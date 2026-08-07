@@ -40,20 +40,20 @@ Each entry lists the intended `id`, quality tier, and a one-line design intent �
 | ✅ | sounding-cord | common | The tallow tip brings up what's at the bottom |
 | ✅ | caltrops-bag | common | The rearguard's best friend |
 
-### Batch 3 — Containers & Storage ⬜ (0/10)
+### Batch 3 — Containers & Storage ✅ (10/10 merged)
 
 | Status | id | Tier | Design intent |
 | --- | --- | --- | --- |
-| ⬜ | fine-backpack | fine | Rigged for silence and fast access; nothing rattles |
-| ⬜ | shoddy-sack | shoddy | Seam gives out under weight — the trail of dropped loot |
-| ⬜ | iron-strongbox | common | Portable security; who holds the key is politics |
-| ⬜ | masterwork-lockbox | masterwork | A puzzle-lock only its maker can open blind |
-| ⬜ | scroll-tube-brass | common | Fireproof document storage |
-| ⬜ | belt-pouch-set | common | The coin-purse economy; cutpurse interactions |
-| ⬜ | fine-bandolier | fine | Every consumable one motion away |
-| ⬜ | sealed-clay-jars | common | Bulk storage; what previous owners sealed inside |
-| ⬜ | false-bottom-chest | fine | Smuggler's classic; found full or found empty |
-| ⬜ | pack-frame | common | Carry capacity for the haul-it-all party |
+| ✅ | fine-backpack | fine | Rigged for silence and fast access; nothing rattles |
+| ✅ | shoddy-sack | shoddy | Seam gives out under weight — the trail of dropped loot |
+| ✅ | iron-strongbox | common | Portable security; who holds the key is politics |
+| ✅ | masterwork-lockbox | masterwork | A puzzle-lock only its maker can open blind |
+| ✅ | scroll-tube-brass | common | Fireproof document storage |
+| ✅ | belt-pouch-set | common | The coin-purse economy; cutpurse interactions |
+| ✅ | fine-bandolier | fine | Every consumable one motion away |
+| ✅ | sealed-clay-jars | common | Bulk storage; what previous owners sealed inside |
+| ✅ | false-bottom-chest | fine | Smuggler's classic; found full or found empty |
+| ✅ | pack-frame | common | Carry capacity for the haul-it-all party |
 
 ### Batch 4 — Clothing & Disguise ⬜ (0/10)
 
