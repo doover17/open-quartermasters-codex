@@ -55,112 +55,112 @@ Each entry lists the intended `id`, quality tier, and a one-line design intent �
 | ✅ | false-bottom-chest | fine | Smuggler's classic; found full or found empty |
 | ✅ | pack-frame | common | Carry capacity for the haul-it-all party |
 
-### Batch 4 — Clothing & Disguise ⬜ (0/10)
+### Batch 4 — Clothing & Disguise ✅ (10/10 merged)
 
 | Status | id | Tier | Design intent |
 | --- | --- | --- | --- |
-| ⬜ | fine-traveling-cloak | fine | Weatherproof; pockets where no one checks |
-| ⬜ | shoddy-boots | shoddy | Cheap soles fail on forced marches |
-| ⬜ | masterwork-boots | masterwork | Broken in from day one; silent heel |
-| ⬜ | common-clothes-bundle | common | Blending in as a purchasable good |
-| ⬜ | noble-attire | common | The outfit that opens doors and draws thieves |
-| ⬜ | disguise-kit | common | SRD kit, fleshed out: what's actually in the box |
-| ⬜ | reversible-coat | fine | Two identities, one garment |
-| ⬜ | winter-kit | common | Cold-weather survival bundle |
-| ⬜ | oilskin-set | common | Rain gear; misery prevention as a purchase |
-| ⬜ | veil-and-gloves | common | Concealment with social texture |
+| ✅ | fine-traveling-cloak | fine | Weatherproof; pockets where no one checks |
+| ✅ | shoddy-boots | shoddy | Cheap soles fail on forced marches |
+| ✅ | masterwork-boots | masterwork | Broken in from day one; silent heel |
+| ✅ | common-clothes-bundle | common | Blending in as a purchasable good |
+| ✅ | noble-attire | common | The outfit that opens doors and draws thieves |
+| ✅ | disguise-kit | common | SRD kit, fleshed out: what's actually in the box |
+| ✅ | reversible-coat | fine | Two identities, one garment |
+| ✅ | winter-kit | common | Cold-weather survival bundle |
+| ✅ | oilskin-set | common | Rain gear; misery prevention as a purchase |
+| ✅ | veil-and-gloves | common | Concealment with social texture |
 
-### Batch 5 — Camp & Travel ⬜ (0/10)
-
-| Status | id | Tier | Design intent |
-| --- | --- | --- | --- |
-| ⬜ | fine-tent | fine | Two-person shelter that pitches in minutes, silent in wind |
-| ⬜ | shoddy-tent | shoddy | Leaks announce themselves at 3 a.m. |
-| ⬜ | camp-kitchen | common | Cookware bundle; morale is a mechanic waiting to happen |
-| ⬜ | folding-camp-stool | common | Small comfort, big character moment |
-| ⬜ | bear-bag-kit | common | Rope, sack, and the discipline of hanging food |
-| ⬜ | fine-fishing-kit | fine | Rations from any waterway |
-| ⬜ | signal-kit | common | Mirror, flags, and smoke-cloth for over-distance messages |
-| ⬜ | portable-shrine | common | Faith on the road; sanctified ground anywhere |
-| ⬜ | insect-netting | common | The jungle arc's most valuable gram |
-| ⬜ | travois-kit | common | Dragging what can't be carried — loot or the wounded |
-
-### Batch 6 — Tools & Trades ⬜ (0/10)
+### Batch 5 — Camp & Travel ✅ (10/10 merged)
 
 | Status | id | Tier | Design intent |
 | --- | --- | --- | --- |
-| ⬜ | fine-healers-kit | fine | Stabilization plus field-surgery dignity |
-| ⬜ | shoddy-healers-kit | shoddy | Half the uses are missing or spoiled |
-| ⬜ | masterwork-smiths-tools | masterwork | Field repairs that hold; a mark armorers respect |
-| ⬜ | fine-cartographers-kit | fine | Maps accurate enough to sell |
-| ⬜ | tinkers-roll | common | Small repairs to anything, slowly |
-| ⬜ | portable-alchemy-rig | fine | Brew on the road at half pace |
-| ⬜ | fine-climbing-kit | fine | Harness and ascenders; the full SRD kit made real |
-| ⬜ | surveyors-kit | common | Measuring land; boundary disputes are adventures |
-| ⬜ | forgery-kit | common | SRD kit fleshed out; papers, seals, inks |
-| ⬜ | game-set-carved | common | Gambling, downtime, and reading opponents |
+| ✅ | fine-tent | fine | Two-person shelter that pitches in minutes, silent in wind |
+| ✅ | shoddy-tent | shoddy | Leaks announce themselves at 3 a.m. |
+| ✅ | camp-kitchen | common | Cookware bundle; morale is a mechanic waiting to happen |
+| ✅ | folding-camp-stool | common | Small comfort, big character moment |
+| ✅ | bear-bag-kit | common | Rope, sack, and the discipline of hanging food |
+| ✅ | fine-fishing-kit | fine | Rations from any waterway |
+| ✅ | signal-kit | common | Mirror, flags, and smoke-cloth for over-distance messages |
+| ✅ | portable-shrine | common | Faith on the road; sanctified ground anywhere |
+| ✅ | insect-netting | common | The jungle arc's most valuable gram |
+| ✅ | travois-kit | common | Dragging what can't be carried — loot or the wounded |
+
+### Batch 6 — Tools & Trades ✅ (10/10 merged)
+
+| Status | id | Tier | Design intent |
+| --- | --- | --- | --- |
+| ✅ | fine-healers-kit | fine | Stabilization plus field-surgery dignity |
+| ✅ | shoddy-healers-kit | shoddy | Half the uses are missing or spoiled |
+| ✅ | masterwork-smiths-tools | masterwork | Field repairs that hold; a mark armorers respect |
+| ✅ | fine-cartographers-kit | fine | Maps accurate enough to sell |
+| ✅ | tinkers-roll | common | Small repairs to anything, slowly |
+| ✅ | portable-alchemy-rig | fine | Brew on the road at half pace |
+| ✅ | fine-climbing-kit | fine | Harness and ascenders; the full SRD kit made real |
+| ✅ | surveyors-kit | common | Measuring land; boundary disputes are adventures |
+| ✅ | forgery-kit | common | SRD kit fleshed out; papers, seals, inks |
+| ✅ | game-set-carved | common | Gambling, downtime, and reading opponents |
 
 ## Consumables (40 items)
 
-### Batch 7 — Alchemical Utility ⬜ (0/10)
+### Batch 7 — Alchemical Utility ✅ (10/10 merged)
 
 | Status | id | Tier | Design intent |
 | --- | --- | --- | --- |
-| ⬜ | emberwax-taper | — | Throwable light; outlines a target (from template example) |
-| ⬜ | smoke-pellet | — | One-round concealment; the exit line |
-| ⬜ | glowvial | — | Shakeable cold light, hours long, can't ignite |
-| ⬜ | frost-salts | — | Douse fires instantly; freeze a lock |
-| ⬜ | tanglefoot-sap | — | Slow a pursuer; sticky area denial |
-| ⬜ | acid-etch-vial | — | Eat one hinge, bar, or lock quietly |
-| ⬜ | vermin-smoke | — | Clear a room of swarms and pests |
-| ⬜ | scent-killer | — | Break a tracking creature's nose |
-| ⬜ | flash-powder-packet | — | One blinding instant; entrances and exits |
-| ⬜ | waterproofing-resin | — | Seal boots, seams, or a scroll case for a season |
+| ✅ | emberwax-taper | — | Throwable light; outlines a target (from template example) |
+| ✅ | smoke-pellet | — | One-round concealment; the exit line |
+| ✅ | glowvial | — | Shakeable cold light, hours long, can't ignite |
+| ✅ | frost-salts | — | Douse fires instantly; freeze a lock |
+| ✅ | tanglefoot-sap | — | Slow a pursuer; sticky area denial |
+| ✅ | acid-etch-vial | — | Eat one hinge, bar, or lock quietly |
+| ✅ | vermin-smoke | — | Clear a room of swarms and pests |
+| ✅ | scent-killer | — | Break a tracking creature's nose |
+| ✅ | flash-powder-packet | — | One blinding instant; entrances and exits |
+| ✅ | waterproofing-resin | — | Seal boots, seams, or a scroll case for a season |
 
-### Batch 8 — Herbal & Medicinal ⬜ (0/10)
-
-| Status | id | Tier | Design intent |
-| --- | --- | --- | --- |
-| ⬜ | willowbark-chew | — | Cheap pain dulling; the long march's friend |
-| ⬜ | wakeleaf | — | Fight off sleep; the watch-keeper's vice |
-| ⬜ | fever-tea | — | Disease care that makes recovery scenes playable |
-| ⬜ | antivenom-draught | — | Broad, weak venom counter; buys time, not cures |
-| ⬜ | numbing-salve | — | Topical anesthetic; surgery and stitches |
-| ⬜ | clot-moss | — | Packs a wound; stabilization without magic |
-| ⬜ | calming-tincture | — | Take the edge off fear; social and horror texture |
-| ⬜ | purgative-draught | — | Force out poison or the swallowed key |
-| ⬜ | herbal-poultice-kit | — | Overnight healing boost bundle |
-| ⬜ | smelling-salts | — | Wake the unconscious; one round earlier than fate |
-
-### Batch 9 — Culinary & Social ⬜ (0/10)
+### Batch 8 — Herbal & Medicinal ✅ (10/10 merged)
 
 | Status | id | Tier | Design intent |
 | --- | --- | --- | --- |
-| ⬜ | travelers-spice-tin | — | Makes trail rations morale food |
-| ⬜ | honeyed-hardtack | — | Comfort ration; children and grumpy dwarves alike |
-| ⬜ | strongwine-flask | — | Liquid courage with a cost |
-| ⬜ | pipeweed-pouch | — | The shared-pipe social ritual |
-| ⬜ | feast-in-a-jar | — | Preserved delicacy; the impressive gift |
-| ⬜ | bitter-coffee-brick | — | The other watch-keeper's vice |
-| ⬜ | ceremonial-salt | — | Guest-right, oaths, and thresholds |
-| ⬜ | sugar-figures | — | Cheap wonder; bribes for children and fey |
-| ⬜ | hunters-jerky-spiced | — | Rations that double as tracking-dog distraction |
-| ⬜ | celebration-cask | — | The party throws a party; goodwill as gear |
+| ✅ | willowbark-chew | — | Cheap pain dulling; the long march's friend |
+| ✅ | wakeleaf | — | Fight off sleep; the watch-keeper's vice |
+| ✅ | fever-tea | — | Disease care that makes recovery scenes playable |
+| ✅ | antivenom-draught | — | Broad, weak venom counter; buys time, not cures |
+| ✅ | numbing-salve | — | Topical anesthetic; surgery and stitches |
+| ✅ | clot-moss | — | Packs a wound; stabilization without magic |
+| ✅ | calming-tincture | — | Take the edge off fear; social and horror texture |
+| ✅ | purgative-draught | — | Force out poison or the swallowed key |
+| ✅ | herbal-poultice-kit | — | Overnight healing boost bundle |
+| ✅ | smelling-salts | — | Wake the unconscious; one round earlier than fate |
 
-### Batch 10 — Expedition Expendables ⬜ (0/10)
+### Batch 9 — Culinary & Social ✅ (10/10 merged)
 
 | Status | id | Tier | Design intent |
 | --- | --- | --- | --- |
-| ⬜ | marked-trail-ribbons | — | Waymarking that survives weather; chalk's outdoor cousin |
-| ⬜ | fire-log-pressed | — | Guaranteed campfire, wet wood be damned |
-| ⬜ | water-purification-drops | — | Drink the swamp and live |
-| ⬜ | snare-wire-coil | — | Food from the land; traps for the small and unwary |
-| ⬜ | bribery-tobacco | — | Small luxuries as social currency on the frontier |
-| ⬜ | message-ribbon | — | Weatherproof written message for drops and couriers |
-| ⬜ | glow-chalk | — | Chalk marks readable in the dark, briefly |
-| ⬜ | rust-eater-paste | — | Free a seized hinge, gear, or blade |
-| ⬜ | patch-kit | — | Field repair for cloth, leather, and skins |
-| ⬜ | last-candle | — | Burns exactly one hour; the timekeeping ritual |
+| ✅ | travelers-spice-tin | — | Makes trail rations morale food |
+| ✅ | honeyed-hardtack | — | Comfort ration; children and grumpy dwarves alike |
+| ✅ | strongwine-flask | — | Liquid courage with a cost |
+| ✅ | pipeweed-pouch | — | The shared-pipe social ritual |
+| ✅ | feast-in-a-jar | — | Preserved delicacy; the impressive gift |
+| ✅ | bitter-coffee-brick | — | The other watch-keeper's vice |
+| ✅ | ceremonial-salt | — | Guest-right, oaths, and thresholds |
+| ✅ | sugar-figures | — | Cheap wonder; bribes for children and fey |
+| ✅ | hunters-jerky-spiced | — | Rations that double as tracking-dog distraction |
+| ✅ | celebration-cask | — | The party throws a party; goodwill as gear |
+
+### Batch 10 — Expedition Expendables ✅ (10/10 merged)
+
+| Status | id | Tier | Design intent |
+| --- | --- | --- | --- |
+| ✅ | marked-trail-ribbons | — | Waymarking that survives weather; chalk's outdoor cousin |
+| ✅ | fire-log-pressed | — | Guaranteed campfire, wet wood be damned |
+| ✅ | water-purification-drops | — | Drink the swamp and live |
+| ✅ | snare-wire-coil | — | Food from the land; traps for the small and unwary |
+| ✅ | bribery-tobacco | — | Small luxuries as social currency on the frontier |
+| ✅ | message-ribbon | — | Weatherproof written message for drops and couriers |
+| ✅ | glow-chalk | — | Chalk marks readable in the dark, briefly |
+| ✅ | rust-eater-paste | — | Free a seized hinge, gear, or blade |
+| ✅ | patch-kit | — | Field repair for cloth, leather, and skins |
+| ✅ | last-candle | — | Burns exactly one hour; the timekeeping ritual |
 
 ---
 
