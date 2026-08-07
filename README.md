@@ -1,5 +1,6 @@
 # The Open Quartermaster's Codex
-*A free, open-source item compendium for tabletop RPGs*
+
+## *A free, open-source item compendium for tabletop RPGs*
 
 ## Vision
 
@@ -20,23 +21,27 @@ Items in most TTRPGs are underserved: scattered across roll tables, missing pric
 ## Scope
 
 ### Phase 1 — Core Release (v0.1, the lean proof)
+
 - Adventuring gear (full treatment of ~60 SRD items: quality tiers, prices, descriptions, hooks)
 - Consumables (~40 items: alchemical, herbal, culinary one-shots priced to be used, not hoarded)
 - The item template + contribution guide (this repo's foundation)
 - One sample pre-built shop with merchant personality
 
 ### Phase 2 — Commerce & Context
+
 - Shop generator chapter (merchant archetypes, inventories, haggling quirks, under-the-counter goods)
 - Selling & appraisal rules (fences, collectors, resale values, monster-part markets)
 - Loot-by-context bundles (curated: war camp, wizard's study, shipwreck, etc.)
 
 ### Phase 3 — Depth & Character
+
 - Weapons & armor regional variants and maker's marks
 - Magic item quirks & personality tables
 - Sentimental/story item guidance
 - Wear, repair, and upgrade module
 
 ### Out of scope (for now)
+
 - New character options (feats, subclasses)
 - Full crafting economy overhaul (light crafting notes only)
 - Systems beyond 5e/PF2e (welcomed later as community conversions)
@@ -50,7 +55,7 @@ Items in most TTRPGs are underserved: scattered across roll tables, missing pric
 
 ## Repository Structure
 
-```
+``` md
 /
 ├── README.md                  ← this file
 ├── CONTRIBUTING.md            ← how to submit items
@@ -67,7 +72,7 @@ Items in most TTRPGs are underserved: scattered across roll tables, missing pric
 ├── shops/                     ← pre-built merchants
 ├── loot-tables/               ← contextual loot bundles
 ├── modules/                   ← optional rules (quality tiers, wear, haggling)
-└── LICENSES/
+└── LICENSES.md
 ```
 
 Items are stored as individual markdown files with YAML front matter — human-readable, diffable in pull requests, and machine-parseable so we can auto-generate the PDF, item cards, and a searchable website from one source of truth.
@@ -89,7 +94,7 @@ Items are stored as individual markdown files with YAML front matter — human-r
 ## Roadmap
 
 | Milestone | Target |
-|---|---|
+| --- | --- |
 | v0.1 | Template finalized, 100 core items (gear + consumables), contribution guide live |
 | v0.2 | Website generator working, first community PRs merged |
 | v0.5 | Phase 2 content (shops, selling, loot bundles) |
