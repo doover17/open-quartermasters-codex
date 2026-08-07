@@ -29,4 +29,4 @@ Pathfinder Second Edition compatibility content is used under the terms of the *
 
 When crediting this work, please use:
 
-> Contains material from *The Open Quartermaster's Codex* (github.com/YOUR-USERNAME/YOUR-REPO), licensed under CC-BY 4.0.
+> Contains material from *The Open Quartermaster's Codex* (github.com/doover17/open-quartermasters-codex), licensed under CC-BY 4.0.
