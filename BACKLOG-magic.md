@@ -60,22 +60,22 @@ Cheap magic that changes daily life more than combat. Rarity: common.
 | ✅ | the-borrowed-axe | +1 handaxe; every owner's initials appear, none can be filed off |
 | ✅ | frostmarked-spear | +1 spear; the haft frosts over without warning, indoors and out |
 
-## Batch M3 — Uncommon Utility ⬜ (0/10)
+## Batch M3 — Uncommon Utility ✅ (10/10 merged)
 
 Non-combat magic with real table impact. Rarity: uncommon.
 
 | Status | id | Design intent |
 |---|---|---|
-| ⬜ | bottomless-satchel | Modest extra storage; something inside rearranges itself |
-| ⬜ | keyring-of-familiar-doors | Opens any door you've opened before |
-| ⬜ | travelers-kettle | Clean water from any source; the taste tells you what it removed |
-| ⬜ | mask-of-plain-faces | Forgettable, not invisible; witnesses can't describe you |
-| ⬜ | rope-that-listens | Climbs where told, once per day, badly |
-| ⬜ | ledger-of-honest-weight | Reveals true value of goods; merchants hate it, courts love it |
-| ⬜ | lantern-of-last-hours | Shows a room as it was one hour ago |
-| ⬜ | boots-of-the-quiet-mile | Leaves no tracks; the wearer's own footprints appear elsewhere |
-| ⬜ | speaking-slate | Paired slates share writing; ink dries slower on bad news |
-| ⬜ | cloak-of-small-weather | A personal fair day; the weather owed returns later |
+| ✅ | bottomless-satchel | Modest extra storage; something inside rearranges itself |
+| ✅ | keyring-of-familiar-doors | Opens any door you've opened before |
+| ✅ | travelers-kettle | Clean water from any source; the taste tells you what it removed |
+| ✅ | mask-of-plain-faces | Forgettable, not invisible; witnesses can't describe you |
+| ✅ | rope-that-listens | Climbs where told, once per day, badly |
+| ✅ | ledger-of-honest-weight | Reveals true value of goods; merchants hate it, courts love it |
+| ✅ | lantern-of-last-hours | Shows a room as it was one hour ago |
+| ✅ | boots-of-the-quiet-mile | Leaves no tracks; the wearer's own footprints appear elsewhere |
+| ✅ | speaking-slate | Paired slates share writing; ink dries slower on bad news |
+| ✅ | cloak-of-small-weather | A personal fair day; the weather owed returns later |
 
 ## Batch M4 — Rare & Storied ⬜ (0/10)
 
