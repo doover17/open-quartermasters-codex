@@ -43,22 +43,22 @@ Cheap magic that changes daily life more than combat. Rarity: common.
 | ✅ | weathervane-charm | An hour's warning of coming weather |
 | ✅ | rememberers-locket | Holds one face perfectly; opens only for its owner |
 
-## Batch M2 — Uncommon Arms ⬜ (0/10)
+## Batch M2 — Uncommon Arms ✅ (10/10 merged)
 
 +1 weapons and armor whose real value is identity. Rarity: uncommon.
 
 | Status | id | Design intent |
 |---|---|---|
-| ⬜ | spicebiter-dagger | +1 dagger; cinnamon scent strengthens near the recently dead |
-| ⬜ | tidebound-cutlass | +1 scimitar; drips seawater that isn't there |
-| ⬜ | the-quiet-argument | +1 rapier; the blade never rings, even parried |
-| ⬜ | hearthguard-shield | +1 shield; warm to the touch, warmest indoors |
-| ⬜ | debtors-mace | +1 mace; grows heavier the longer it goes unused |
-| ⬜ | falconers-longbow | +1 longbow; arrows loosed from it are always found again |
-| ⬜ | last-watch-mail | +1 chain shirt; the rings shiver at odd moments, and no two veterans agree what it means |
-| ⬜ | pilgrims-staff | +1 quarterstaff; set down anywhere, it leans the same way, and it isn't downhill |
-| ⬜ | the-borrowed-axe | +1 handaxe; every owner's initials appear, none can be filed off |
-| ⬜ | frostmarked-spear | +1 spear; the haft frosts over without warning, indoors and out |
+| ✅ | spicebiter-dagger | +1 dagger; cinnamon scent strengthens near the recently dead |
+| ✅ | tidebound-cutlass | +1 scimitar; drips seawater that isn't there |
+| ✅ | the-quiet-argument | +1 rapier; the blade never rings, even parried |
+| ✅ | hearthguard-shield | +1 shield; warm to the touch, warmest indoors |
+| ✅ | debtors-mace | +1 mace; grows heavier the longer it goes unused |
+| ✅ | falconers-longbow | +1 longbow; arrows loosed from it are always found again |
+| ✅ | last-watch-mail | +1 chain shirt; the rings shiver at odd moments, and no two veterans agree what it means |
+| ✅ | pilgrims-staff | +1 quarterstaff; set down anywhere, it leans the same way, and it isn't downhill |
+| ✅ | the-borrowed-axe | +1 handaxe; every owner's initials appear, none can be filed off |
+| ✅ | frostmarked-spear | +1 spear; the haft frosts over without warning, indoors and out |
 
 ## Batch M3 — Uncommon Utility ⬜ (0/10)
 
