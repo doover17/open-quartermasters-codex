@@ -37,6 +37,13 @@ How the Codex sounds, reads, and stays consistent across hundreds of contributor
 - **An NPC refusing to answer is not an unsettling detail.** "She won't say what she's been feeding them," "he changes the subject," "she'll only discuss it drunk" — these withhold the image instead of delivering it. End on the thing the DM can describe.
 - **Don't do the DM's arithmetic.** If the hook names the target, solves its own puzzle, or explains the anomaly it just raised, cut the last sentence. Twelve missing vials and a year of patience is the hook; the DM finds the door.
 - Hooks are prompts, not plots. No stat blocks, no required outcomes, no multi-paragraph scenarios.
+- **An NPC refusing to answer is not an unsettling detail.** "She won't say," "he changes the subject," and "she'll only discuss it drunk" are the *absence* of a detail. End on the thing the DM can describe.
+- **Over-used hook shapes — a batch may use each at most once, and check merged items in the same subcategory before reaching for any of them:**
+  - the seller/maker keeps a secret record of buyers
+  - the supplier can't be found or won't explain
+  - a strange customer buys unusual quantities
+  - the maker won't say what's in it / where it comes from
+  - an unexplained extra unit inside a kit
 
 ### Over-used hook shapes
 
@@ -61,7 +68,8 @@ Structures the Codex has *not* worn out, for when you need one: an object found 
 - **State the trigger, then the effect.** "On a climbing check that fails by 5 or more, the rope frays or snaps."
 - **Situational, never raw power** for mundane and quality-tier items: no flat bonuses to attack or damage, no AC increases, nothing that competes with magic items. Reliability, resistance to failure, and edge-case utility are the design space.
 - **Shoddy = drawback with a discount. Fine = one situational benefit. Masterwork = Fine's benefit made reliable, plus identity (a maker's mark, held resale value).**
-- If a rule needs a DC, use the system's standard easy/medium DCs (5e: 10/15; PF2e: level-appropriate simple DCs). Don't invent novel subsystems inside a single item — propose those as modules instead.
+- If a rule needs a DC, use the system's standard easy/medium DCs (5e: 10/15; PF2e: level-appropriate simple DCs). Don't invent novel subsystems inside a single item — propose those as modules instead. Obligation economies, faction accounting, and anything that implies ongoing bookkeeping belong in At the Table as fiction, not in the mechanics block.
+- **Batch integrity covers mechanics, not only hooks.** No more than two items in a batch should resolve to the same mechanical shape — a bonus to the same check, the same duration, the same resource. Vary the payload, not only the flavor: a duration, a consumable resource, a thing that works on someone else's roll, a thing you can lose.
 - Can't write one of the two system blocks? Fill in what you can and mark the other `TODO:` — conversion help is a valued contribution type.
 
 ## Formatting Rules
