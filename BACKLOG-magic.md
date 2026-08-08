@@ -26,22 +26,22 @@ guardrails move rather than disappear.
 
 ---
 
-## Batch M1 — Common Wonders ⬜ (0/10)
+## Batch M1 — Common Wonders ✅ (10/10 merged)
 
 Cheap magic that changes daily life more than combat. Rarity: common.
 
 | Status | id | Design intent |
 |---|---|---|
-| ⬜ | everburning-lamp | Light without fuel; the oil economy's quiet enemy |
-| ⬜ | mending-needle | Repairs cloth overnight; a tailor's ghost of a gift |
-| ⬜ | truesalt-shaker | Preserves any food indefinitely; ends the ration clock, starts other problems |
-| ⬜ | homing-compass | Points to a place you named once and can't change |
-| ⬜ | quiet-bell | Rings only for its paired bell's holder; two halves, two owners |
-| ⬜ | ink-of-second-thoughts | Writing fades in a day unless the writer meant it |
-| ⬜ | warmstone | Body heat for one sleeper; the winter arc's small mercy |
-| ⬜ | tally-cord | Counts what its holder counts, and remembers after they forget |
-| ⬜ | weathervane-charm | An hour's warning of coming weather |
-| ⬜ | rememberers-locket | Holds one face perfectly; opens only for its owner |
+| ✅ | everburning-lamp | Light without fuel; the oil economy's quiet enemy |
+| ✅ | mending-needle | Repairs cloth overnight; a tailor's ghost of a gift |
+| ✅ | truesalt-shaker | Preserves any food indefinitely; ends the ration clock, starts other problems |
+| ✅ | homing-compass | Points to a place you named once and can't change |
+| ✅ | quiet-bell | Rings only for its paired bell's holder; two halves, two owners |
+| ✅ | ink-of-second-thoughts | Writing fades in a day unless the writer meant it |
+| ✅ | warmstone | Body heat for one sleeper; the winter arc's small mercy |
+| ✅ | tally-cord | Counts what its holder counts, and remembers after they forget |
+| ✅ | weathervane-charm | An hour's warning of coming weather |
+| ✅ | rememberers-locket | Holds one face perfectly; opens only for its owner |
 
 ## Batch M2 — Uncommon Arms ⬜ (0/10)
 
@@ -55,10 +55,10 @@ Cheap magic that changes daily life more than combat. Rarity: common.
 | ⬜ | hearthguard-shield | +1 shield; warm to the touch, warmest indoors |
 | ⬜ | debtors-mace | +1 mace; grows heavier the longer it goes unused |
 | ⬜ | falconers-longbow | +1 longbow; arrows loosed from it are always found again |
-| ⬜ | last-watch-mail | +1 chain shirt; the rings shiver a beat before an ambush |
-| ⬜ | pilgrims-staff | +1 quarterstaff; points downhill toward water, always |
+| ⬜ | last-watch-mail | +1 chain shirt; the rings shiver at odd moments, and no two veterans agree what it means |
+| ⬜ | pilgrims-staff | +1 quarterstaff; set down anywhere, it leans the same way, and it isn't downhill |
 | ⬜ | the-borrowed-axe | +1 handaxe; every owner's initials appear, none can be filed off |
-| ⬜ | frostmarked-spear | +1 spear; the haft frosts when someone nearby lies |
+| ⬜ | frostmarked-spear | +1 spear; the haft frosts over without warning, indoors and out |
 
 ## Batch M3 — Uncommon Utility ⬜ (0/10)
 
@@ -115,6 +115,10 @@ Everything in the v0.1 writer brief applies, plus:
    guide's note: collectors and auctions can exceed city price for named, storied items.
    That gap is where adventures live.
 6. **Batch integrity covers mechanical shape here too:** no more than two items per batch
-   may resolve to the same shape (+1 to a roll, once-per-day activation, passive sensor).
+   may resolve to the same shape (once-per-day activation, passive sensor, object-property,
+   passive continuous effect, record). **M2 is exempt from this rule for its `+1` baseline**
+   — a batch of ten `+1` arms cannot satisfy it, and shouldn't have to. M2 carries its
+   variety in quirk, provenance, and base weapon instead. The rule still binds M2 for any
+   effect *beyond* the `+1`, and it binds M1, M3, and M4 in full.
 
 Update this file's status column in the same PR that adds the items.

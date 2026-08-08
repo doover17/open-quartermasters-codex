@@ -131,10 +131,16 @@ def check_item(path: Path, seen_ids: dict):
         err(f, "front matter is not a mapping")
         return
 
-    # Required fields
+    # Required fields. Legendary items carry no price — acquiring one is a campaign
+    # event, not a purchase (see the magic pricing table in docs/pricing-guide.md).
+    is_legendary = fm.get("rarity") == "legendary"
     for field in REQUIRED_FIELDS:
+        if field == "price" and is_legendary:
+            continue
         if field not in fm:
             err(f, f"missing required field '{field}'")
+    if is_legendary and "price" in fm:
+        err(f, "legendary items take no price field")
 
     # id rules
     iid = fm.get("id", "")
