@@ -21,7 +21,7 @@ license: CC-BY-4.0
 
 ## Description
 
-A ruled merchant's daybook in a scuffed board cover, half its pages already filled. New lines arrive in ink that is never quite the color of the line above, in a clerk's hand that changes with the region — round and generous in the river towns, cramped and slanted in the hills — as though the book keeps hiring locally.
+A ruled merchant's daybook in a scuffed board cover, half its pages already filled. New lines arrive in ink that never matches the color of the line above, in a clerk's hand that changes with the region — round and generous in the river towns, cramped and slanted in the hills — as though the book keeps hiring locally.
 
 ## At the Table
 

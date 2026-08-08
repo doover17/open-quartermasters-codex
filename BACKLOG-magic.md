@@ -1,6 +1,6 @@
 # Magic Items Backlog
 
-The third content wave: **40 magic items** for `items/magic/`. Written per the same three
+The third content wave: **40 magic items** ✅ complete for `items/magic/`. Written per the same three
 spec docs (`docs/item-template.md`, `docs/style-guide.md`, `docs/pricing-guide.md`), plus the
 rules below — magic items are the one category where combat math is allowed, so the
 guardrails move rather than disappear.
@@ -77,22 +77,22 @@ Non-combat magic with real table impact. Rarity: uncommon.
 | ✅ | speaking-slate | Paired slates share writing; ink dries slower on bad news |
 | ✅ | cloak-of-small-weather | A personal fair day; the weather owed returns later |
 
-## Batch M4 — Rare & Storied ⬜ (0/10)
+## Batch M4 — Rare & Storied ✅ (10/10 merged)
 
 Rare items with history. Acquiring one should be an adventure, not a purchase.
 
 | Status | id | Rarity | Design intent |
 |---|---|---|---|
-| ⬜ | the-cartographers-eye | rare | Maps terrain you've seen from above; the map ages faster than the land |
-| ⬜ | oathkeeper-band | rare | Both parties feel a promise break; no enforcement, only knowledge |
-| ⬜ | the-drowned-lantern | rare | Burns underwater; shows what the water took |
-| ⬜ | quartermasters-tally | rare | Knows the contents of any container it has touched |
-| ⬜ | the-long-road-cloak | rare | Halves travel fatigue; the wearer forgets one place per journey |
-| ⬜ | bloodless-blade | rare | +2 shortsword; wounds it makes don't bleed, and don't close |
-| ⬜ | the-patient-key | rare | Opens one lock perfectly, then chooses a new lock |
-| ⬜ | armor-of-the-fallen-watch | rare | +1 half plate; names of previous wearers surface in the steel |
-| ⬜ | the-honest-mirror | very-rare | Shows the viewer as others see them; no illusions survive it |
-| ⬜ | the-first-lantern | legendary | The light that started a city; no price, only consequence |
+| ✅ | the-cartographers-eye | rare | Maps terrain you've seen from above; the map ages faster than the land |
+| ✅ | oathkeeper-band | rare | Both parties feel a promise break; no enforcement, only knowledge |
+| ✅ | the-drowned-lantern | rare | Burns underwater; shows what the water took |
+| ✅ | quartermasters-tally | rare | Knows the contents of any container it has touched |
+| ✅ | the-long-road-cloak | rare | Halves travel fatigue; the wearer forgets one place per journey |
+| ✅ | bloodless-blade | rare | +2 shortsword; wounds it makes don't bleed, and don't close |
+| ✅ | the-patient-key | rare | Opens one lock perfectly, then chooses a new lock |
+| ✅ | armor-of-the-fallen-watch | rare | +1 half plate; names of previous wearers surface in the steel |
+| ✅ | the-honest-mirror | very-rare | Shows the viewer as others see them; no illusions survive it |
+| ✅ | the-first-lantern | legendary | The light that started a city; no price, only consequence |
 
 ---
 

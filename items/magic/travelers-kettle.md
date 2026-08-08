@@ -25,7 +25,7 @@ A dented tin kettle with a wired-on handle, the kind that costs two silver anywh
 
 ## At the Table
 
-- The water problem is solved forever, which turns deserts, marshes, and sieges from survival math into terrain the party can simply cross.
+- The water problem is solved forever, which turns deserts, marshes, and sieges from survival math into terrain the party can cross at a walk.
 - The aftertaste is the DM's free hand: what the water was carrying is a fact the party learns by drinking, one mouthful before anyone has thought to ask.
 
 ## Hooks
