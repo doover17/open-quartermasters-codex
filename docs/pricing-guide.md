@@ -20,6 +20,7 @@ Every item carries up to three prices in its front matter:
 | `scarcity` | Wartime, remote frontier, black market, siege, or "the only one for sale" | ×2–4, contributor's judgment |
 
 - Round to clean coin values. `8 sp`, not `7.5 sp`. Below 1 gp, prefer sp; below 1 sp, cp.
+- Above 1 gp, prefer gp — **except** where a village or scarcity multiplier lands between whole gp values, in which case sp (`12 sp`, `15 sp`) is preferred over rounding away the multiplier.
 - Omit a price point rather than force one (e.g., illegal goods may have no `village` price).
 
 ## Quality Tier Multipliers
@@ -103,3 +104,20 @@ availability: uncommon
 - A shoddy item whose drawback never actually comes up in play
 
 When your item's price feels wrong but you can't say why, open the PR anyway and flag it — pricing debates in review are how this guide improves.
+
+## Precedents from Merged Items
+
+Concrete anchors from the catalog — price new items against these, not only against the rules above.
+
+**Tier multipliers, applied exactly (Batch 6 is the model):**
+
+| Item | SRD anchor | Tier | Result |
+|---|---|---|---|
+| fine-healers-kit | healer's kit 5 gp | fine ×5 | 25 gp |
+| fine-cartographers-kit | cartographer's tools 15 gp | fine ×5 | 75 gp |
+| masterwork-smiths-tools | smith's tools 20 gp | masterwork ×10 | 200 gp |
+| portable-alchemy-rig | alchemist's supplies 50 gp | fine ×4 | 200 gp |
+
+**The village/city inversion for rural and raw goods (Batches 8–10 apply it consistently):** herbs, foodstuffs, drink, hides, and timber are *cheaper* at the village (willowbark-chew 4 sp village / 5 sp city; fever-tea 6 sp / 8 sp). Manufactured goods run the other way. When unsure which side an item falls on, ask where it's made.
+
+**Masterwork floors:** merged masterwork items price at 20 gp (crowbar), 150 gp (lockbox), and 200 gp (smith's tools). Masterwork on even the humblest base item should not fall below ~20–30 gp — the tier's identity (a maker's mark, held resale) has a minimum cost regardless of the anchor.

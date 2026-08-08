@@ -13,6 +13,8 @@ How the Codex sounds, reads, and stays consistent across hundreds of contributor
 - **2–4 sentences.** If you need five, cut the weakest.
 - **Lead with the senses.** Weight, smell, sound, texture, and temperature before appearance. "It smells of honey and lamp smoke" does more than "it is a well-made case."
 - **One detail that implies a history.** Scratches, brands, repairs, regional variation. Objects are biographies.
+  - A tally of past uses (scratch marks, notches, burned counts) is one valid history-detail among many — not the default. Alternatives: a repair by a different hand, a regional variation, a modification the current owner didn't make, a part that's newer than the rest.
+- **Vary your openings across a batch.** "Lead with the senses" does not mean "open on smell." Weight, sound, temperature, texture, and material are equally valid leads. A batch where every description opens the same way reads as one narrator with one move — a batch-level failure even when every sentence passes.
 - **No stats in prose.** Numbers live in the YAML `mechanics` fields. The description of a fine bedroll never says "advantage."
 
 ### Good vs. flat
@@ -33,6 +35,13 @@ How the Codex sounds, reads, and stays consistent across hundreds of contributor
 - A hook should **raise a question or point at a person**: someone who made it, wants it, fears it, or is lying about it.
 - **End on the unsettling detail**, not the explanation. "The chalk dust at each mark is mixed with grave soil." Full stop. The DM finishes the story.
 - Hooks are prompts, not plots. No stat blocks, no required outcomes, no multi-paragraph scenarios.
+- **An NPC refusing to answer is not an unsettling detail.** "She won't say," "he changes the subject," and "she'll only discuss it drunk" are the *absence* of a detail. End on the thing the DM can describe.
+- **Over-used hook shapes — a batch may use each at most once, and check merged items in the same subcategory before reaching for any of them:**
+  - the seller/maker keeps a secret record of buyers
+  - the supplier can't be found or won't explain
+  - a strange customer buys unusual quantities
+  - the maker won't say what's in it / where it comes from
+  - an unexplained extra unit inside a kit
 
 ## Setting Neutrality
 
@@ -46,7 +55,8 @@ How the Codex sounds, reads, and stays consistent across hundreds of contributor
 - **State the trigger, then the effect.** "On a climbing check that fails by 5 or more, the rope frays or snaps."
 - **Situational, never raw power** for mundane and quality-tier items: no flat bonuses to attack or damage, no AC increases, nothing that competes with magic items. Reliability, resistance to failure, and edge-case utility are the design space.
 - **Shoddy = drawback with a discount. Fine = one situational benefit. Masterwork = Fine's benefit made reliable, plus identity (a maker's mark, held resale value).**
-- If a rule needs a DC, use the system's standard easy/medium DCs (5e: 10/15; PF2e: level-appropriate simple DCs). Don't invent novel subsystems inside a single item — propose those as modules instead.
+- If a rule needs a DC, use the system's standard easy/medium DCs (5e: 10/15; PF2e: level-appropriate simple DCs). Don't invent novel subsystems inside a single item — propose those as modules instead. Obligation economies, faction accounting, and anything that implies ongoing bookkeeping belong in At the Table as fiction, not in the mechanics block.
+- **Batch integrity covers mechanics, not only hooks.** No more than two items in a batch should resolve to the same mechanical shape — a bonus to the same check, the same duration, the same resource. Vary the payload, not only the flavor: a duration, a consumable resource, a thing that works on someone else's roll, a thing you can lose.
 - Can't write one of the two system blocks? Fill in what you can and mark the other `TODO:` — conversion help is a valued contribution type.
 
 ## Formatting Rules
