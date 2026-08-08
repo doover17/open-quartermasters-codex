@@ -175,6 +175,6 @@ Any writer — human or agent — filling backlog slots follows this exact proce
 5. **All three body sections** — Description (2–4 sentences, sensory), At the Table (1–3 play moments), Hooks (at least one, ending on the unsettling detail).
 6. **Price by the guide** — anchor to SRD, apply tier multipliers, round clean, sanity-check against merged items in the same subcategory.
 7. **Self-check against the submission checklist** at the bottom of the template, then run the two Codex questions: ten-second usability, and would a player remember owning it?
-8. **Batch integrity:** when writing a full batch, vary the sold_by merchants and hook flavors — no two hooks in a batch should share a structure.
+8. **Batch integrity:** when writing a full batch, vary the sold_by merchants, the hook structures, the *mechanical shape* of the items, and the sense your descriptions open on. See **Batch Integrity** in `docs/style-guide.md` for the full rule and the list of over-used hook shapes — a batch is reviewed as a unit, and ten items that each pass alone can still fail together.
 
 Update this file's status column in the same PR that adds the items.
