@@ -110,9 +110,13 @@ Codex — match them rather than re-deriving from first principles.
 | `portable-alchemy-rig` | alchemist's supplies, 50 gp | Fine ×4 | 200 gp |
 | `masterwork-smiths-tools` | smith's tools, 20 gp | Masterwork ×10 | 200 gp |
 
-Note the two masterwork entries in the Codex sit at 150–200 gp. **Masterwork is a price
-band as much as a multiplier**: if your masterwork item lands under ~10× and reads as
-cheap beside these, the multiplier is wrong or the item isn't masterwork.
+**Masterwork floors.** Merged masterwork items price at 20 gp (`masterwork-crowbar`),
+35 gp (`masterwork-boots`), 150 gp (`masterwork-lockbox`), and 200 gp
+(`masterwork-smiths-tools`). Masterwork is a price band as much as a multiplier: on even the
+humblest base item it should not fall below ~20–30 gp, because the tier's identity — a
+maker's mark, resale that holds — has a minimum cost regardless of the anchor. If your
+masterwork item lands under ~10× and reads as cheap beside these, the multiplier is wrong or
+the item isn't masterwork.
 
 **Village/city inversion, worked correctly.** Manufactured goods cost more in the village;
 rural and raw goods cost less. Both directions appear in merged items and both are correct:
@@ -157,20 +161,3 @@ price against. Resale is ~50% of city, and `"—"` where there is no price at al
 - A shoddy item whose drawback never actually comes up in play
 
 When your item's price feels wrong but you can't say why, open the PR anyway and flag it — pricing debates in review are how this guide improves.
-
-## Precedents from Merged Items
-
-Concrete anchors from the catalog — price new items against these, not only against the rules above.
-
-**Tier multipliers, applied exactly (Batch 6 is the model):**
-
-| Item | SRD anchor | Tier | Result |
-|---|---|---|---|
-| fine-healers-kit | healer's kit 5 gp | fine ×5 | 25 gp |
-| fine-cartographers-kit | cartographer's tools 15 gp | fine ×5 | 75 gp |
-| masterwork-smiths-tools | smith's tools 20 gp | masterwork ×10 | 200 gp |
-| portable-alchemy-rig | alchemist's supplies 50 gp | fine ×4 | 200 gp |
-
-**The village/city inversion for rural and raw goods (Batches 8–10 apply it consistently):** herbs, foodstuffs, drink, hides, and timber are *cheaper* at the village (willowbark-chew 4 sp village / 5 sp city; fever-tea 6 sp / 8 sp). Manufactured goods run the other way. When unsure which side an item falls on, ask where it's made.
-
-**Masterwork floors:** merged masterwork items price at 20 gp (crowbar), 150 gp (lockbox), and 200 gp (smith's tools). Masterwork on even the humblest base item should not fall below ~20–30 gp — the tier's identity (a maker's mark, held resale) has a minimum cost regardless of the anchor.

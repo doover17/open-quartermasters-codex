@@ -37,21 +37,15 @@ How the Codex sounds, reads, and stays consistent across hundreds of contributor
 - **An NPC refusing to answer is not an unsettling detail.** "She won't say what she's been feeding them," "he changes the subject," "she'll only discuss it drunk" — these withhold the image instead of delivering it. End on the thing the DM can describe.
 - **Don't do the DM's arithmetic.** If the hook names the target, solves its own puzzle, or explains the anomaly it just raised, cut the last sentence. Twelve missing vials and a year of patience is the hook; the DM finds the door.
 - Hooks are prompts, not plots. No stat blocks, no required outcomes, no multi-paragraph scenarios.
-- **An NPC refusing to answer is not an unsettling detail.** "She won't say," "he changes the subject," and "she'll only discuss it drunk" are the *absence* of a detail. End on the thing the DM can describe.
-- **Over-used hook shapes — a batch may use each at most once, and check merged items in the same subcategory before reaching for any of them:**
-  - the seller/maker keeps a secret record of buyers
-  - the supplier can't be found or won't explain
-  - a strange customer buys unusual quantities
-  - the maker won't say what's in it / where it comes from
-  - an unexplained extra unit inside a kit
 
 ### Over-used hook shapes
 
-These structures work, which is why they recur — and they now recur too much. **Use each at most once per batch**, and if your batch is already carrying two of them, reach for something else entirely.
+These structures work, which is why they recur — and they now recur too much. **Use each at most once per batch**, check merged items in the same subcategory before reaching for any of them, and if your batch is already carrying two, reach for something else entirely.
 
 - **The seller's secret record** — the maker or merchant keeps a ledger, a customer book, a wax impression, or a shelf of lasts, and knows more about buyers than they let on. Heavily over-used; treat as spent unless your version does something the merged examples don't.
 - **The unfindable supplier** — the shop no one can locate, the resin bought after dark, the source nobody can recall.
 - **The strange customer** — someone buying or consuming unusual quantities of the item.
+- **The maker won't say** — what's in it, where it comes from, who it was for. This one is also a withheld ending; see the rule above.
 - **The unexplained extra unit** — a sixth patch, a sixth square, an unlabeled vial that came free with the kit.
 
 Structures the Codex has *not* worn out, for when you need one: an object found where it can't have got to, a previous owner identified by a trace they left, a local custom nobody will explain the origin of, a mark or code that outlived the institution that used it, a track heading the wrong way.
@@ -69,7 +63,7 @@ Structures the Codex has *not* worn out, for when you need one: an object found 
 - **Situational, never raw power** for mundane and quality-tier items: no flat bonuses to attack or damage, no AC increases, nothing that competes with magic items. Reliability, resistance to failure, and edge-case utility are the design space.
 - **Shoddy = drawback with a discount. Fine = one situational benefit. Masterwork = Fine's benefit made reliable, plus identity (a maker's mark, held resale value).**
 - If a rule needs a DC, use the system's standard easy/medium DCs (5e: 10/15; PF2e: level-appropriate simple DCs). Don't invent novel subsystems inside a single item — propose those as modules instead. Obligation economies, faction accounting, and anything that implies ongoing bookkeeping belong in At the Table as fiction, not in the mechanics block.
-- **Batch integrity covers mechanics, not only hooks.** No more than two items in a batch should resolve to the same mechanical shape — a bonus to the same check, the same duration, the same resource. Vary the payload, not only the flavor: a duration, a consumable resource, a thing that works on someone else's roll, a thing you can lose.
+- **Batch integrity covers mechanics, not only hooks** — see the Batch Integrity section below for the rule.
 - Can't write one of the two system blocks? Fill in what you can and mark the other `TODO:` — conversion help is a valued contribution type.
 
 ## Formatting Rules
@@ -96,7 +90,7 @@ When you write several items at once — a full backlog batch, or any group that
 Check all three before submitting:
 
 1. **Hook structure.** No two hooks in a batch share a structure. See the over-used shapes above; each may appear at most once.
-2. **Mechanical shape.** No more than two items in a batch resolve to the same mechanical payload — a bonus to the same check, the same duration, the same resource, the same trigger. A batch of ten social items should not be ten bonuses to Persuasion; vary what the mechanic *is*, not only what it's flavored as. A player who buys three items from your batch should not own one item three times.
+2. **Mechanical shape.** No more than two items in a batch resolve to the same mechanical payload — a bonus to the same check, the same duration, the same resource, the same trigger. A batch of ten social items should not be ten bonuses to Persuasion; vary what the mechanic *is*, not only what it's flavored as: a duration, a consumable resource, a thing that works on someone else's roll, a thing you can lose. A player who buys three items from your batch should not own one item three times.
 3. **Description openings.** Vary the sense and sentence rhythm you open on. Read your first lines in sequence; if they sound like one narrator with one move, rewrite half of them.
 4. **Sensory registers** (for waves whose items carry quirks). Every quirk must be distinct, and no more than two per batch may sit in the same register — smell, taste, sound, texture, temperature, weight, sight, motion, orientation. Note that "every quirk in a wave gets its own register" is not achievable past about nine items; the workable rule is distinctness everywhere and no clustering within a batch. Spread the registers across the wave as far as the count allows, and don't spend two batches in a row on the same one.
 
