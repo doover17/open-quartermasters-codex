@@ -10,9 +10,9 @@ availability: common
 sold_by: [vintner, tavern, caravan-trader]
 systems:
   dnd5e:
-    mechanics: "A flask holds four measures. For 1 hour after drinking a measure, a creature has advantage on saving throws against being frightened and disadvantage on Wisdom (Perception) checks. A second measure within that hour extends both to 4 hours and adds disadvantage on Dexterity checks. A third leaves the creature poisoned until it finishes a long rest."
+    mechanics: "A flask holds four measures. For 1 hour after drinking a measure, a creature has advantage on saving throws against being frightened and disadvantage on Wisdom (Perception) checks. A second measure within that hour resets both for a further 1 hour and adds disadvantage on Dexterity checks for that hour. A third leaves the creature poisoned for 1 hour once the other effects end."
   pf2e:
-    mechanics: "A flask holds four measures. For 1 hour after drinking a measure, a creature gains a +1 circumstance bonus to saves against fear and takes a -1 circumstance penalty to Perception. A second measure within that hour extends both to 4 hours and adds a -1 circumstance penalty to Reflex saves. A third leaves the drinker sickened 2 until their next daily preparations."
+    mechanics: "A flask holds four measures. For 1 hour after drinking a measure, a creature gains a +1 circumstance bonus to saves against fear and takes a -1 circumstance penalty to Perception. A second measure within that hour resets both until the end of your next 10-minute activity and adds a -1 circumstance penalty to Reflex saves. A third leaves the drinker sickened 2, which they can attempt to recover from as normal."
 tags: [drink, morale, social, cost]
 contributors: [codex-core]
 license: CC-BY-4.0

@@ -12,7 +12,7 @@ systems:
   dnd5e:
     mechanics: "One biscuit counts as part of a day's food. A creature that eats one during a short rest and regains hit points from spending Hit Dice regains 1 additional hit point — comfort, not medicine."
   pf2e:
-    mechanics: "One biscuit counts as part of a day's rations. A creature that eats one while being Treated for Wounds recovers 1 additional Hit Point from that treatment — comfort, not medicine."
+    mechanics: "One biscuit counts as part of a day's rations. A healer gains a +1 item bonus to the Medicine check to Treat Wounds on a patient who eats a biscuit during the treatment — comfort, not medicine."
 tags: [provisions, comfort, morale, cheap]
 contributors: [codex-core]
 license: CC-BY-4.0

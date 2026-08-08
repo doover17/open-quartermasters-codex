@@ -29,4 +29,4 @@ A dense brick of sawdust, tallow, and pine resin, pressed hard enough to ring wh
 
 ## Hooks
 
-The best-pressed logs come out of one chandlery, and since midwinter they have burned with a thread of incense running through the smoke — the resin blend used at funerals and at nothing else. Her recipe hasn't changed. Her sweepings come from the same three shops they always have.
+Since midwinter, the best-pressed logs have burned with a thread of incense running through the smoke — the resin blend used at funerals and at nothing else. The chandler's recipe hasn't changed and her sweepings come from the same three shops they always have. The smell is getting stronger.

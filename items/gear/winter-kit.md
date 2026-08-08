@@ -13,7 +13,7 @@ systems:
   dnd5e:
     mechanics: "A bundled set: fur-lined coat and hood, mittens over wool liners, felted boot socks, and a wax-treated scarf. While the full kit is worn, you have advantage on saving throws against exhaustion caused by extreme cold weather. Fine manipulation with the mittens on requires a free hand or removing one (an object interaction)."
   pf2e:
-    mechanics: "Bundled cold-weather clothing: coat, hood, mittens, liners, and felt socks. While the full kit is worn, you're protected against severe environmental cold as if properly outfitted, and you gain a +1 circumstance bonus to Fortitude saves against extreme cold. Mittened hands can't perform fine Interact tasks without pulling one off."
+    mechanics: "Bundled cold-weather clothing: coat, hood, mittens, liners, and felt socks. While the full kit is worn, you're protected against severe environmental cold as if properly outfitted, and you gain a +2 circumstance bonus to Fortitude saves against extreme cold. Mittened hands can't perform fine Interact tasks without pulling one off."
 tags: [clothing, survival, cold, travel, bundle]
 contributors: [codex-core]
 license: CC-BY-4.0

@@ -10,9 +10,9 @@ availability: common
 sold_by: [herbalist, smokehouse, general-store]
 systems:
   dnd5e:
-    mechanics: "A pouch holds about twenty bowls. Sharing a pipe takes ten unhurried minutes and is its own excuse to be somewhere: while two or more creatures share one, onlookers read them as idle rather than waiting, watching, or listening, and no check is needed to justify their presence. The smoke stays in wool and hair for a day, and anyone who knows the blend can place where you've been."
+    mechanics: "A pouch holds about twenty bowls. What the pipe buys is time: a creature who accepts and shares one gives you ten unhurried minutes of its attention and doesn't leave, break off, or raise the matter it was going to raise until the bowl is out. It grants no bonus to any check — what you do with the ten minutes is yours. The smoke stays in wool and hair for a day, and anyone who knows the blend can place where you've been."
   pf2e:
-    mechanics: "A pouch holds about twenty bowls. Sharing a pipe takes ten unhurried minutes and serves as its own pretext: while sharing, you and your companions need attempt no checks to explain loitering or waiting in a public place. The smoke clings to clothing and hair for a day, and a creature familiar with the blend can identify where it was grown."
+    mechanics: "A pouch holds about twenty bowls. The pipe buys time rather than a bonus: a creature who accepts and shares one grants you ten unhurried minutes of its attention and won't depart or press its own business until the bowl is finished. No check is granted or improved. The smoke clings to clothing and hair for a day, and a creature familiar with the blend can identify where it was grown."
 tags: [social, ritual, comfort, leaf]
 contributors: [codex-core]
 license: CC-BY-4.0
