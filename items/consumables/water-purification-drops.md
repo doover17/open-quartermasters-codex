@@ -29,4 +29,4 @@ A finger-length glass vial of amber liquid that reeks of vinegar and crushed jun
 
 ## Hooks
 
-A downriver village now orders the drops by the crate — every household, every week, no explanation. The alchemist who fills the order has stopped drinking from his own well.
+A downriver village has begun ordering the drops by the crate — every household, every week, more than any well could foul and more than all of them together could drink. They aren't drinking it. They carry it upstream at dusk, all of them at once, and pour it into the river.

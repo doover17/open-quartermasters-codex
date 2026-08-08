@@ -29,4 +29,4 @@ A dried gourd of amber sap that smells of pine and spoiled honey, heavy and slow
 
 ## Hooks
 
-Every gourd sold this season grips harder than last year's stock, and the herbalist who taps the trees will not say what she has been feeding them.
+Every gourd sold this season grips harder than last year's stock. Walk out to the grove she taps and the ground beneath each tree is swept bare and packed smooth, in a circle exactly as wide as the branches reach, with nothing fallen anywhere inside it.

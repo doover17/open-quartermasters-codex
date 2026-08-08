@@ -12,9 +12,9 @@ How the Codex sounds, reads, and stays consistent across hundreds of contributor
 
 - **2–4 sentences.** If you need five, cut the weakest.
 - **Lead with the senses.** Weight, smell, sound, texture, and temperature before appearance. "It smells of honey and lamp smoke" does more than "it is a well-made case."
+- **Vary which sense leads.** "Lead with the senses" is not "open on smell." Weight, sound, temperature, and texture are equally valid first beats, and a batch whose descriptions all open the same way reads as one voice no matter how good each sentence is. If you're writing several items at once, check your opening lines side by side before you submit.
 - **One detail that implies a history.** Scratches, brands, repairs, regional variation. Objects are biographies.
-  - A tally of past uses (scratch marks, notches, burned counts) is one valid history-detail among many — not the default. Alternatives: a repair by a different hand, a regional variation, a modification the current owner didn't make, a part that's newer than the rest.
-- **Vary your openings across a batch.** "Lead with the senses" does not mean "open on smell." Weight, sound, temperature, texture, and material are equally valid leads. A batch where every description opens the same way reads as one narrator with one move — a batch-level failure even when every sentence passes.
+- **Vary the history-detail too.** A scratched or burned tally of past uses is one valid answer and currently an over-used one. Reach instead for a repair made by a different hand, a regional variation, a modification the current owner didn't make, or a part replaced with something that doesn't match.
 - **No stats in prose.** Numbers live in the YAML `mechanics` fields. The description of a fine bedroll never says "advantage."
 
 ### Good vs. flat
@@ -34,6 +34,8 @@ How the Codex sounds, reads, and stays consistent across hundreds of contributor
 - **At least one per item; one great hook beats three vague ones.**
 - A hook should **raise a question or point at a person**: someone who made it, wants it, fears it, or is lying about it.
 - **End on the unsettling detail**, not the explanation. "The chalk dust at each mark is mixed with grave soil." Full stop. The DM finishes the story.
+- **An NPC refusing to answer is not an unsettling detail.** "She won't say what she's been feeding them," "he changes the subject," "she'll only discuss it drunk" — these withhold the image instead of delivering it. End on the thing the DM can describe.
+- **Don't do the DM's arithmetic.** If the hook names the target, solves its own puzzle, or explains the anomaly it just raised, cut the last sentence. Twelve missing vials and a year of patience is the hook; the DM finds the door.
 - Hooks are prompts, not plots. No stat blocks, no required outcomes, no multi-paragraph scenarios.
 - **An NPC refusing to answer is not an unsettling detail.** "She won't say," "he changes the subject," and "she'll only discuss it drunk" are the *absence* of a detail. End on the thing the DM can describe.
 - **Over-used hook shapes — a batch may use each at most once, and check merged items in the same subcategory before reaching for any of them:**
@@ -42,6 +44,17 @@ How the Codex sounds, reads, and stays consistent across hundreds of contributor
   - a strange customer buys unusual quantities
   - the maker won't say what's in it / where it comes from
   - an unexplained extra unit inside a kit
+
+### Over-used hook shapes
+
+These structures work, which is why they recur — and they now recur too much. **Use each at most once per batch**, and if your batch is already carrying two of them, reach for something else entirely.
+
+- **The seller's secret record** — the maker or merchant keeps a ledger, a customer book, a wax impression, or a shelf of lasts, and knows more about buyers than they let on. Heavily over-used; treat as spent unless your version does something the merged examples don't.
+- **The unfindable supplier** — the shop no one can locate, the resin bought after dark, the source nobody can recall.
+- **The strange customer** — someone buying or consuming unusual quantities of the item.
+- **The unexplained extra unit** — a sixth patch, a sixth square, an unlabeled vial that came free with the kit.
+
+Structures the Codex has *not* worn out, for when you need one: an object found where it can't have got to, a previous owner identified by a trace they left, a local custom nobody will explain the origin of, a mark or code that outlived the institution that used it, a track heading the wrong way.
 
 ## Setting Neutrality
 
@@ -74,6 +87,18 @@ How the Codex sounds, reads, and stays consistent across hundreds of contributor
 - "This item can be used to..." — show the use instead.
 - "The DM may decide..." — the DM always may; saying so wastes the sentence.
 - Real-world brand names, units the systems don't use (no meters, no kilograms).
+
+## Batch Integrity
+
+When you write several items at once — a full backlog batch, or any group that will be read together — the group is reviewed as a unit. Items that each pass on their own can still fail collectively, and that failure is the most common reason a batch is returned.
+
+Check all three before submitting:
+
+1. **Hook structure.** No two hooks in a batch share a structure. See the over-used shapes above; each may appear at most once.
+2. **Mechanical shape.** No more than two items in a batch resolve to the same mechanical payload — a bonus to the same check, the same duration, the same resource, the same trigger. A batch of ten social items should not be ten bonuses to Persuasion; vary what the mechanic *is*, not only what it's flavored as. A player who buys three items from your batch should not own one item three times.
+3. **Description openings.** Vary the sense and sentence rhythm you open on. Read your first lines in sequence; if they sound like one narrator with one move, rewrite half of them.
+
+The bar for a batch is not "every item passes." It's "these ten items feel like ten items."
 
 ## The Bar
 

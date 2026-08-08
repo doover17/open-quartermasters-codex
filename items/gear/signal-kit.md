@@ -11,9 +11,9 @@ availability: uncommon
 sold_by: [outfitter, chandler, garrison-quartermaster]
 systems:
   dnd5e:
-    mechanics: "A steel signal mirror, two colored flags, a signal whistle, and three squares of smoke-cloth. On a clear day, mirror flashes are readable up to 10 miles and flag code up to 2 miles; a square of smoke-cloth burns for 1 minute, sending up colored smoke visible for 5 miles. Sending a prearranged signal takes 1 minute; free-form messages require sender and receiver to share a code, which takes a day of practice to learn."
+    mechanics: "A steel signal mirror, two colored flags, a signal whistle, and three squares of smoke-cloth. In clear conditions, mirror flashes read at 10 miles, flag code at 2 miles, and a burning square of smoke-cloth at 5 miles (it burns 1 minute). Sending a prearranged signal takes 1 minute."
   pf2e:
-    mechanics: "Steel mirror, paired flags, signal whistle, and three squares of smoke-cloth. Mirror flashes carry 10 miles and flag code 2 miles in clear conditions; burning a square of smoke-cloth (1 Interact action to light) produces colored smoke visible for 5 miles for 1 minute. Prearranged signals take 1 minute to send; open messages require a shared code, learned with a day of practice."
+    mechanics: "Steel mirror, paired flags, signal whistle, and three squares of smoke-cloth. In clear conditions, mirror flashes read at 10 miles, flag code at 2 miles, and a burning square of smoke-cloth at 5 miles (1 Interact action to light, 1 minute of colored smoke). Sending a prearranged signal takes 1 minute."
 tags: [camping, travel, communication, signaling]
 contributors: [codex-core]
 license: CC-BY-4.0
@@ -27,6 +27,7 @@ A flat tin case that rattles faintly with the whistle inside, its mirror polishe
 
 - Splitting the party stops being a mistake and becomes a plan: the scouts crest the ridge, and everyone at the table watches for the flash.
 - Smoke on the horizon is a question the players ask themselves — ours, theirs, or someone in trouble who saw our column first?
+- Anything beyond the agreed signals needs a code both ends have learned, and learning one is its own scene: who teaches it, who writes it down, and who kept a copy.
 
 ## Hooks
 

@@ -11,7 +11,7 @@ availability: common
 sold_by: [huntsman, carpenter, drover]
 systems:
   dnd5e:
-    mechanics: "Straps, lashings, and a webbed bed that rig two poles (included, or cut fresh in 10 minutes) into a drag-sled. Assembly takes 10 minutes. A creature dragging the travois moves at half speed and treats the load as dragged weight (up to twice its normal drag capacity) in cargo — or one Medium creature. A stabilized or unconscious creature can be moved on it without further harm from jostling."
+    mechanics: "Straps, lashings, and a webbed bed that rig two poles (included, or cut fresh in 10 minutes) into a drag-sled. Assembly takes 10 minutes. A creature dragging the travois moves at half speed and can haul up to 300 lb. of cargo on it, or one Medium creature. A stabilized or unconscious creature can be moved on it without further harm from jostling."
   pf2e:
     mechanics: "Rigging that turns two poles (included, or cut on-site in 10 minutes) into a drag-sled; assembly takes 10 minutes. While dragging it your Speeds are halved. The bed holds up to 8 Bulk or one Medium creature, and a stabilized dying or unconscious creature can be transported without being harmed by the movement."
 tags: [camping, travel, hauling, rescue]

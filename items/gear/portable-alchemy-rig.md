@@ -30,4 +30,4 @@ Folded shut, it could pass for a courier's chest; open, it blooms into a bench �
 
 ## Hooks
 
-Rigs like this are commissioned, never stocked, and the workshop that builds them keeps a ledger of buyers. The last three entries in that ledger are written in the same hand as the orders they fulfilled — the buyers dictating, the clerk explained, though nobody remembers any of the three speaking.
+A small silver plaque was riveted inside this rig's lid, and someone later worked the name off it with a blade. The rivets stayed. Count them: nine, in two rows — and no workshop in the trade sets a nameplate with more than four.

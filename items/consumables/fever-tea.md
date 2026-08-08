@@ -29,4 +29,4 @@ A paper packet of elderflower, yarrow, and shaved gingerroot that fills the sick
 
 ## Hooks
 
-The hedge-witch swears her recipe hasn't changed in thirty years, but this season's packets smell wrong — sweeter, almost floral — and the people drinking them recover faster than they should.
+The hedge-witch swears her recipe hasn't changed in thirty years, and this season's packets smell wrong — sweeter, almost floral. In three houses along the same lane, a used packet has been folded into the family book with no illness written beside it, and nobody in those houses has been sick.

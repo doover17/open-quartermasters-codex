@@ -10,9 +10,9 @@ availability: common
 sold_by: [spice-merchant, caravan-trader, provisioner]
 systems:
   dnd5e:
-    mechanics: "A full tin seasons about twenty meals. When a pinch is added to a shared camp meal during a long rest, each creature who eats gains advantage on the first Charisma (Persuasion) check it makes against a fellow diner before the rest ends."
+    mechanics: "A full tin seasons about twenty meals. A pinch masks the taste of stores that have turned: a creature will willingly eat a seasoned ration that has gone bad, and has advantage on the saving throw against its spoilage. The spice makes bad food edible, not safe."
   pf2e:
-    mechanics: "A full tin seasons about twenty meals. Creatures who share a seasoned meal during their daily preparations gain a +1 circumstance bonus to Diplomacy checks to Make an Impression on fellow diners until the next time they rest."
+    mechanics: "A full tin seasons about twenty meals. A pinch masks the taste of spoiled stores: a creature will willingly eat seasoned rations that have turned, and gains a +2 circumstance bonus to the Fortitude save against their effects. The spice hides the spoilage; it doesn't undo it."
 tags: [provisions, morale, travel, social]
 contributors: [codex-core]
 license: CC-BY-4.0
@@ -20,14 +20,14 @@ license: CC-BY-4.0
 
 ## Description
 
-The tin opens with a click and a rush of pepper, dried garlic, and something warm underneath — cinnamon or clove, depending on where it was packed. A pinch turns twice-baked biscuit and salt meat into something you'd eat by choice, not necessity. The lid's interior is scratched with tally marks from a previous owner counting either meals or days.
+The tin sits in the palm heavier than its size promises, its lid held by a bayonet catch that opens with two fingers and a quarter turn — a fitting cut for cold hands. A pinch turns twice-baked biscuit and salt meat into something you'd eat by choice, not necessity. Scratched across the inside of the lid is a previous owner's blend, written out in a hand that got smaller as it ran out of room.
 
 ## At the Table
 
 - Twenty days into a wilderness arc, the character who produces this tin becomes the most popular person in camp.
-- Trading pinches of spice with a stranger's cookfire is a border-crossing gesture that opens conversations no coin can.
+- The grim version: the stores turned four days ago, everyone knows it, and the tin is the only reason anyone is still eating. Seasoning bad meat is a decision, and the table will feel it.
 - When the tin runs empty, so does something in the party's mood — a soft clock the DM can hear ticking.
 
 ## Hooks
 
-The spice-merchant blends each tin to order and remembers every recipe she has ever sold. She recognized last week's customer by his blend before he lowered his hood, and she has not slept well since.
+Caravan cooks talk about the ninth pinch: pepper, clove, and one thing nobody has ever placed. It isn't sold. It turns up in tins bought secondhand, always a single pinch of it lying on top of the rest, and no two people who've found one agree on whether it was there when they bought the tin.

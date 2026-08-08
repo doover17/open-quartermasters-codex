@@ -29,4 +29,4 @@ A shallow tin of translucent amber paste that smells of pine tar and beeswax and
 
 ## Hooks
 
-A drowned courier washed ashore with everything ruined except the scroll case at her belt, sealed with a resin no chandler on the coast can identify. The letter inside is addressed to a person who insists, credibly, that she has been dead for forty years.
+A drowned courier washed ashore with everything ruined except the scroll case at her belt, sealed with a resin no chandler on the coast can identify. The letter inside is addressed to a woman by name — and every record in the port agrees that she drowned forty years ago.

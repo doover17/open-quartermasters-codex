@@ -20,7 +20,7 @@ Every item carries up to three prices in its front matter:
 | `scarcity` | Wartime, remote frontier, black market, siege, or "the only one for sale" | ×2–4, contributor's judgment |
 
 - Round to clean coin values. `8 sp`, not `7.5 sp`. Below 1 gp, prefer sp; below 1 sp, cp.
-- Above 1 gp, prefer gp — **except** where a village or scarcity multiplier lands between whole gp values, in which case sp (`12 sp`, `15 sp`) is preferred over rounding away the multiplier.
+- Above 1 gp, prefer gp — **except** where a village or scarcity multiplier lands between whole gp values. There, sp is preferred over rounding the multiplier away: a 1 gp city item at a ×1.2 village markup is `12 sp`, not `1 gp` (which erases the markup) or `2 gp` (which doubles it). `12 sp` and `15 sp` are correct and idiomatic; `13 gp, 7 sp` is not.
 - Omit a price point rather than force one (e.g., illegal goods may have no `village` price).
 
 ## Quality Tier Multipliers
@@ -94,10 +94,49 @@ resale: 4 gp
 availability: uncommon
 ```
 
+## Precedents from Merged Items
+
+Rules get argued; precedents get copied. These are worked examples from items already in the
+Codex — match them rather than re-deriving from first principles.
+
+**Tier multipliers, anchored to SRD tools.** Every one of these lands exactly on its band:
+
+| Item | SRD anchor | Tier | City price |
+|---|---|---|---|
+| `fine-healers-kit` | healer's kit, 5 gp | Fine ×5 | 25 gp |
+| `shoddy-healers-kit` | healer's kit, 5 gp | Shoddy ×0.5 | 2 gp |
+| `fine-cartographers-kit` | cartographer's tools, 15 gp | Fine ×5 | 75 gp |
+| `fine-climbing-kit` | climber's kit, 25 gp | Fine ×4 | 100 gp |
+| `portable-alchemy-rig` | alchemist's supplies, 50 gp | Fine ×4 | 200 gp |
+| `masterwork-smiths-tools` | smith's tools, 20 gp | Masterwork ×10 | 200 gp |
+
+Note the two masterwork entries in the Codex sit at 150–200 gp. **Masterwork is a price
+band as much as a multiplier**: if your masterwork item lands under ~10× and reads as
+cheap beside these, the multiplier is wrong or the item isn't masterwork.
+
+**Village/city inversion, worked correctly.** Manufactured goods cost more in the village;
+rural and raw goods cost less. Both directions appear in merged items and both are correct:
+
+| Direction | Examples | Village | City |
+|---|---|---|---|
+| Manufactured (×1.2–1.5 village) | `fine-backpack` | 8 gp | 6 gp |
+| | `iron-strongbox` | 20 gp | 15 gp |
+| | `travelers-spice-tin` (traded in) | 2 gp | 1 gp |
+| Rural / raw (×0.7–0.9 village) | `willowbark-chew` (gathered) | 4 sp | 5 sp |
+| | `fever-tea` (gathered) | 6 sp | 8 sp |
+| | `hunters-jerky-spiced` (farmed) | 6 sp | 8 sp |
+| | `honeyed-hardtack` (baked locally) | 8 cp | 1 sp |
+
+If your item is grown, gathered, hunted, or baked where it's sold, the village price is the
+lower one. If it was carried in, it's the higher one. Imported goods (`bitter-coffee-brick`)
+are manufactured goods for this purpose no matter what they're made of.
+
 ## Red Flags Reviewers Look For
 
 - A price that contradicts the SRD or an already-merged Codex item
 - Fine/masterwork items whose benefit touches combat math (attack, damage, AC)
+- A mundane item whose benefit duplicates a magic item's — if the effect has a rarity band in the magic table, a quality tier can't sell it for 10 gp. Check the band before you price it.
+- A lower tier outclassing a higher one at its own job: a common-tier bundle that grants automatic success where a merged fine-tier item grants only advantage is a tier-contract failure, whatever it costs.
 - Consumables priced into hoarding territory
 - Resale above 50% without a story reason
 - Precision theater: `13 gp, 7 sp, 4 cp` — round it

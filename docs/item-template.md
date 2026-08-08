@@ -117,8 +117,8 @@ license: CC-BY-4.0
 
 ```yaml
 ---
-id: dagger-plus-one-cinnamon
-name: "+1 Dagger, 'Spicebiter'"
+id: spicebiter-dagger
+name: "Spicebiter, +1 Dagger"
 category: magic
 subcategory: weapon
 rarity: uncommon

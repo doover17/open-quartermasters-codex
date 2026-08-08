@@ -30,4 +30,4 @@ The buckles are mismatched and the leather has the sour, cellar smell of damp th
 
 ## Hooks
 
-Ask the pawnbroker where the kit came from and he'll say an army surplus lot, same as everything else on that shelf. The kits do keep coming in, though, a few each month, always used, always with the same initials scraped off, and no two sets of initials alike.
+The stained bandage roll was wound with the mark turned inward, which is a habit you pick up in a field hospital and nowhere else. The initials on the lid weren't sanded away, they were scraped — with the edge of the salve tin that's still rattling in the case. Whoever did it worked in a hurry, and worked one-handed.

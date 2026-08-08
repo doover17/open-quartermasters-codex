@@ -29,4 +29,4 @@ A wax-paper ball no bigger than a plum, packed so tight it creaks between your f
 
 ## Hooks
 
-Ask any fence who makes the good ones and you get the same answer: a widow who sells only at night, only in singles, and only to people she has watched cross the square twice.
+The good ones come from a widow who sells at night, in singles, and only after she has watched you cross the square twice. She dyes her own the theater crimson and has never sold to anyone in daylight. Every so often a crimson pellet goes off somewhere in the city at noon, and she shutters her windows for the rest of the week.

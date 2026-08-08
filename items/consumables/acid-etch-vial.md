@@ -29,4 +29,4 @@ A brush built into the stopper, a liquid the green of old bottle glass, and a sm
 
 ## Hooks
 
-An engraver's apprentice has been underreporting the shop's tally by one vial a month for a year. The missing twelve would eat through the hinges of exactly one thing in this city: nobody keeps a door that large except the crypt under the counting house.
+An engraver's apprentice has been underreporting the shop's tally by one vial a month, for a year. Never two. Never twice in the same week of the month.

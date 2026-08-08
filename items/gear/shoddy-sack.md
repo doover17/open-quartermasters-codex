@@ -30,4 +30,4 @@ Coarse burlap that sheds fibers on everything it touches, sewn with a single loo
 
 ## Hooks
 
-Grain merchants in the low quarter have started double-bagging without being asked, and none of them will say why. The ragpicker who sews these sacks lost her good thread supplier a month ago — and lost him in a way she'll only discuss drunk.
+The ragpicker sews these from sacking the granaries sell off cheap, and this month's bundle came out of the low quarter's oldest store-house. Every sack in it carries the same brown stain across the bottom seam — the same shape, the same height on all five, as though the whole stack stood a long while in one shallow pool.

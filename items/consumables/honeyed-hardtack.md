@@ -12,7 +12,7 @@ systems:
   dnd5e:
     mechanics: "One biscuit counts as part of a day's food. A creature that eats one during a short rest and regains hit points from spending Hit Dice regains 1 additional hit point — comfort, not medicine."
   pf2e:
-    mechanics: "One biscuit counts as part of a day's rations. A creature that eats one while being Treated for Wounds gains a +1 circumstance bonus to the recipient's recovery only if the treatment succeeds; the biscuit steadies the patient, not the healer."
+    mechanics: "One biscuit counts as part of a day's rations. A creature that eats one while being Treated for Wounds recovers 1 additional Hit Point from that treatment — comfort, not medicine."
 tags: [provisions, comfort, morale, cheap]
 contributors: [codex-core]
 license: CC-BY-4.0
@@ -20,7 +20,7 @@ license: CC-BY-4.0
 
 ## Description
 
-It smells of clover honey and woodsmoke, and it tastes the way a warm kitchen sounds — sweet at the edge, dense and nutty underneath, hard enough to demand patience. Bakers press each round with a flower stamp, and every town's stamp is different; travelers collect the patterns the way sailors collect ports. Children gnaw them for hours, and dwarves who claim to want nothing accept them without comment.
+It has the heft and the give of a roof slate, and it takes a patient jaw or a hot cup to make any progress at all. Worked at long enough, it goes sweet at the edge and dense and nutty underneath, clover honey over woodsmoke. Bakers press each round with a flower stamp, and every town's stamp is different; travelers collect the patterns the way sailors collect ports. Children gnaw them for hours, and dwarves who claim to want nothing accept them without comment.
 
 ## At the Table
 

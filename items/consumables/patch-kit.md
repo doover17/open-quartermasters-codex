@@ -29,4 +29,4 @@ A waxed canvas roll that smells of beeswax and saddle soap, holding two needles,
 
 ## Hooks
 
-One tinker's kits each include a sixth patch of soft gray leather, finer than the rest, free of charge. He can't recall where he buys it. Neither can his supplier.
+This kit has been patched with itself more than once, and the newest mend on the roll isn't canvas. It's a fine pale leather nobody at the outfitter's can name, cut from something considerably larger, and the awl holes along its edge were made from the other side.
