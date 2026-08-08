@@ -30,4 +30,4 @@ Brocade with real metal thread — you feel the weight of it settle on your shou
 
 ## Hooks
 
-Ask the dressmaker why she takes full measurements even for off-the-rack alterations, and she'll say fit is everything. Her measurement ledger records the true build of half the notables in the city — and a lender's collection agents have started identifying disguised debtors with an accuracy no one can account for.
+A replaced button reads to a court tailor the way a mended hoof reads to a farrier: whoever owned this was stripped of it once and got it back. Three suits out of the same estate sale this season carry the same lesser hand's repair, in the same place, second from the top. The family has never reported a robbery, a ransom, or a death.

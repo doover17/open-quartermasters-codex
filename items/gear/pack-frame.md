@@ -4,8 +4,8 @@ name: Pack Frame
 category: gear
 subcategory: containers
 quality: common
-price: {village: 3 gp, city: 2 gp, scarcity: 6 gp}
-resale: 5 sp
+price: {village: 5 gp, city: 4 gp, scarcity: 10 gp}
+resale: 1 gp
 weight: 8 lb.
 availability: common
 sold_by: [outfitter, carpenter, caravan-trader]

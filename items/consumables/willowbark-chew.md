@@ -29,4 +29,4 @@ Finger-length strips of pale inner bark, bitter enough to pucker your whole jaw 
 
 ## Hooks
 
-The ferryman at the crossing buys pouches by the score, far more than one aching back needs. He pays in coin that's always damp.
+Old soldiers argue upland bark against lowland by the aftertaste, and agree on one point: take nothing off the willows below the old ford. Those trees are the largest in the country, and their bark strips away sweet instead of bitter — and one strip of it dulls a pain you had not noticed you were carrying.

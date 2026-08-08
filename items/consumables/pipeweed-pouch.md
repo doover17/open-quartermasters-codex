@@ -10,9 +10,9 @@ availability: common
 sold_by: [herbalist, smokehouse, general-store]
 systems:
   dnd5e:
-    mechanics: "A pouch holds about twenty bowls. Sharing a pipe takes ten unhurried minutes; a creature that shares one with another has advantage on its next Wisdom (Insight) or Charisma (Persuasion) check against that companion, made before the conversation ends."
+    mechanics: "A pouch holds about twenty bowls. Sharing a pipe takes ten unhurried minutes and is its own excuse to be somewhere: while two or more creatures share one, onlookers read them as idle rather than waiting, watching, or listening, and no check is needed to justify their presence. The smoke stays in wool and hair for a day, and anyone who knows the blend can place where you've been."
   pf2e:
-    mechanics: "A pouch holds about twenty bowls. Sharing a pipe takes ten unhurried minutes and grants a +1 circumstance bonus to Sense Motive and Diplomacy checks against the person you shared it with, lasting until the conversation ends."
+    mechanics: "A pouch holds about twenty bowls. Sharing a pipe takes ten unhurried minutes and serves as its own pretext: while sharing, you and your companions need attempt no checks to explain loitering or waiting in a public place. The smoke clings to clothing and hair for a day, and a creature familiar with the blend can identify where it was grown."
 tags: [social, ritual, comfort, leaf]
 contributors: [codex-core]
 license: CC-BY-4.0
@@ -20,7 +20,7 @@ license: CC-BY-4.0
 
 ## Description
 
-The pouch breathes out sweet hay, dried apple, and a resinous note that clings to your fingers after you tie it shut; the smoke tastes rounder than it smells, with a peppery finish old smokers chase across every grower's crop. The ritual matters more than the leaf — the packing, the passing, the silence between draws. Growers mark their harvest with a colored thread through the pouch string, and arguments over which valley's thread is best have outlived the arguers.
+The leaf is cut coarse and packs down under the thumb with a give that tells an old smoker whether it's been kept damp enough; too dry and it burns hot and fast, too wet and it sulks. The ritual matters more than the leaf — the packing, the passing, the silence between draws. Growers mark their harvest with a colored thread through the pouch string, and arguments over which valley's thread is best have outlived the arguers.
 
 ## At the Table
 

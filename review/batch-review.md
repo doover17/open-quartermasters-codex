@@ -1,5 +1,11 @@
 # Batch Review — Batches 3–10 (80 items)
 
+> **Status: fixes applied.** The two guide updates this review proposed were merged first
+> (`docs/style-guide.md`, `docs/pricing-guide.md`, plus the `BACKLOG.md` step 8 pointer), and
+> every fix below has since been applied to the items against those updated guides — including
+> the Batch 9 rebuild. The verdict table records the state of the batches *as reviewed*; it is
+> kept as written so the reasoning stays auditable. Validator: 100 files, 0 errors.
+
 Human-judgment review of the 80 agent-written items in `items/gear/` (Batches 3–6) and
 `items/consumables/` (Batches 7–10). The validator passed all files with zero errors, so
 schema, ids, formats, and structure are out of scope here.

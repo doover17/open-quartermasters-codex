@@ -30,4 +30,4 @@ The chain pours out of its sack link by cold link, each one stamped with a guild
 
 ## Hooks
 
-Surveyors in this region carry a bonded license, because a chain-length of error moves fortunes. The widow selling this kit still has her late husband's license, his field books, and his last, unfinished survey — the one commission he never wrote a client's name against.
+Surveyors in this region carry a bonded license, because a chain-length of error moves fortunes. The widow selling this kit kept her husband's field books, and the last one runs out mid-page: a line of chain measurements that leaves the parcel he was hired to survey and keeps going east, four more pages, across land nobody owns.

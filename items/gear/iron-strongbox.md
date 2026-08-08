@@ -30,4 +30,4 @@ Riveted iron plate with a rolled lip, a hasp thick as your thumb, and carrying h
 
 ## Hooks
 
-The locksmith keeps a wax impression of every key she cuts, filed by buyer's name in a drawer behind the counter. She's never used them. The drawer's lock, though, is cheaper than anything she sells.
+A strongbox came up in the harbor dredge last month, still locked, and the moneylender who had reported one stolen paid to have it opened in front of witnesses. It held no coin, no papers, and no water. It held its own second key, and the key was on the inside.

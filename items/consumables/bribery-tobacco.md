@@ -10,9 +10,9 @@ availability: common
 sold_by: [riverboat-sutler, trading-post, farm-stall]
 systems:
   dnd5e:
-    mechanics: "Offer the twist as a gift before or during a parley with someone who values such comforts — guards, guides, ferrymen, hermits, most anyone far from a market. Expend the twist to gain advantage on one Charisma (Persuasion) check made with that person during the conversation. Refusal of the gift tells you something too."
+    mechanics: "A twist is scored into about twelve thumb-widths, and past the last mile-marker that is the coin of the country: one thumb-width is the going rate for a night's shelter, a ferry crossing, an hour of a guide's time, or one question answered. Cut and offered before you ask, it settles the price with no haggling and no check. Offered afterward, it's a bribe, and everyone present will understand it as one."
   pf2e:
-    mechanics: "Offer the twist as a gift during a social encounter with someone far from comforts. Expend it to gain a +1 circumstance bonus to Diplomacy checks to Make an Impression on or Request something of that person for the rest of the conversation. If they refuse the gift, you learn their attitude is unfriendly or worse."
+    mechanics: "A twist is scored into about twelve thumb-widths, the working currency past the last trading post: one thumb-width covers a night's shelter, a ferry crossing, an hour of a guide's time, or one answered question. Offered before you ask, it sets the price without a check and ends the haggling. Offered afterward, it's a bribe and is understood as one."
 tags: [social, trade-good, frontier, cheap-utility]
 contributors: [codex-core]
 license: CC-BY-4.0

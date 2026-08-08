@@ -30,4 +30,4 @@ Heavier than it looks, because it's two coats sharing one set of seams: scuffed 
 
 ## Hooks
 
-The costumer sews these in pairs from the same bolts — she says cutting two costs no more than one, and she keeps the twin. What she doesn't advertise is who buys the twins. Someone in this city owns the double of the party's coat, and last week a witness swore she saw its owner in two places an hour apart.
+Fold the collar back and the tailor's chalk is still on the inner seam: two numbers, the second one higher than the first. Coats like this are cut two to a bolt and numbered as a pair, so the twin of the party's coat is out there, wearing somebody. Last week a witness swore she saw that same blue broadcloth on both sides of the river within the hour.

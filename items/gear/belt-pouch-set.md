@@ -30,4 +30,4 @@ Three pouches off the same hide, the leather still smelling of the tannery, with
 
 ## Hooks
 
-Every cutpurse in the market quarter knows the two-pouch trick, so the good ones have stopped cutting pouches at all. The best one now works the crowd as a leatherworker's assistant, fitting customers for belts — and taking measurements.
+The flat pouch rides against the skin, which is why the weir-keeper's men search for one before they search for a purse. The body they pulled last week had the flat pouch and nothing else — no coin, no belt, no working pouches at all. The one nobody was meant to find had been moved around to the outside.

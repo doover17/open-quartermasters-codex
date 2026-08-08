@@ -10,9 +10,9 @@ availability: common
 sold_by: [vintner, tavern, caravan-trader]
 systems:
   dnd5e:
-    mechanics: "A flask holds four measures. For 1 hour after drinking a measure, a creature has advantage on saving throws against being frightened and advantage on Charisma checks to carouse or make merry, but disadvantage on Wisdom (Perception) and Dexterity (Sleight of Hand) checks. A second measure within the hour extends the duration and the penalties to the end of the creature's next long rest."
+    mechanics: "A flask holds four measures. For 1 hour after drinking a measure, a creature has advantage on saving throws against being frightened and disadvantage on Wisdom (Perception) checks. A second measure within that hour extends both to 4 hours and adds disadvantage on Dexterity checks. A third leaves the creature poisoned until it finishes a long rest."
   pf2e:
-    mechanics: "A flask holds four measures. For 1 hour after drinking a measure, a creature gains a +1 circumstance bonus to saves against fear and to Diplomacy checks made while socializing, and takes a -1 circumstance penalty to Perception and Thievery checks. A second measure within the hour extends both effects until the creature's next daily preparations."
+    mechanics: "A flask holds four measures. For 1 hour after drinking a measure, a creature gains a +1 circumstance bonus to saves against fear and takes a -1 circumstance penalty to Perception. A second measure within that hour extends both to 4 hours and adds a -1 circumstance penalty to Reflex saves. A third leaves the drinker sickened 2 until their next daily preparations."
 tags: [drink, morale, social, cost]
 contributors: [codex-core]
 license: CC-BY-4.0
@@ -20,7 +20,7 @@ license: CC-BY-4.0
 
 ## Description
 
-Uncorked, it smells of blackberry, tar, and a sharpness that makes your eyes water before the flask reaches your lips. It tastes of dark fruit for one heartbeat and of fire for the next ten, settling into a warmth that spreads from the sternum outward. Vintners in the high valleys fortify their pressings for winters that kill unfortified wine in the barrel, and they seal each flask with a thumbprint in the wax.
+The flask is pewter and sweats cold in the hand, its four measures scored inside the neck so you can feel what's left without looking. It tastes of dark fruit for one heartbeat and of fire for the next ten, settling into a warmth that spreads from the sternum outward. Vintners in the high valleys fortify their pressings for winters that kill unfortified wine in the barrel, and they seal each flask with a thumbprint in the wax.
 
 ## At the Table
 

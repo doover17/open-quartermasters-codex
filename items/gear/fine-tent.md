@@ -30,4 +30,4 @@ Tight-woven sailcloth that goes drum-taut on its poles and stays that way — yo
 
 ## Hooks
 
-The sailmaker who sews these takes payment in coin like anyone else, but insists every buyer tell her where they intend to sleep first. She writes each answer in a ledger, and the ledger's early pages are crossed out in black, name by name.
+One corner grommet has been re-sewn by a finer hand than sewed the rest, in waxed silk thread no chandler on this coast stocks. The work was done from the inside, with the tent pitched and its flap laced shut.
