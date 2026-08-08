@@ -131,6 +131,20 @@ If your item is grown, gathered, hunted, or baked where it's sold, the village p
 lower one. If it was carried in, it's the higher one. Imported goods (`bitter-coffee-brick`)
 are manufactured goods for this purpose no matter what they're made of.
 
+**Magic rarity bands, as actually used.** Named and quirked items sit in the upper half of
+their band, so these are the working centres of gravity rather than the midpoints:
+
+| Rarity | Band | Merged examples | Notes |
+|---|---|---|---|
+| Common | 50–100 gp | `warmstone` 55, `homing-compass` 75, `truesalt-shaker` 100 | Availability `uncommon` or `special-order`; villages don't stock magic |
+| Uncommon | 200–500 gp | `debtors-mace` 350, `spicebiter-dagger` 400, `mask-of-plain-faces` 500 | A `+1` weapon or armor lands 350–500 |
+| Rare | 2,000–10,000 gp | `oathkeeper-band` 5,000, `bloodless-blade` 9,000 | `special-order` and above from here up |
+| Very rare | 20,000–50,000 gp | `the-honest-mirror` 35,000 | `collector`/`auction` only |
+| Legendary | no `price` field | `the-first-lantern` | The validator rejects a legendary that carries one |
+
+Magic items carry `city` and `scarcity` only — a village has no magic market to set a third
+price against. Resale is ~50% of city, and `"—"` where there is no price at all.
+
 ## Red Flags Reviewers Look For
 
 - A price that contradicts the SRD or an already-merged Codex item

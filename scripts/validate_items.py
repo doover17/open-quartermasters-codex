@@ -275,7 +275,9 @@ def check_common(path: Path, fm: dict, body: str, required, sections, seen_ids: 
             warn(f, f"banned phrase: '{phrase}'")
     # withheld-answer endings in the Hooks section (style guide v2 rule)
     check_hook_ending(f, body)
-    for m in CLOSED_IP.finditer(fm.get("name", "") + body):
+    # Scan the whole front matter, not only `name` — settlements, types, tags and stock
+    # comments can all carry closed IP. check_item() scans its whole file for the same reason.
+    for m in CLOSED_IP.finditer(str(fm) + body):
         err(f, f"possible closed IP: '{m.group(0)}'")
 
 
@@ -388,6 +390,12 @@ def main():
     for f, field, iid in refs:
         if iid not in item_ids:
             err(f, f"{field} references '{iid}' — no such merged item id")
+
+    # A shop or loot bundle sharing an id with an item would make every cross-reference to
+    # that id ambiguous, and the separate id namespaces would hide it.
+    for iid, where in other_ids.items():
+        if iid in item_ids:
+            err(where, f"id '{iid}' collides with the item id in {item_ids[iid]}")
 
     total = len(item_files) + len(shop_files) + len(loot_files)
     print(f"({len(item_files)} items, {len(shop_files)} shops, {len(loot_files)} loot bundles; "

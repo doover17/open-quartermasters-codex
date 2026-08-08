@@ -70,6 +70,7 @@ Structures the Codex has *not* worn out, for when you need one: an object found 
 - `id` is permanent once merged (it's the future website URL). Choose carefully.
 - Section headers exactly: `## Description`, `## At the Table`, `## Hooks`.
 - Prices always in the form `4 gp`, `5 sp`, `2 cp` (lowercase, space, no periods). Em dash `"—"` for not-applicable fields, in quotes so YAML parses it.
+- **Prices of 1,000 or more must be quoted** in the inline `price: {…}` form: `price: {city: "6,500 gp", scarcity: "15,000 gp"}`. The thousands separator is a comma, and an unquoted comma inside `{ }` splits the mapping — YAML parses `{city: 6,500 gp}` as the key `city` set to `6` plus a junk key `500 gp`. The validator catches it as `unknown price location`, but the fix is to quote, not to drop the separator.
 - Weights as `7 lb.` — and note conditions where relevant: `"5 lb. (full)"`.
 - Oxford commas, en dashes for ranges (2–4), em dashes for asides.
 
@@ -89,6 +90,7 @@ Check all three before submitting:
 1. **Hook structure.** No two hooks in a batch share a structure. See the over-used shapes above; each may appear at most once.
 2. **Mechanical shape.** No more than two items in a batch resolve to the same mechanical payload — a bonus to the same check, the same duration, the same resource, the same trigger. A batch of ten social items should not be ten bonuses to Persuasion; vary what the mechanic *is*, not only what it's flavored as. A player who buys three items from your batch should not own one item three times.
 3. **Description openings.** Vary the sense and sentence rhythm you open on. Read your first lines in sequence; if they sound like one narrator with one move, rewrite half of them.
+4. **Sensory registers** (for waves whose items carry quirks). Every quirk must be distinct, and no more than two per batch may sit in the same register — smell, taste, sound, texture, temperature, weight, sight, motion, orientation. Note that "every quirk in a wave gets its own register" is not achievable past about nine items; the workable rule is distinctness everywhere and no clustering within a batch. Spread the registers across the wave as far as the count allows, and don't spend two batches in a row on the same one.
 
 The bar for a batch is not "every item passes." It's "these ten items feel like ten items."
 
