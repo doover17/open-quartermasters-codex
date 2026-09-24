@@ -1,0 +1,40 @@
+name: App
+
+on:
+  push:
+    paths: ["app/**", "items/**", "scripts/export_json.py", ".github/workflows/app.yml"]
+  pull_request:
+    paths: ["app/**", "items/**", "scripts/export_json.py", ".github/workflows/app.yml"]
+
+jobs:
+  export:
+    name: JSON export is current
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml
+      - run: python3 scripts/export_json.py --check
+
+  codexkit:
+    name: CodexKit tests
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - run: swift test
+        working-directory: app
+
+  app:
+    name: Build app
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - run: brew install xcodegen
+      - run: xcodegen generate
+        working-directory: app
+      - run: >
+          xcodebuild build -project Codex.xcodeproj -scheme Codex
+          -destination 'generic/platform=macOS' CODE_SIGNING_ALLOWED=NO
+        working-directory: app

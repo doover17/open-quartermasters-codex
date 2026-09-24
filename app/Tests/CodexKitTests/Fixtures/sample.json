@@ -1,0 +1,132 @@
+{
+  "format": 1,
+  "items": [
+    {
+      "at_the_table": [
+        "Ten silent minutes is the whole tension of an infiltration in one object: the guard's round takes eight.",
+        "Buying one is easy; buying three in the same week starts a rumor with the party's description attached."
+      ],
+      "availability": "special-order",
+      "category": "consumable",
+      "contributors": [
+        "codex-core"
+      ],
+      "description": "A brush built into the stopper, a liquid the green of old bottle glass, and a smell like vinegar that lost an argument. Painted onto iron it works without light, heat, or sound — the metal goes first dull, then lacy, then gone. Engravers invented it for lettering; certain customers taught it other trades, which is why honest sellers now scratch a tally of every vial into their ledger door.",
+      "hooks": "An engraver's apprentice has been underreporting the shop's tally by one vial a month, for a year. Never two. Never twice in the same week of the month.",
+      "id": "acid-etch-vial",
+      "license": "CC-BY-4.0",
+      "name": "Acid-Etch Vial",
+      "price": {
+        "city": "4 gp",
+        "scarcity": "12 gp",
+        "village": "6 gp"
+      },
+      "resale": "—",
+      "sold_by": [
+        "alchemist",
+        "engraver",
+        "fence"
+      ],
+      "subcategory": "alchemical",
+      "systems": {
+        "dnd5e": {
+          "mechanics": "As an action, paint the contents onto one metal hinge, bar, lock, or hasp within reach. Over the next 10 minutes the acid silently eats through it: the object is destroyed, or if it is unusually thick or well made, a DC 10 Strength check afterward snaps what remains. The acid is too slow and thin to harm creatures."
+        },
+        "pf2e": {
+          "mechanics": "Held alchemical item, 1 Interact action to apply to one metal hinge, bar, lock, or hasp. After 10 minutes the acid dissolves it without sound; particularly sturdy fittings instead become broken, and a DC 15 Athletics check to Force Open finishes the work. The compound is harmless to creatures."
+        }
+      },
+      "tags": [
+        "acid",
+        "infiltration",
+        "locks",
+        "quiet"
+      ],
+      "weight": "—"
+    },
+    {
+      "at_the_table": [
+        "The night infiltration where the whole party crouches frozen — except the one whose pack didn't clink.",
+        "Reaching back and producing the rope, the potion, or the crowbar *right now*, while everyone else digs."
+      ],
+      "availability": "uncommon",
+      "category": "gear",
+      "contributors": [
+        "codex-core"
+      ],
+      "description": "Oiled leather over a light ash frame, every buckle wrapped in felt and every strap ending in a leather keeper instead of a loose flap. Shake it fully loaded and you hear nothing but your own breathing. Inside, a dozen sewn loops and pockets hold each piece of gear exactly where your hand already knows it is.",
+      "hooks": "The loop-and-pocket layout inside is a leatherworkers' guild pattern, identical in every pack they make — which is why a fence in the city pays double for them. Her burglars train on one pack and can rob the contents of any other blind.",
+      "id": "fine-backpack",
+      "license": "CC-BY-4.0",
+      "name": "Fine Backpack",
+      "price": {
+        "city": "6 gp",
+        "scarcity": "15 gp",
+        "village": "8 gp"
+      },
+      "quality": "fine",
+      "resale": "2 gp",
+      "sold_by": [
+        "outfitter",
+        "leatherworker",
+        "adventurers-guild"
+      ],
+      "subcategory": "containers",
+      "systems": {
+        "dnd5e": {
+          "mechanics": "As a backpack. Stowed gear makes no sound when you move, and you can retrieve any one item from it with your free object interaction without stopping to search, even in darkness."
+        },
+        "pf2e": {
+          "mechanics": "As a backpack. Contents don't rattle or clink (no penalty to Avoid Notice from stowed gear), and retrieving an item from it is a single Interact action rather than two."
+        }
+      },
+      "tags": [
+        "containers",
+        "stealth",
+        "travel",
+        "quality-tier"
+      ],
+      "weight": "5 lb."
+    },
+    {
+      "at_the_table": [
+        "The party cannot turn it off. Every scene requiring darkness, concealment, or a quiet approach now has to route around one member's cargo, and leaving it behind is its own decision.",
+        "Its light does not end, so anything that needs the dark must come at it another way. That reframes a whole campaign's worth of enemies."
+      ],
+      "availability": "special-order",
+      "category": "magic",
+      "contributors": [
+        "codex-core"
+      ],
+      "description": "A crude thing: a clay bowl, a bronze handle riveted on by somebody in a hurry, and a wick of twisted flax that has never shortened. It is older than the technique used to make it. It smells of the first rain falling on hot stone, and it smells of that in dry seasons, in sealed rooms, and underground — a smell people recognize before they have any idea why.",
+      "hooks": "A city grew around where this lantern was set down, and grew in rings, and the oldest ring is the one whose streets all face the same point. It has been out of that city for two hundred years and the city has not gone dark. Whatever is burning in the shrine at the center is burning without a wick, and the keepers change the oil weekly, and the oil is never gone.",
+      "id": "the-first-lantern",
+      "license": "CC-BY-4.0",
+      "name": "The First Lantern",
+      "price": {},
+      "rarity": "legendary",
+      "resale": "—",
+      "sold_by": [
+        "collector"
+      ],
+      "subcategory": "light",
+      "systems": {
+        "dnd5e": {
+          "mechanics": "Requires attunement. Sheds bright light in a 60-foot radius and dim light for 60 feet beyond, and cannot be extinguished, shuttered, dimmed, or hidden by any means while attuned. Its light is not dispelled and does not end; while it burns, magical darkness within its bright light fails."
+        },
+        "pf2e": {
+          "mechanics": "Invested. Sheds bright light in a 60-foot radius and dim light 60 feet beyond, and cannot be extinguished, shuttered, or concealed while invested. Its light can't be dispelled or suppressed, and magical darkness fails within its bright light."
+        }
+      },
+      "tags": [
+        "magic",
+        "light",
+        "legendary",
+        "quirk",
+        "named"
+      ],
+      "weight": "4 lb."
+    }
+  ],
+  "license": "CC-BY-4.0"
+}

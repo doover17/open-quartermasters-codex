@@ -72,6 +72,8 @@ Items in most TTRPGs are underserved: scattered across roll tables, missing pric
 ├── shops/                     ← pre-built merchants
 ├── loot-tables/               ← contextual loot bundles
 ├── modules/                   ← optional rules (quality tiers, wear, haggling)
+├── scripts/                   ← validator + JSON export
+├── app/                       ← SwiftUI app for iPhone, iPad, and Mac (see app/README.md)
 └── LICENSES.md
 ```
 
@@ -82,7 +84,8 @@ Items are stored as individual markdown files with YAML front matter — human-r
 1. **Website** — searchable, filterable database (static site; priority #1 for usability)
 2. **PDF** — print-friendly compiled book per release
 3. **Item cards** — printable card sheets for handing to players
-4. **Data export** — JSON for VTT module makers (Foundry, etc.)
+4. **Data export** — JSON for VTT module makers (Foundry, etc.), built by `scripts/export_json.py`
+5. **App** — a SwiftUI browser for iPhone, iPad, and Mac, shipping that JSON export (`app/`)
 
 ## Contribution Model
 
