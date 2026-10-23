@@ -1,0 +1,237 @@
+{
+  "shapes": [
+    "rect",
+    "round",
+    "cave",
+    "L",
+    "cross",
+    "octagon",
+    "hex",
+    "T",
+    "U",
+    "apse",
+    "ring"
+  ],
+  "floors": [
+    "stone",
+    "dirt",
+    "wood",
+    "water",
+    "marsh",
+    "grass",
+    "sand",
+    "snow",
+    "ice",
+    "metal",
+    "lava",
+    "rubble",
+    "carpet",
+    "void",
+    "crystal",
+    "rock"
+  ],
+  "outside": [
+    "rock",
+    "earth",
+    "marsh",
+    "forest",
+    "grass",
+    "sand",
+    "snow",
+    "water",
+    "lava",
+    "void",
+    "space"
+  ],
+  "linkStyles": [
+    "corridor",
+    "tunnel",
+    "bridge",
+    "stairs",
+    "water",
+    "open"
+  ],
+  "features": [
+    "pillar",
+    "statue",
+    "altar",
+    "stairs",
+    "pool",
+    "rubble",
+    "table",
+    "bed",
+    "chest",
+    "trap",
+    "tree",
+    "boulder",
+    "pit",
+    "throne",
+    "crates",
+    "console",
+    "helm",
+    "fire",
+    "portal",
+    "bones",
+    "cage",
+    "lava",
+    "web",
+    "crystal",
+    "machine",
+    "bookshelf",
+    "barrel",
+    "well",
+    "door"
+  ],
+  "mapTypes": {
+    "dungeon": "Dungeon",
+    "cavern": "Cavern",
+    "building": "Building",
+    "ship": "Ship",
+    "wilderness": "Wilderness",
+    "settlement": "Settlement"
+  },
+  "terrainKinds": {
+    "river": "River",
+    "chasm": "Chasm",
+    "cliff": "Cliff",
+    "lava": "Lava flow",
+    "rubble": "Collapse",
+    "asteroids": "Asteroids"
+  },
+  "terrainOrder": {
+    "fantasy": [
+      "river",
+      "chasm",
+      "cliff",
+      "lava",
+      "rubble",
+      "asteroids"
+    ],
+    "spelljammer": [
+      "asteroids",
+      "chasm",
+      "lava",
+      "river",
+      "cliff",
+      "rubble"
+    ]
+  },
+  "palettes": {
+    "parchment": {
+      "bg": "#efe4c8",
+      "wall": "#2a2018",
+      "ink": "#2a2018",
+      "muted": "#6d5d48",
+      "accent": "#8a2a1f",
+      "grid": "rgba(42,32,24,.16)",
+      "detail": "rgba(42,32,24,.28)",
+      "door": "#7a4b23",
+      "lock": "#b8860b",
+      "floor": {
+        "stone": "#ddd2b6",
+        "dirt": "#ccb58c",
+        "wood": "#c9a173",
+        "water": "#8fb4c6",
+        "marsh": "#9fae7f",
+        "grass": "#adbe86",
+        "sand": "#e3cf9a",
+        "snow": "#f2f2ee",
+        "ice": "#cfe4ea",
+        "metal": "#b9bdbf",
+        "lava": "#d8743a",
+        "rubble": "#c2b497",
+        "carpet": "#a65b4f",
+        "void": "#3c3452",
+        "crystal": "#cbbbe8",
+        "rock": "#8e8371",
+        "earth": "#9c8a6a",
+        "forest": "#7f9a66",
+        "space": "#1d1b2c"
+      }
+    },
+    "ink": {
+      "bg": "#ffffff",
+      "wall": "#111111",
+      "ink": "#111111",
+      "muted": "#555555",
+      "accent": "#111111",
+      "grid": "rgba(0,0,0,.13)",
+      "detail": "rgba(0,0,0,.30)",
+      "door": "#ffffff",
+      "lock": "#111111",
+      "floor": {
+        "stone": "#ffffff",
+        "dirt": "#ffffff",
+        "wood": "#ffffff",
+        "water": "#e9eef1",
+        "marsh": "#f3f5ef",
+        "grass": "#ffffff",
+        "sand": "#ffffff",
+        "snow": "#ffffff",
+        "ice": "#f2f6f8",
+        "metal": "#ffffff",
+        "lava": "#eeeeee",
+        "rubble": "#ffffff",
+        "carpet": "#f2f2f2",
+        "void": "#e6e6e6",
+        "crystal": "#ffffff",
+        "rock": "#ffffff",
+        "earth": "#ffffff",
+        "forest": "#ffffff",
+        "space": "#ffffff"
+      }
+    }
+  },
+  "anchors": {
+    "n": [
+      0.5,
+      0.22
+    ],
+    "s": [
+      0.5,
+      0.78
+    ],
+    "e": [
+      0.8,
+      0.5
+    ],
+    "w": [
+      0.2,
+      0.5
+    ],
+    "ne": [
+      0.8,
+      0.22
+    ],
+    "nw": [
+      0.2,
+      0.22
+    ],
+    "se": [
+      0.8,
+      0.78
+    ],
+    "sw": [
+      0.2,
+      0.78
+    ],
+    "center": [
+      0.5,
+      0.5
+    ]
+  },
+  "chips": {
+    "fantasy": [
+      "Set it on an island in a marsh",
+      "Make the caves wetter",
+      "Add pillars to the big rooms",
+      "Turn the entrance toward the north"
+    ],
+    "spelljammer": [
+      "Dock it on an asteroid",
+      "Add a zero-g shaft between decks",
+      "Make the corridors cramped maintenance tunnels",
+      "Put the helm room at the center"
+    ]
+  }
+}

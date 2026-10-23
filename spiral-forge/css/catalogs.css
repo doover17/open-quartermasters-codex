@@ -1,0 +1,135 @@
+/* Bestiary: search column on the left, the open stat block on the right (sticky on wide screens). */
+.best-view { display: grid; gap: 14px; min-width: 0; }
+.best-grid { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 24px; align-items: start; }
+@media (max-width: 920px) { .best-grid { grid-template-columns: minmax(0, 1fr); } }
+.best-find { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 14px; display: grid; gap: 10px; min-width: 0; }
+.best-find input[type=search], .best-find select { font: inherit; padding: 7px 10px; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); color: var(--ink); min-width: 0; width: 100%; }
+.best-find input[type=search]::placeholder { color: var(--muted); font-style: italic; }
+.best-filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 10px; }
+.best-filters label { display: grid; gap: 2px; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); font-weight: 500; min-width: 0; }
+.best-filters select { font-size: 15px; letter-spacing: 0; text-transform: none; }
+.best-meta { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 12px; font-size: 14px; color: var(--muted); }
+.best-meta b { color: var(--ink); font-variant-numeric: tabular-nums; }
+.best-named { display: grid; gap: 6px; padding-top: 8px; border-top: 1px dashed var(--line); }
+.best-named .chips button { font-size: 13px; }
+.best-list { list-style: none; margin: 0; padding: 0; max-height: 62vh; overflow: auto; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); overscroll-behavior: contain; }
+@media (max-width: 920px) { .best-list { max-height: 46vh; } }
+.best-list li + li { border-top: 1px solid var(--line); }
+.best-list button { width: 100%; border: 0; border-radius: 0; background: transparent; display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 10px; align-items: center; text-align: left; padding: 7px 10px; font-weight: 400; }
+.best-list button:hover { background: var(--panel); }
+.best-list button[aria-current="true"] { background: var(--brass-soft); }
+.best-list .cr { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--brass); text-align: center; font-variant-numeric: tabular-nums; }
+.best-list .nm { display: grid; min-width: 0; line-height: 1.25; }
+.best-list .nm b { font-weight: 700; overflow-wrap: anywhere; }
+.best-list .nm span { font-size: 13px; color: var(--muted); text-transform: capitalize; }
+.best-list .none { padding: 18px 12px; color: var(--muted); font-size: 15px; }
+.best-credit { font-size: 13px; color: var(--muted); margin: 0; }
+.best-credit a { color: var(--accent); }
+
+.best-out { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); display: grid; gap: 10px; min-width: 0; }
+@media (max-width: 920px) { .best-out { position: static; } }
+.best-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+.rolllog { display: grid; gap: 4px; min-height: 0; }
+.rolllog:empty { display: none; }
+.rolllog div { font-size: 14px; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; }
+.rolllog div:not(:first-child) { opacity: .6; }
+.rolllog .tot { font-family: var(--mono); font-weight: 700; font-size: 16px; color: var(--brass); background: var(--brass-soft); border-radius: 4px; padding: 0 7px; font-variant-numeric: tabular-nums; }
+.rolllog .tot.crit { color: var(--accent-ink); background: var(--accent); }
+.rolllog .tot.fumble { color: var(--panel); background: var(--danger); }
+.rolllog .how { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+
+/* The stat block itself, set in the 2024 layout: header, defenses, ability table, details, then trait and action sections. */
+.statblock { background: var(--panel); border: 1px solid var(--line); border-top: 4px solid var(--ring3); border-bottom: 4px solid var(--ring3); border-radius: var(--r); padding: 16px 20px 18px; display: grid; gap: 10px; font-family: var(--prose); font-size: 16px; line-height: 1.45; min-width: 0; max-height: calc(100vh - 140px); overflow: auto; }
+@media (max-width: 920px) { .statblock { max-height: none; } }
+.statblock h3 { margin: 0; font-family: var(--display); font-size: 28px; line-height: 1.05; color: var(--ring3); text-wrap: balance; }
+.statblock .sbsub { margin: 2px 0 0; font-style: italic; color: var(--muted); }
+.sbrule { height: 2px; background: var(--ring3); opacity: .55; border: 0; margin: 0; }
+.sbline { margin: 0; }
+.sbline b { font-family: var(--body); font-weight: 700; color: var(--ring3); }
+.sbpair { display: flex; flex-wrap: wrap; gap: 2px 22px; }
+.sbabil { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; font-family: var(--body); }
+@media (max-width: 460px) { .sbabil { gap: 3px; } .sbabil th, .sbabil td { padding: 2px 1px; } .sbabil tbody td { font-size: 12px; } .sbabil thead th { font-size: 9px; letter-spacing: .04em; } .sbabil tbody th { font-size: 13px; } }
+/* Ability table and stat block entries */
+.sbabil table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+.sbabil th, .sbabil td { padding: 2px 4px; text-align: center; font-size: 14px; }
+.sbabil thead th { font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.sbabil tbody th { text-align: left; font-family: var(--display); font-size: 15px; color: var(--ring3); }
+.sbabil tbody td { font-family: var(--mono); font-size: 13.5px; }
+.sbabil tbody tr { background: var(--bg); }
+.sbabil tbody tr td.sv.prof { color: var(--accent); font-weight: 700; }
+.statblock h4 { margin: 6px 0 0; font-family: var(--display); font-size: 19px; color: var(--ring3); border-bottom: 1px solid var(--ring3); padding-bottom: 2px; }
+.statblock .sbentry { margin: 0; }
+.statblock .sbentry > b { font-style: italic; font-weight: 600; }
+.statblock .sbentry .form { font-size: 13px; color: var(--muted); font-family: var(--body); }
+.statblock .sbintro { margin: 0; font-style: italic; color: var(--muted); }
+.statblock .dice { font: inherit; font-weight: 600; color: var(--brass); background: none; border: 0; border-bottom: 1px dotted var(--brass); border-radius: 0; padding: 0 1px; cursor: pointer; }
+.statblock .dice:hover { background: var(--brass-soft); }
+.best-empty { color: var(--muted); font-family: var(--body); font-size: 16px; display: grid; gap: 8px; justify-items: start; }
+/* Reskin panel and the bar that labels a Claude-made variant */
+.reskin { background: var(--panel); border: 1px solid var(--accent); border-radius: var(--r); padding: 12px 14px; display: grid; gap: 8px; min-width: 0; }
+.reskin .chips button { font-size: 13px; }
+.reskin-opts { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; }
+.reskin-opts select { font: inherit; font-family: var(--mono); font-size: 14px; padding: 4px 6px; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); color: var(--ink); }
+.variant-bar { background: var(--brass-soft); border-radius: var(--r); padding: 10px 12px; display: grid; gap: 6px; min-width: 0; }
+.variant-txt { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-size: 14px; }
+.variant-bar .badge { background: var(--accent); color: var(--accent-ink); }
+.variant-note { margin: 0; font-family: var(--prose); font-size: 15px; max-width: 68ch; }
+.best-list .mine { font-family: var(--body); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; font-weight: 700; color: var(--accent); margin-left: 6px; }
+.best-list .cr.mine-cr { color: var(--accent); }
+.best-book { grid-column: 1 / -1; }
+.best-list .nm .book-tag, .best-list .nm .mine { text-transform: uppercase; }
+.book-tag { font-family: var(--body); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; font-weight: 700; color: var(--brass); margin-left: 6px; }
+.sbsource { margin: 2px 0 0; font-family: var(--body); font-size: 13px; color: var(--muted); }
+.sbsource b { color: var(--brass); font-weight: 700; }
+.ogl { font-size: 12.5px; color: var(--muted); font-family: var(--body); }
+.ogl summary { cursor: pointer; color: var(--accent); font-weight: 500; }
+.ogl p { margin: 6px 0 0; max-width: 72ch; overflow-wrap: anywhere; }
+.ogl[open] { max-height: 50vh; overflow: auto; padding-right: 4px; }
+/* Items: rarity carries the traditional D&D rarity colors, tuned to read on both themes. */
+:root { --rar-common: #6b7275; --rar-uncommon: #2f7d3a; --rar-rare: #2b5ea8; --rar-very-rare: #7b3fa6; --rar-legendary: #b4590f; --rar-artifact: #a32626; --rar-varies: #5d686c; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --rar-common: #b3b9bb; --rar-uncommon: #6cc47a; --rar-rare: #7aa7ec; --rar-very-rare: #c08ee6; --rar-legendary: #f0a35a; --rar-artifact: #ec8080; --rar-varies: #9aa6a5; }
+}
+:root[data-theme="dark"] { --rar-common: #b3b9bb; --rar-uncommon: #6cc47a; --rar-rare: #7aa7ec; --rar-very-rare: #c08ee6; --rar-legendary: #f0a35a; --rar-artifact: #ec8080; --rar-varies: #9aa6a5; }
+[data-r="common"] { --rc: var(--rar-common); }
+[data-r="uncommon"] { --rc: var(--rar-uncommon); }
+[data-r="rare"] { --rc: var(--rar-rare); }
+[data-r="very-rare"] { --rc: var(--rar-very-rare); }
+[data-r="legendary"] { --rc: var(--rar-legendary); }
+[data-r="artifact"] { --rc: var(--rar-artifact); }
+[data-r="varies"] { --rc: var(--rar-varies); }
+#it-kind { justify-self: start; flex-wrap: wrap; }
+.it-list button { grid-template-columns: 84px minmax(0, 1fr); }
+.it-list .rar { font-family: var(--body); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; font-weight: 700; color: var(--rc, var(--muted)); text-align: left; line-height: 1.2; }
+.it-list .rar.gear { color: var(--muted); font-weight: 500; }
+.itemcard { border-top-color: var(--rc, var(--ring3)); border-bottom-color: var(--rc, var(--ring3)); }
+.itemcard h3 { color: var(--rc, var(--ring3)); }
+.itemcard .sbrule { background: var(--rc, var(--ring3)); }
+.itemcard .sbline b { color: var(--rc, var(--ring3)); }
+.itemcard .idesc { display: grid; gap: 8px; }
+.itemcard .idesc > * { margin: 0; max-width: 68ch; }
+.itemcard .idesc h1, .itemcard .idesc h2, .itemcard .idesc h3, .itemcard .idesc h4 { font-family: var(--display); font-size: 18px; color: var(--rc, var(--ring3)); border: 0; margin: 4px 0 0; padding: 0; }
+.itemcard .idesc ul, .itemcard .idesc ol { padding-left: 1.3em; }
+.itemcard .idesc table { border-collapse: collapse; font-family: var(--body); font-size: 14px; display: block; overflow-x: auto; max-width: 100%; }
+.itemcard .idesc th, .itemcard .idesc td { border: 1px solid var(--line); padding: 3px 8px; text-align: left; }
+.itemcard .idesc em { font-style: italic; }
+.itemcard .gearnote { margin: 0; font-style: italic; color: var(--muted); }
+/* Spells: the card uses the setting accent; spell names elsewhere become quiet links into this tab. */
+#sp-kind { justify-self: start; }
+.sp-list button { grid-template-columns: 64px minmax(0, 1fr); }
+.sp-list .lvl { font-family: var(--mono); font-size: 12px; font-weight: 700; color: var(--accent); text-align: center; font-variant-numeric: tabular-nums; }
+.spellcard { border-top-color: var(--accent); border-bottom-color: var(--accent); }
+.spellcard h3 { color: var(--accent); }
+.spellcard .sbrule { background: var(--accent); }
+.spellcard .sbline b { color: var(--accent); }
+.spellcard .idesc { display: grid; gap: 8px; }
+.spellcard .idesc > * { margin: 0; max-width: 68ch; }
+.spellcard .idesc ul, .spellcard .idesc ol { padding-left: 1.3em; }
+.spellcard .idesc table { border-collapse: collapse; font-family: var(--body); font-size: 14px; display: block; overflow-x: auto; max-width: 100%; }
+.spellcard .idesc th, .spellcard .idesc td { border: 1px solid var(--line); padding: 3px 8px; text-align: left; vertical-align: top; }
+.spellcard .sp-up { margin: 0; max-width: 68ch; }
+.spellcard .sp-up b { font-style: italic; }
+.sp-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.sp-tags span { font-family: var(--body); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; font-weight: 700; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 1px 8px; }
+.spell-link { font: inherit; color: var(--accent); background: none; border: 0; border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); border-radius: 0; padding: 0; cursor: pointer; font-weight: inherit; }
+.spell-link:hover { border-bottom-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); }

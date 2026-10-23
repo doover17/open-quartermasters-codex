@@ -1,0 +1,68 @@
+/* Encounters: a difficulty meter over the monster list. The meter's three ticks are the party's Low, Moderate and High budgets. */
+.en-party, .en-gen, .en-add { display: grid; gap: 8px; min-width: 0; }
+.en-gen, .en-add { padding-top: 10px; border-top: 1px dashed var(--line); }
+.en-party-row { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.en-party .note { margin: 0; }
+.en-gen input[type=search], .en-add input[type=search] { font: inherit; padding: 7px 10px; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); color: var(--ink); width: 100%; min-width: 0; }
+.en-pick { max-height: 36vh; }
+.en-pick button { grid-template-columns: 52px minmax(0, 1fr) auto; }
+.en-pick .add { font-family: var(--body); font-size: 13px; font-weight: 700; color: var(--accent); }
+
+.en-card { gap: 12px; border-top-color: var(--ring3); border-bottom-color: var(--ring3); }
+.en-name-lbl { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-family: var(--body); }
+.en-name { font-family: var(--display); font-size: 26px; font-weight: 700; color: var(--ink); background: transparent; border: 0; border-bottom: 1px dashed var(--line); padding: 2px 0 4px; width: 100%; min-width: 0; margin-top: -8px; }
+.en-name:focus { outline: none; border-bottom-color: var(--accent); }
+.en-name::placeholder { color: var(--muted); font-weight: 500; }
+.en-meter { display: grid; gap: 6px; font-family: var(--body); }
+.en-verdict { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; }
+.en-verdict b { font-family: var(--display); font-size: 20px; }
+.en-verdict span { font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.en-verdict.none b { color: var(--muted); }
+.en-verdict.trivial b { color: var(--muted); }
+.en-verdict.low b { color: var(--accent); }
+.en-verdict.moderate b { color: var(--brass); }
+.en-verdict.high b { color: var(--ring3); }
+.en-verdict.over b { color: var(--danger); }
+.en-bar { position: relative; height: 12px; background: var(--bg); border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+.en-fill { position: absolute; inset: 0 auto 0 0; background: var(--muted); border-radius: 999px; transition: width .25s ease; }
+.en-fill.low { background: var(--accent); } .en-fill.moderate { background: var(--brass); } .en-fill.high { background: var(--ring3); } .en-fill.over { background: var(--danger); }
+.en-tick { position: absolute; top: -1px; bottom: -1px; width: 2px; background: var(--ink); opacity: .5; }
+.en-ticks { position: relative; height: 16px; font-size: 11px; color: var(--muted); letter-spacing: .04em; }
+.en-ticks span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+.en-ticks span:last-child { transform: translateX(-100%); }
+.en-warn { margin: 0; font-size: 14px; color: var(--danger); font-family: var(--body); }
+.en-rows { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid var(--line); }
+.en-row { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 4px 14px; align-items: center; padding: 8px 2px; border-bottom: 1px solid var(--line); font-family: var(--body); }
+.en-row .who { display: grid; min-width: 0; }
+.en-row .who button { font: inherit; font-family: var(--display); font-size: 18px; font-weight: 700; color: var(--ring3); background: none; border: 0; padding: 0; text-align: left; cursor: pointer; overflow-wrap: anywhere; }
+.en-row .who button:hover { text-decoration: underline; }
+.en-row .who span { font-size: 13px; color: var(--muted); }
+.en-count { display: inline-flex; align-items: center; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+.en-count button { border: 0; border-radius: 0; padding: 2px 10px; background: transparent; font-weight: 700; }
+.en-count output { min-width: 28px; text-align: center; font-family: var(--mono); font-weight: 700; font-variant-numeric: tabular-nums; }
+.en-sub { display: grid; justify-items: end; gap: 2px; }
+.en-sub b { font-family: var(--mono); font-size: 14px; font-variant-numeric: tabular-nums; }
+.en-sub button { padding: 0 6px; font-size: 12px; border-color: transparent; background: transparent; color: var(--muted); }
+.en-sub button:hover { color: var(--danger); border-color: var(--line); }
+.en-empty { color: var(--muted); font-family: var(--body); font-size: 15px; padding: 14px 2px; }
+.en-card textarea { font-family: var(--prose); font-size: 16px; }
+.en-loot { display: grid; gap: 8px; padding: 10px 12px 12px; background: var(--bg); border: 1px solid var(--line); border-radius: var(--r); min-width: 0; }
+.en-loot-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 12px; }
+.en-loot h4 { margin: 0; border: 0; padding: 0; color: var(--brass); }
+.en-loot-total { font-family: var(--mono); font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.en-loot-stale { margin: 0; font-family: var(--body); font-size: 14px; color: var(--danger); }
+.en-loot-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.en-loot-list li { display: grid; gap: 2px; min-width: 0; }
+.en-loot-list .g { display: flex; flex-wrap: wrap; gap: 2px 10px; align-items: baseline; font-family: var(--body); }
+.en-loot-list .g b { font-weight: 700; }
+.en-loot-list .g .amt { font-family: var(--mono); font-weight: 700; color: var(--brass); font-variant-numeric: tabular-nums; }
+.en-loot-list .how { font-family: var(--mono); font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.en-loot-list .none { font-family: var(--body); font-size: 14px; color: var(--muted); }
+.en-loot-list .carry, .en-loot-hook { font-style: italic; color: var(--muted); margin: 0; }
+.en-loot-hoard { display: grid; gap: 6px; padding-top: 8px; border-top: 1px dashed var(--line); }
+.en-loot-hoard:empty { display: none; }
+.en-loot-hoard .hh { font-family: var(--body); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+.en-loot-hoard p { margin: 0; }
+.en-loot .actions, .en-loot .actions button, .en-loot .tog, .en-loot .status { font-family: var(--body); }
+.en-loot-hoard .how { font-family: var(--mono); font-size: 12px; color: var(--muted); font-weight: 400; }
+.en-loot-hoard p b { font-family: var(--body); }

@@ -1,0 +1,25 @@
+/* Library */
+.library-view { display: grid; gap: 14px; min-width: 0; }
+.lib-bar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; align-items: center; }
+.lib-list { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+.lib-item { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; display: grid; gap: 8px; min-width: 0; }
+.lib-item.current { border-color: var(--accent); }
+.lib-item h3 { margin: 0; font-family: var(--display); font-size: 19px; line-height: 1.2; overflow-wrap: anywhere; }
+.lib-meta { display: flex; flex-wrap: wrap; gap: 6px 10px; font-size: 13px; color: var(--muted); align-items: center; }
+.badge { font-size: 11px; letter-spacing: .06em; text-transform: uppercase; font-weight: 700; padding: 2px 7px; border-radius: 999px; background: var(--brass-soft); color: var(--brass); }
+.badge.loc { background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent); }
+.lib-item .actions { gap: 6px; }
+.lib-item input[type=text] { font: inherit; padding: 5px 8px; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); color: var(--ink); width: 100%; }
+.lib-empty { color: var(--muted); background: var(--panel); border: 1px dashed var(--line); border-radius: var(--r); padding: 20px; }
+button.danger { color: var(--danger); border-color: var(--danger); }
+/* Send to Notion */
+.notion-panel { background: var(--panel); border: 1px solid var(--accent); border-radius: var(--r); padding: 12px 14px; display: grid; gap: 10px; font-size: 15px; }
+.notion-panel .opt { display: flex; gap: 8px; align-items: flex-start; cursor: pointer; }
+.notion-panel .opt input { margin-top: 4px; accent-color: var(--accent); }
+.notion-panel .opt small { display: block; color: var(--muted); font-size: 13px; }
+.notion-panel input[type=search] { font: inherit; padding: 6px 10px; border: 1px solid var(--line); border-radius: var(--r); background: var(--bg); color: var(--ink); width: 100%; }
+.notion-results { display: grid; gap: 4px; max-height: 220px; overflow: auto; }
+.notion-results button { text-align: left; border-radius: var(--r); padding: 6px 10px; }
+.notion-results button[aria-pressed=true] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--panel)); }
+.notion-results small { color: var(--muted); display: block; font-size: 12px; }
+.notion-done a { color: var(--accent); font-weight: 700; }

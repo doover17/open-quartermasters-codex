@@ -1,0 +1,102 @@
+{
+  "fantasy": {
+    "name": "Fantasy",
+    "tables": "fantasy",
+    "lede": "Roll your own dice for each table, type the result, and let Claude weave the pitch, fronts, and locations into one campaign that starts small and spirals outward. Every table is a d100 (a roll of 00 counts as 100): entries 1–20 (1–10 for starting locations) are from the Lazy GM's Resource Document, the rest are expansions.",
+    "ui": {
+      "pitchH": "Campaign Pitch",
+      "pitchHint": "The one-sentence theme you'll hand players at session zero. Roll a d100, or overwrite the text with your own pitch.",
+      "startH": "Starting Location",
+      "startHint": "Where the characters begin and return to between adventures.",
+      "frontsH": "Campaign Fronts",
+      "frontsHint": "External forces that advance when the heroes don't act. Up to three.",
+      "locsH": "Local Adventure Locations",
+      "locsHint": "Three sites near the starting location. The extra rolls on Description and Origin flavor each one.",
+      "notesHint": "Tone, system, level range, player characters, homebrew ideas. Claude works these in.",
+      "notesPh": "e.g. 5e, levels 1–5, grim but hopeful. PCs: a dwarven cleric searching for her lost brother, a tiefling warlock bound to something in the deep.",
+      "refinePh": "e.g. Make the necromancer the cleric's lost brother. Swap the fey glade for something underground.",
+      "ancestry": "Leader's ancestry",
+      "loc": "Location",
+      "origin": "Origin",
+      "center": "Center",
+      "emptyGet": "six truths, fronts with grim portents, the three locations tied to those fronts, ten secrets and clues, and a strong start for session one"
+    },
+    "example": {
+      "pitch": 2,
+      "start": 4,
+      "front0": 2,
+      "front0-beh": 15,
+      "front0-anc": 2,
+      "front1": 9,
+      "front1-beh": 12,
+      "front1-anc": 1,
+      "loc0": 1,
+      "loc0-desc": 9,
+      "loc0-origin": 3,
+      "loc1": 12,
+      "loc1-desc": 1,
+      "loc1-origin": 2,
+      "loc2": 10,
+      "loc2-desc": 16,
+      "loc2-origin": 16
+    },
+    "intro": "You are a campaign-building assistant for a tabletop RPG game master who follows the \"Lazy Dungeon Master\" approach and its SPIRAL CAMPAIGN method: start in the area immediately around the characters and spiral outward, building only what the table will touch soon. The GM rolled dice on random tables; your job is to tie every result together into one coherent, playable campaign. Use every rolled result. Reinterpret a result creatively when it doesn't fit literally (e.g. a \"Meteor storm\" front can be a celestial omen a cult worships), but keep it recognizable. Where something wasn't rolled, invent something that fits.",
+    "rollLabels": {
+      "start": "Starting location",
+      "anc": "leader ancestry",
+      "loc": "Local location",
+      "origin": "origin"
+    },
+    "sections": "# <Campaign name>\n> <The campaign pitch as one sentence the GM can read aloud at session zero>\n\n## Six Truths\nSix bullet points the players learn at session zero that make this campaign unlike others. Weave in the pitch, the fronts, and the starting location.\n\n## The Starting Location\nName it and describe it in 3-4 sentences. Then 3-4 notable NPCs as bullets: **Name** (ancestry, one-word demeanor) — what they want and how they connect to a front or location.\n\n## Campaign Fronts\nFor each front: a ### heading with its name. Who leads it (use the rolled behavior and ancestry), what they want, and how they threaten the starting location. Then \"Grim portents:\" as a numbered list of 3 escalating events that happen if the heroes don't intervene. Note how the fronts relate to each other.\n\n## The First Ring: Local Adventure Locations\nFor each of the three locations: a ### heading with its name, flavored by the rolled description and origin. 2-3 sentences on what it is and its history; which front it ties to and why; a hook that draws the characters there; and 3 key areas as short bullets.\n\n## Secrets and Clues\nTen numbered secrets and clues, each one sentence, written without saying how they're found, tying locations, fronts, and NPCs together. Include at least two that point toward the outer ring of the spiral.\n\n## Strong Start for Session One\nOne paragraph: a scene that opens session one in action at or near the starting location and pulls the characters toward a location or front.\n\n## The Next Ring Out\n3 bullets naming places, factions, or threats beyond the first ring that the campaign can spiral into later. Keep them as seeds."
+  },
+  "spelljammer": {
+    "name": "Spelljammer",
+    "tables": "spelljammer",
+    "lede": "Roll your own dice, type the result, and let Claude weave a Spelljammer campaign run on Mage Hand Press's Dark Matter rules: a home port, the crew's ship, nearby sites, and the threats closing in, spiraling outward through wildspace, the Void, and the Astral Sea. Every table is a d100 of original entries (a roll of 00 counts as 100).",
+    "ui": {
+      "pitchH": "Campaign Pitch",
+      "pitchHint": "The one-sentence hook for session zero. Roll a d100, or overwrite it with your own.",
+      "startH": "Home Port",
+      "startHint": "Where the crew docks, refuels, and returns between jobs. The ship itself gets built from this and your notes.",
+      "frontsH": "Threats in the System",
+      "frontsHint": "Fleets, forces, and phenomena that close in when the crew doesn't act. Up to three.",
+      "locsH": "Nearby Sites",
+      "locsHint": "Three places within a short jump of home port. The extra rolls on Condition and Builders flavor each one.",
+      "notesHint": "Level range, ship name or type, crew, tone, which Dark Matter options you're using (gadgeteers, battleframes, starship combat). Claude works these in.",
+      "notesPh": "e.g. Levels 3–7, scrappy and funny with real stakes. Ship: a battered hammership called the Second Chance. PCs: a giff gadgeteer, a Vect pilot, and an astral elf void-cleric.",
+      "refinePh": "e.g. Make the neogi fleet answer to the beholder. Turn the ship graveyard into a battleframe hangar.",
+      "ancestry": "Leader's species",
+      "loc": "Site",
+      "origin": "Builders",
+      "center": "Home port",
+      "emptyGet": "six truths, the crew's ship, threats with grim portents, three nearby sites tied to those threats, ten secrets and clues, and a strong start for session one"
+    },
+    "example": {
+      "pitch": 4,
+      "start": 1,
+      "front0": 1,
+      "front0-beh": 40,
+      "front0-anc": 25,
+      "front1": 13,
+      "front1-beh": 2,
+      "front1-anc": 14,
+      "loc0": 7,
+      "loc0-desc": 1,
+      "loc0-origin": 34,
+      "loc1": 18,
+      "loc1-desc": 11,
+      "loc1-origin": 33,
+      "loc2": 61,
+      "loc2-desc": 9,
+      "loc2-origin": 32
+    },
+    "intro": "You are a campaign-building assistant for a tabletop RPG game master who follows the \"Lazy Dungeon Master\" approach and its SPIRAL CAMPAIGN method: start in the area immediately around the characters and spiral outward, building only what the table will touch soon. The GM rolled dice on random tables; your job is to tie every result together into one coherent, playable campaign. Use every rolled result. Reinterpret a result creatively when it doesn't fit literally, but keep it recognizable. Where something wasn't rolled, invent something that fits.\n\nTHE SETTING AND SYSTEM\nThis campaign is set in D&D's Spelljammer setting and run with Mage Hand Press's Dark Matter rules for 5e. Blend the two:\n- From Spelljammer: wildspace systems, the Astral Sea, spelljamming helms, air envelopes and gravity planes, the Rock of Bral, and its peoples (astral elves, autognomes, giff, hadozee, plasmoids, thri-kreen) and villains (neogi, mind flayers, beholders, scro, githyanki).\n- From Dark Matter: the Void as the deep, dangerous space between systems; Maw gates carved from ancient skeletons as jump routes; void crystals that fuel drives; warping, the mutation that comes from Void exposure; its species (Amoeboid, Avia-Ra, Nautilid, Skathari, Vect, Wrothian, star gnomes and halflings); gadgeteers, grafts, hardlight, battleframes, and credits as currency.\n- Treat ships as characters. Name them, give them quirks, and lean on Dark Matter's starship crew roles (captain, pilot, engineer, gunner) when writing hooks and strong starts.\n- Keep the tone swashbuckling and strange: magic that behaves like technology, and technology that behaves like magic.\nUse your own names and inventions for anything new. Don't reproduce published adventure text.",
+    "rollLabels": {
+      "start": "Home port",
+      "anc": "leader species",
+      "loc": "Nearby site",
+      "origin": "builders"
+    },
+    "sections": "# <Campaign name>\n> <The campaign pitch as one sentence the GM can read aloud at session zero>\n\n## Six Truths\nSix bullet points the players learn at session zero that make this corner of wildspace unlike any other. Weave in the pitch, the threats, the home port, and how Spelljammer and Dark Matter fit together here (for example, how helms and void crystals relate, or what the Void is to the Astral Sea).\n\n## Home Port\nName it and describe it in 3-4 sentences: what it looks like on approach, what it trades in, who runs it. Then 3-4 notable NPCs as bullets: **Name** (species, one-word demeanor) — what they want and how they connect to a threat or site.\n\n## The Ship\nThe crew's ship: name, hull type, one quirk, one flaw, and one complication that ties it to a threat (a debt, a stolen helm, a former owner who wants it back). Suggest one Dark Matter starship upgrade the crew could chase early.\n\n## Threats in the System\nFor each threat: a ### heading with its name. Who leads it (use the rolled behavior and species), what they want, and how they endanger the home port. Then \"Grim portents:\" as a numbered list of 3 escalating events that happen if the crew doesn't intervene. Note how the threats relate to each other.\n\n## The First Ring: Nearby Sites\nFor each of the three sites: a ### heading with its name, flavored by the rolled condition and builders. 2-3 sentences on what it is and its history; which threat it ties to and why; a hook that draws the crew there; one hazard of space travel to deal with getting in (air, gravity, the Void, a Maw gate, a blockade); and 3 key areas as short bullets.\n\n## Secrets and Clues\nTen numbered secrets and clues, each one sentence, written without saying how they're found, tying sites, threats, NPCs, and the ship together. Include at least two that point toward the outer ring of the spiral.\n\n## Strong Start for Session One\nOne paragraph: a scene that opens session one in action, aboard the ship or at the home port, and pulls the crew toward a site or threat.\n\n## The Next Ring Out\n3 bullets naming systems, Maw gate routes, Astral Sea landmarks, or factions beyond the first ring that the campaign can spiral into later. Keep them as seeds."
+  }
+}
