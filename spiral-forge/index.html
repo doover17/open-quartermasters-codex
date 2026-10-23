@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Spiral Forge</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@500;700&display=swap">
+<!-- Shared styles first, then one sheet per feature; the order matters for the cascade. -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/map.css">
+<link rel="stylesheet" href="css/library.css">
+<link rel="stylesheet" href="css/catalogs.css">
+<link rel="stylesheet" href="css/encounters.css">
+<link rel="stylesheet" href="css/combat.css">
+<link rel="stylesheet" href="css/loot.css">
+<!-- Markdown rendering and sanitizing, used by every page that shows Claude's text. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="banner warn-banner" id="storage-warn" role="alert" hidden>
+    <span><b>Browser storage is full, so your latest changes aren't being saved.</b> Export a backup from the Library tab now, then delete library items you no longer need.</span>
+  </div>
+  <header class="top">
+    <div>
+      <div class="setting-pick">
+        <span class="setting-lbl" id="setting-lbl">Setting</span>
+        <div class="seg" role="group" aria-labelledby="setting-lbl" id="setting-seg"></div>
+      </div>
+      <h1>Spiral Forge</h1>
+      <p class="lede" id="ui-lede"></p>
+    </div>
+    <div class="toolbar">
+      <button id="btn-clear" class="ghost" type="button">Clear all rolls</button>
+      <button id="btn-randomize" class="ghost" type="button" title="Fill every empty slot with a virtual roll">Roll the empty slots</button>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist" aria-label="Forge pages">
+    <div class="tabgroup" role="presentation">
+      <span class="tg-lbl" aria-hidden="true">Spiral campaign</span>
+      <div class="tg-tabs" role="presentation">
+        <button type="button" role="tab" id="tab-campaign" data-view="campaign" aria-controls="view-campaign">Campaign</button>
+        <button type="button" role="tab" id="tab-location" data-view="location" aria-controls="view-location">Location</button>
+      </div>
+    </div>
+    <div class="tabgroup" role="presentation">
+      <span class="tg-lbl" aria-hidden="true">Map detailing</span>
+      <div class="tg-tabs" role="presentation">
+        <button type="button" role="tab" id="tab-layout" data-view="layout" aria-controls="view-layout">Layout</button>
+      </div>
+    </div>
+    <div class="tabgroup" role="presentation">
+      <span class="tg-lbl" aria-hidden="true">Tools</span>
+      <div class="tg-tabs" role="presentation">
+        <button type="button" role="tab" id="tab-bestiary" data-view="bestiary" aria-controls="view-bestiary">Bestiary</button>
+        <button type="button" role="tab" id="tab-encounters" data-view="encounters" aria-controls="view-encounters">Encounters</button>
+        <button type="button" role="tab" id="tab-combat" data-view="combat" aria-controls="view-combat">Combat</button>
+        <button type="button" role="tab" id="tab-spells" data-view="spells" aria-controls="view-spells">Spells</button>
+        <button type="button" role="tab" id="tab-items" data-view="items" aria-controls="view-items">Items</button>
+        <button type="button" role="tab" id="tab-loot" data-view="loot" aria-controls="view-loot">Loot</button>
+        <button type="button" role="tab" id="tab-library" data-view="library" aria-controls="view-library">Library</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="grid" id="view-campaign" role="tabpanel" aria-labelledby="tab-campaign">
+    <!-- ROLL SHEET -->
+    <form class="sheet" id="sheet" autocomplete="off">
+      <section class="step">
+        <h2><span id="ui-pitch-h"></span> <span class="ring">The spine</span></h2>
+        <p class="hint" id="ui-pitch-hint"></p>
+        <div id="slot-pitch"></div>
+      </section>
+
+      <section class="step">
+        <h2><span id="ui-start-h"></span> <span class="ring">Center of the spiral</span></h2>
+        <p class="hint" id="ui-start-hint"></p>
+        <div id="slot-start"></div>
+      </section>
+
+      <section class="step">
+        <h2><span id="ui-fronts-h"></span> <span class="ring">The pressure</span></h2>
+        <div class="row">
+          <p class="hint" style="margin:0" id="ui-fronts-hint"></p>
+          <div class="seg" role="group" aria-label="Number of fronts">
+            <button type="button" data-fronts="1">1</button>
+            <button type="button" data-fronts="2">2</button>
+            <button type="button" data-fronts="3">3</button>
+          </div>
+        </div>
+        <div id="fronts"></div>
+      </section>
+
+      <section class="step">
+        <h2><span id="ui-locs-h"></span> <span class="ring">First ring out</span></h2>
+        <p class="hint" id="ui-locs-hint"></p>
+        <div id="locs"></div>
+      </section>
+
+      <section class="step">
+        <h2>Your Notes <span class="ring">Optional</span></h2>
+        <p class="hint" id="ui-notes-hint"></p>
+        <textarea id="notes" rows="4"></textarea>
+      </section>
+    </form>
+
+    <!-- OUTPUT -->
+    <section class="out" aria-live="polite">
+      <div class="spiral-card">
+        <svg id="spiral" viewBox="0 0 180 180" role="img" aria-label="Spiral map of the campaign"></svg>
+        <div class="legend" id="legend"></div>
+      </div>
+
+      <div class="actions">
+        <button id="btn-weave" class="primary" type="button">Weave the campaign</button>
+        <button id="btn-stop" type="button" hidden>Stop</button>
+        <button id="btn-copy" type="button" hidden>Copy</button>
+        <button id="btn-save" type="button" hidden>Save .md</button>
+        <button id="btn-undo" type="button" class="ghost" hidden title="Bring back the version before the last weave or revision">Undo</button>
+        <button id="btn-clib" type="button" hidden>Save to library</button>
+        <button id="btn-cnotion" type="button" hidden>Send to Notion</button>
+        <span class="status" id="status"></span>
+      </div>
+      <div class="notion-panel" id="cnotion-panel" hidden></div>
+
+      <article class="doc" id="doc"></article>
+
+      <div class="refine" id="refine" hidden>
+        <label for="refine-text"><strong>Change something</strong></label>
+        <textarea id="refine-text" rows="2"></textarea>
+        <div class="row">
+          <span class="note">Claude rewrites the whole campaign with your change.</span>
+          <button id="btn-refine" type="button">Revise</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- LOCATION PAGE: one standalone site at a time -->
+  <div class="grid" id="view-location" role="tabpanel" aria-labelledby="tab-location" hidden>
+    <form class="sheet" id="lsheet" autocomplete="off">
+      <div class="banner" id="llink" hidden>
+        <span>Built from your campaign: <b id="llink-name"></b>. Claude will keep it consistent with the campaign.</span>
+        <button type="button" class="small" id="btn-lunlink">Make it standalone</button>
+      </div>
+      <section class="step">
+        <h2><span id="ui-lplace-h">The Place</span> <span class="ring">What it is</span></h2>
+        <p class="hint" id="ui-lplace-hint"></p>
+        <div id="lslots-place"></div>
+      </section>
+
+      <section class="step">
+        <h2>Who's There Now <span class="ring">Occupants</span></h2>
+        <p class="hint">The group holding it today, and the one in charge. Leave blank and Claude picks something fitting.</p>
+        <div id="lslots-occ"></div>
+      </section>
+
+      <section class="step">
+        <h2>Size <span class="ring">Keyed areas</span></h2>
+        <div class="row">
+          <div class="seg" role="group" aria-label="Location size" id="lsize-seg">
+            <button type="button" data-size="small">Small · 5</button>
+            <button type="button" data-size="medium">Medium · 8</button>
+            <button type="button" data-size="large">Large · 12</button>
+            <button type="button" data-size="huge">Huge · 16</button>
+          </div>
+        </div>
+        <p class="hint" style="margin:0">Small follows the five-room dungeon shape: entrance, puzzle or roleplay, setback, climax, twist.</p>
+      </section>
+
+      <section class="step">
+        <h2>Your Notes <span class="ring">Optional</span></h2>
+        <p class="hint">Party level and size, mood, must-have features, a villain you already know, anything you want kept out.</p>
+        <textarea id="lnotes" rows="4"></textarea>
+      </section>
+    </form>
+
+    <section class="out" aria-live="polite">
+      <div class="map-card">
+        <div class="map-head">
+          <strong id="map-title">Map</strong>
+          <span class="note" id="map-note">Tap an area to jump to it.</span>
+        </div>
+        <div class="map-scroll" id="map-scroll"><svg id="lmap" role="img" aria-label="Location map"></svg></div>
+        <div class="map-legend" id="map-legend" hidden>
+          <span><svg width="26" height="8"><line x1="1" y1="4" x2="25" y2="4" class="lk"/></svg>passage</span>
+          <span><svg width="26" height="10"><line x1="1" y1="5" x2="25" y2="5" class="lk"/><line x1="13" y1="0" x2="13" y2="10" class="lk door"/></svg>door</span>
+          <span><svg width="26" height="10"><line x1="1" y1="5" x2="25" y2="5" class="lk"/><line x1="13" y1="0" x2="13" y2="10" class="lk door"/><circle cx="13" cy="5" r="2.6" class="lock"/></svg>locked</span>
+          <span><svg width="26" height="8"><line x1="1" y1="4" x2="25" y2="4" class="lk secret"/></svg>secret</span>
+          <span><svg width="26" height="10"><line x1="1" y1="3" x2="25" y2="3" class="lk"/><line x1="1" y1="7" x2="25" y2="7" class="lk"/></svg>stairs / lift</span>
+          <span><svg width="26" height="10"><line x1="1" y1="5" x2="21" y2="5" class="lk"/><path d="M19 1 L25 5 L19 9 Z" class="arrow"/></svg>one-way</span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="btn-lbuild" class="primary" type="button">Build the location</button>
+        <button id="btn-lstop" type="button" hidden>Stop</button>
+        <button id="btn-lcopy" type="button" hidden>Copy</button>
+        <button id="btn-lsave" type="button" hidden>Save .md</button>
+        <button id="btn-lsvg" type="button" hidden>Save map</button>
+        <button id="btn-lundo" type="button" class="ghost" hidden title="Bring back the version before the last build or revision">Undo</button>
+        <button id="btn-llib" type="button" hidden>Save to library</button>
+        <button id="btn-lnotion" type="button" hidden>Send to Notion</button>
+        <span class="status" id="lstatus"></span>
+      </div>
+      <div class="notion-panel" id="lnotion-panel" hidden></div>
+
+      <article class="doc" id="ldoc"></article>
+
+      <div class="refine" id="lrefine" hidden>
+        <label for="lrefine-text"><strong>Flesh it out</strong></label>
+        <div class="chips" id="lchips"></div>
+        <textarea id="lrefine-text" rows="2"></textarea>
+        <div class="row">
+          <span class="note">Claude rewrites the location and its map with your change.</span>
+          <button id="btn-lrefine" type="button">Revise</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- LAYOUT PAGE: turns the Location wireframe into a top-down draft map -->
+  <div class="layout-view" id="view-layout" role="tabpanel" aria-labelledby="tab-layout" hidden>
+    <div class="lay-empty" id="lay-empty" hidden>
+      <strong>Build a location first.</strong>
+      <p>The Layout tab drafts a top-down map from the location on the Location tab, using its keyed areas and wireframe.</p>
+      <button type="button" class="primary" id="btn-goto-loc">Go to Location</button>
+    </div>
+
+    <div id="lay-main" hidden>
+      <div class="lay-head">
+        <div>
+          <h2 class="lay-title" id="lay-title">Layout</h2>
+          <p class="hint" id="lay-sub"></p>
+        </div>
+        <div class="actions">
+          <button type="button" class="primary" id="btn-ydraft">Draft with Claude</button>
+          <button type="button" id="btn-yquick" title="Lay out rooms from the wireframe without Claude">Quick draft</button>
+          <button type="button" id="btn-yshuffle" title="Nudge rooms and corridor bends into a new arrangement">Shuffle</button>
+          <button type="button" id="btn-ystop" hidden>Stop</button>
+        </div>
+      </div>
+      <div class="lay-stale" id="lay-stale" hidden>
+        The location has changed since this draft. <button type="button" class="small" id="btn-ystale">Draft it again</button>
+      </div>
+      <span class="status" id="ystatus"></span>
+
+      <div class="lay-opts" id="ytype-row">
+        <label class="tog">Map type <select id="ytype" class="sel"></select></label>
+        <span class="note">Terrain</span>
+        <div class="chips" id="yterrain" role="group" aria-label="Map-wide terrain"></div>
+      </div>
+
+      <div class="lay-opts">
+        <div class="seg" role="group" aria-label="Map style" id="ystyle-seg">
+          <button type="button" data-ystyle="parchment">Parchment</button>
+          <button type="button" data-ystyle="ink">Ink</button>
+        </div>
+        <label class="tog"><input type="checkbox" id="yopt-grid"> Grid</label>
+        <label class="tog"><input type="checkbox" id="yopt-labels"> Names</label>
+        <label class="tog"><input type="checkbox" id="yopt-features"> Features</label>
+        <label class="tog" title="Hide secret doors, traps, room numbers and names"><input type="checkbox" id="yopt-player"> Player version</label>
+        <label class="tog" id="ysplit-wrap" hidden title="Draw each level as its own panel"><input type="checkbox" id="yopt-split"> Split levels</label>
+        <div class="seg" role="group" aria-label="Level" id="ylevel-seg" hidden></div>
+        <div class="seg" role="group" aria-label="Zoom" id="yzoom-seg">
+          <button type="button" data-yzoom="fit">Fit</button>
+          <button type="button" data-yzoom="full">Full size</button>
+        </div>
+      </div>
+
+      <div class="lay-stage" id="lay-stage"><svg id="ymap" role="img" aria-label="Draft map"></svg></div>
+
+      <div class="lay-sel" id="lay-sel" hidden>
+        <strong id="ysel-name"></strong>
+        <div class="actions">
+          <button type="button" class="small" data-yedit="rotate">Rotate</button>
+          <button type="button" class="small" data-yedit="wider">Wider</button>
+          <button type="button" class="small" data-yedit="narrower">Narrower</button>
+          <button type="button" class="small" data-yedit="taller">Taller</button>
+          <button type="button" class="small" data-yedit="shorter">Shorter</button>
+          <button type="button" class="small" data-yedit="lvlup" title="Move this room up a level">Level ▲</button>
+          <button type="button" class="small" data-yedit="lvldown" title="Move this room down a level">Level ▼</button>
+          <button type="button" class="small ghost" data-yedit="reset">Reset room</button>
+        </div>
+      </div>
+      <p class="note">Tap a room to select it, then drag it (or use the arrow keys) to move it; corridors follow. Rotate or resize it from the bar above. Tap empty ground to deselect. Each square is 5 feet.</p>
+
+      <div class="export-box" id="yexport">
+        <div class="row">
+          <strong>Export</strong>
+          <span class="note">Pixels per square:</span>
+          <div class="seg" role="group" aria-label="Pixels per square" id="yppsq-seg">
+            <button type="button" data-yppsq="50">50</button>
+            <button type="button" data-yppsq="70">70</button>
+            <button type="button" data-yppsq="100">100</button>
+            <button type="button" data-yppsq="140">140</button>
+          </div>
+        </div>
+        <p class="note" style="margin:0">Match this to your Inkarnate grid so the export lines up square for square. The tracing layer is just walls, doors and stairs on a transparent background, sized to match the full map.</p>
+        <div class="actions">
+          <button type="button" id="btn-ypng">Save map PNG</button>
+          <button type="button" id="btn-ytrace">Save tracing layer</button>
+          <button type="button" id="btn-ysvg">Save SVG</button>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="ghost" id="btn-yresetall">Reset moves</button>
+        <button type="button" class="ghost" id="btn-yundo" hidden>Undo</button>
+      </div>
+
+      <div class="refine" id="yrefine" hidden>
+        <label for="yrefine-text"><strong>Change the layout</strong></label>
+        <div class="chips" id="ychips"></div>
+        <textarea id="yrefine-text" rows="2" placeholder="e.g. Make the chapel a long nave with pillars. Flood the cellar. Put the whole keep on an island in the marsh."></textarea>
+        <div class="row">
+          <span class="note">Claude redrafts room sizes, terrain, and features. Your room moves are kept.</span>
+          <button type="button" id="btn-yrefine">Revise</button>
+        </div>
+      </div>
+
+      <section class="sheet-card" id="vttcard">
+        <div class="lay-head">
+          <div>
+            <h2 class="lay-title" style="font-size:22px">Final map → VTT</h2>
+            <p class="hint">Attach your finished Inkarnate map. The Forge adds walls, doors, light sources and sight-blocking pillars from this layout and packages it all as one Universal VTT file. Roll20 imports it directly, Foundry with the Universal Battlemap Importer module, and Owlbear Rodeo with the Smoke &amp; Spectre extension.</p>
+          </div>
+          <div class="actions">
+            <button type="button" id="btn-vattach">Attach Inkarnate map</button>
+            <button type="button" class="ghost" id="btn-vremove" hidden>Remove</button>
+            <input type="file" id="vfile" accept="image/png,image/jpeg,image/webp" hidden>
+          </div>
+        </div>
+        <p class="note" id="vinfo" style="margin:0"></p>
+        <div class="lay-opts" id="valign" hidden>
+          <label class="tog">Offset X <input type="number" id="vox" step="0.25" class="num-in"> sq</label>
+          <label class="tog">Offset Y <input type="number" id="voy" step="0.25" class="num-in"> sq</label>
+          <label class="tog">Scale <input type="number" id="vscale" step="0.5" min="25" max="400" class="num-in"> %</label>
+          <button type="button" class="small ghost" id="btn-vfit">Reset fit</button>
+        </div>
+        <div class="lay-stage fit" id="vstage"></div>
+        <div class="lay-opts">
+          <label class="tog"><input type="checkbox" id="vopt-lights"> Lights from fires and braziers</label>
+          <label class="tog"><input type="checkbox" id="vopt-objects"> Pillars and statues block sight</label>
+        </div>
+        <div class="actions">
+          <button type="button" class="primary" id="btn-vexport">Save VTT file</button>
+          <span class="status" id="vstatus"></span>
+        </div>
+        <p class="note" style="margin:0">Saves a .zip with a .dd2vtt inside: unzip it, then import the .dd2vtt. Secret doors come through as closed walls, so players can't see them; switch them to secret doors in your VTT. Multi-level places come out as one .dd2vtt per level: with All levels shown you get every level in the zip; with an attached map, pick its level first. With no map attached, the draft map is used, so you can test the walls now.</p>
+      </section>
+
+      <section class="sheet-card" id="gmsheet">
+        <div class="lay-head">
+          <div>
+            <h2 class="lay-title" style="font-size:22px">One-page GM sheet</h2>
+            <p class="hint">The map with a condensed key, NPCs, secrets, encounters, treasure and hooks, ready to print.</p>
+          </div>
+          <div class="actions">
+            <div class="seg" role="group" aria-label="Paper size" id="paper-seg">
+              <button type="button" data-paper="letter">Letter</button>
+              <button type="button" data-paper="a4">A4</button>
+            </div>
+            <button type="button" id="btn-stighten" title="Have Claude condense the key so it fits on one page">Tighten with Claude</button>
+            <button type="button" id="btn-sauto" class="ghost" hidden>Use full text</button>
+            <button type="button" class="primary" id="btn-spdf">Save PDF</button>
+          </div>
+        </div>
+        <span class="status" id="sstatus"></span>
+        <div class="sheet-preview" id="sheet-preview"></div>
+      </section>
+    </div>
+  </div>
+
+  <!-- LIBRARY PAGE: saved campaigns and locations, plus backup -->
+  <div class="library-view" id="view-library" role="tabpanel" aria-labelledby="tab-library" hidden>
+    <div class="lay-head">
+      <div>
+        <h2 class="lay-title">Library</h2>
+        <p class="hint">Saved in this browser. Export a backup now and then so nothing is lost if browser data gets cleared, or to move your work to another device.</p>
+      </div>
+      <div class="actions">
+        <button type="button" id="btn-backup">Export backup</button>
+        <button type="button" id="btn-restore">Restore backup</button>
+        <input type="file" id="restore-file" accept=".json,application/json" hidden>
+      </div>
+    </div>
+    <span class="status" id="libstatus"></span>
+    <div class="lib-bar">
+      <div class="seg" role="group" aria-label="Show" id="libfilter-seg">
+        <button type="button" data-libfilter="setting">This setting</button>
+        <button type="button" data-libfilter="all">All settings</button>
+      </div>
+      <div class="actions">
+        <button type="button" class="small" id="btn-newcamp">New campaign</button>
+        <button type="button" class="small" id="btn-newloc">New location</button>
+      </div>
+    </div>
+    <div class="lib-list" id="lib-list"></div>
+  </div>
+
+  <!-- BESTIARY PAGE: search the SRD 5.2 (2024 rules) monsters, read their stat blocks, and reskin them with Claude -->
+  <div class="best-view" id="view-bestiary" role="tabpanel" aria-labelledby="tab-bestiary" hidden>
+    <div class="lay-head">
+      <div>
+        <h2 class="lay-title">Bestiary</h2>
+        <p class="hint">Every monster in the 2024 System Reference Document (5.5e rules), plus about 1,550 more from Kobold Press: the Black Flag SRD and Tome of Beasts 1, 2 and 3. Search by name, filter by challenge rating, type, size and book, and tap any attack or damage roll in a stat block to roll it. Reskin any monster with Claude to make your own variant.</p>
+      </div>
+    </div>
+    <div class="best-grid">
+      <div class="best-find">
+        <label for="best-q" class="sub-title">Search monsters</label>
+        <input type="search" id="best-q" placeholder="e.g. ghoul, dragon, bandit" autocomplete="off" spellcheck="false">
+        <div class="best-filters">
+          <label for="best-crmin">CR from <select id="best-crmin"></select></label>
+          <label for="best-crmax">CR to <select id="best-crmax"></select></label>
+          <label for="best-type">Type <select id="best-type"></select></label>
+          <label for="best-size">Size <select id="best-size"></select></label>
+          <label for="best-book" class="best-book">Book <select id="best-book">
+            <option value="">All books</option><option value="srd-2024">SRD 5.2 (2024 rules)</option><option value="kobold">All Kobold Press books</option><option value="bfrd">Black Flag SRD</option><option value="tob1">Tome of Beasts 1 (2023)</option><option value="tob2">Tome of Beasts 2</option><option value="tob3">Tome of Beasts 3</option><option value="home">Spiral Forge homebrew</option>
+          </select></label>
+        </div>
+        <div class="best-meta">
+          <span id="best-count">Loading monsters…</span>
+          <span class="row" style="gap:6px">
+            <div class="seg" role="group" aria-label="Show" id="best-src">
+              <button type="button" data-src="all">All</button>
+              <button type="button" data-src="mine">Yours</button>
+            </div>
+            <div class="seg" role="group" aria-label="Sort by" id="best-sort">
+              <button type="button" data-sort="name">A–Z</button>
+              <button type="button" data-sort="cr">CR</button>
+            </div>
+            <button type="button" class="small ghost" id="best-reset">Reset</button>
+          </span>
+        </div>
+        <div class="best-named" id="best-named" hidden>
+          <span class="sub-title" id="best-named-lbl">Named in your campaign</span>
+          <div class="chips" id="best-named-chips"></div>
+        </div>
+        <ul class="best-list" id="best-list" aria-label="Monsters"></ul>
+        <p class="best-credit">Monster data from the open-source <a href="https://github.com/open5e/open5e-api" target="_blank" rel="noopener">Open5e API</a>. System Reference Document 5.2 by Wizards of the Coast and the <a href="https://koboldpress.com/black-flag-reference-document/" target="_blank" rel="noopener">Black Flag Roleplaying Reference Document v0.2</a> by Open Design LLC d/b/a Kobold Press are licensed <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank" rel="noopener">CC BY 4.0</a>. Monsters from Tome of Beasts 1 (2023 Edition), 2 and 3 by Kobold Press are Open Game Content used under the Open Game License 1.0a below. The Kobold Press books use the older 5e stat block layout; Reskin can convert any of them to 2024 rules. Variants you make with Claude are saved in this browser and in Library backups.</p>
+        <details class="ogl" id="best-ogl"><summary>Open Game License 1.0a and copyright notices</summary>
+          <p><b>Designation of Open Game Content:</b> the monster names, statistics and rules text shown from Tome of Beasts 1 (2023 Edition), Tome of Beasts 2 and Tome of Beasts 3 are Open Game Content. No Product Identity is used.</p>
+          <p>The following text is the property of Wizards of the Coast, Inc. and is Copyright 2000 Wizards of the Coast, Inc (&quot;Wizards&quot;). All Rights Reserved.</p>
+          <p>1. Definitions: (a)&quot;Contributors&quot; means the copyright and/or trademark owners who have contributed Open Game Content; (b)&quot;Derivative Material&quot; means copyrighted material including derivative works and translations (including into other computer languages), potation, modification, correction, addition, extension, upgrade, improvement, compilation, abridgment or other form in which an existing work may be recast, transformed or adapted; (c) &quot;Distribute&quot; means to reproduce, license, rent, lease, sell, broadcast, publicly display, transmit or otherwise distribute; (d)&quot;Open Game Content&quot; means the game mechanic and includes the methods, procedures, processes and routines to the extent such content does not embody the Product Identity and is an enhancement over the prior art and any additional content clearly identified as Open Game Content by the Contributor, and means any work covered by this License, including translations and derivative works under copyright law, but specifically excludes Product Identity. (e) &quot;Product Identity&quot; means product and product line names, logos and identifying marks including trade dress; artifacts; creatures characters; stories, storylines, plots, thematic elements, dialogue, incidents, language, artwork, symbols, designs, depictions, likenesses, formats, poses, concepts, themes and graphic, photographic and other visual or audio representations; names and descriptions of characters, spells, enchantments, personalities, teams, personas, likenesses and special abilities; places, locations, environments, creatures, equipment, magical or supernatural abilities or effects, logos, symbols, or graphic designs; and any other trademark or registered trademark clearly identified as Product identity by the owner of the Product Identity, and which specifically excludes the Open Game Content; (f) &quot;Trademark&quot; means the logos, names, mark, sign, motto, designs that are used by a Contributor to identify itself or its products or the associated products contributed to the Open Game License by the Contributor (g) &quot;Use&quot;, &quot;Used&quot; or &quot;Using&quot; means to use, Distribute, copy, edit, format, modify, translate and otherwise create Derivative Material of Open Game Content. (h) &quot;You&quot; or &quot;Your&quot; means the licensee in terms of this agreement.</p>
+          <p>2. The License: This License applies to any Open Game Content that contains a notice indicating that the Open Game Content may only be Used under and in terms of this License. You must affix such a notice to any Open Game Content that you Use. No terms may be added to or subtracted from this License except as described by the License itself. No other terms or conditions may be applied to any Open Game Content distributed using this License.</p>
+          <p>3. Offer and Acceptance: By Using the Open Game Content You indicate Your acceptance of the terms of this License.</p>
+          <p>4. Grant and Consideration: In consideration for agreeing to use this License, the Contributors grant You a perpetual, worldwide, royalty-free, non-exclusive license with the exact terms of this License to Use, the Open Game Content.</p>
+          <p>5.Representation of Authority to Contribute: If You are contributing original material as Open Game Content, You represent that Your Contributions are Your original creation and/or You have sufficient rights to grant the rights conveyed by this License.</p>
+          <p>6.Notice of License Copyright: You must update the COPYRIGHT NOTICE portion of this License to include the exact text of the COPYRIGHT NOTICE of any Open Game Content You are copying, modifying or distributing, and You must add the title, the copyright date, and the copyright holder&#x27;s name to the COPYRIGHT NOTICE of any original Open Game Content you Distribute.</p>
+          <p>7. Use of Product Identity: You agree not to Use any Product Identity, including as an indication as to compatibility, except as expressly licensed in another, independent Agreement with the owner of each element of that Product Identity. You agree not to indicate compatibility or co-adaptability with any Trademark or Registered Trademark in conjunction with a work containing Open Game Content except as expressly licensed in another, independent Agreement with the owner of such Trademark or Registered Trademark. The use of any Product Identity in Open Game Content does not constitute a challenge to the ownership of that Product Identity. The owner of any Product Identity used in Open Game Content shall retain all rights, title and interest in and to that Product Identity.</p>
+          <p>8. Identification: If you distribute Open Game Content You must clearly indicate which portions of the work that you are distributing are Open Game Content.</p>
+          <p>9. Updating the License: Wizards or its designated Agents may publish updated versions of this License. You may use any authorized version of this License to copy, modify and distribute any Open Game Content originally distributed under any version of this License.</p>
+          <p>10. Copy of this License: You MUST include a copy of this License with every copy of the Open Game Content You Distribute.</p>
+          <p>11. Use of Contributor Credits: You may not market or advertise the Open Game Content using the name of any Contributor unless You have written permission from the Contributor to do so.</p>
+          <p>12. Inability to Comply: If it is impossible for You to comply with any of the terms of this License with respect to some or all of the Open Game Content due to statute, judicial order, or governmental regulation then You may not Use any Open Game Material so affected.</p>
+          <p>13. Termination: This License will terminate automatically if You fail to comply with all terms herein and fail to cure such breach within 30 days of becoming aware of the breach. All sublicenses shall survive the termination of this License.</p>
+          <p>14. Reformation: If any provision of this License is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable.</p>
+          <p>15. COPYRIGHT NOTICE</p>
+          <p>Open Game License v 1.0a Copyright 2000, Wizards of the Coast, LLC.</p>
+          <p>System Reference Document 5.1 Copyright 2016, Wizards of the Coast, Inc.; Authors Mike Mearls, Jeremy Crawford, Chris Perkins, Rodney Thompson, Peter Lee, James Wyatt, Robert J. Schwalb, Bruce R. Cordell, Chris Sims, and Steve Townshend, based on original material by E. Gary Gygax and Dave Arneson.</p>
+          <p>Tome of Beasts 1 (2023 Edition). Copyright 2023, Open Design LLC; Authors Dan Dillon, Chris Harris, Rodrigo Garcia Carmona, and Wolfgang Baur.</p>
+          <p>Tome of Beasts 2. Copyright 2020, Open Design LLC; Authors Wolfgang Baur, Celeste Conowitch, Darrin Drader, James Introcaso, Philip Larwood, Jeff Lee, Kelly Pawlik, Brian Suskind, and Mike Welham.</p>
+          <p>Tome of Beasts 3. Copyright 2022, Open Design LLC; Authors Wolfgang Baur, Celeste Conowitch, Darrin Drader, James Introcaso, Philip Larwood, Jeff Lee, Kelly Pawlik, Brian Suskind, and Mike Welham.</p>
+          <p>END OF LICENSE</p>
+        </details>
+      </div>
+      <div class="best-out" id="best-out">
+        <div class="best-tools" id="best-tools" hidden>
+          <div class="actions">
+            <button type="button" class="small" id="best-hp">Roll HP</button>
+            <button type="button" class="small" id="best-init">Roll initiative</button>
+            <button type="button" class="small primary" id="best-reskin-open" aria-expanded="false" aria-controls="best-reskin">Reskin with Claude</button>
+            <button type="button" class="small" id="best-enc-add">Add to encounter</button>
+          </div>
+          <div class="actions">
+            <button type="button" class="small ghost" id="best-copy">Copy as Markdown</button>
+            <span class="status" id="best-status"></span>
+          </div>
+        </div>
+
+        <div class="reskin" id="best-reskin" hidden>
+          <label for="best-rs-text"><strong id="best-rs-title">Reskin this monster</strong></label>
+          <div class="chips" id="best-rs-chips"></div>
+          <textarea id="best-rs-text" rows="2" placeholder="e.g. A void-touched version that drifts through wildspace and drains warmth from its victims."></textarea>
+          <div class="reskin-opts">
+            <label class="tog" for="best-rs-cr">Target CR <select id="best-rs-cr"></select></label>
+            <label class="tog"><input type="checkbox" id="best-rs-camp"> Flavor it from my campaign</label>
+          </div>
+          <div class="actions">
+            <button type="button" class="primary" id="best-rs-go">Reskin</button>
+            <button type="button" class="ghost" id="best-rs-stop" hidden>Stop</button>
+            <span class="status" id="best-rs-status" role="status"></span>
+          </div>
+          <p class="note" style="margin:0">Claude rebuilds the stat block with 2024 rules math: proficiency bonus, attack bonuses, save DCs and hit points recalculated for the new CR. The Forge then double-checks every damage and HP average against its dice.</p>
+        </div>
+
+        <div class="variant-bar" id="best-variant" hidden>
+          <div class="variant-txt">
+            <span class="badge" id="best-v-badge">Variant</span>
+            <span id="best-v-of"></span>
+          </div>
+          <p class="variant-note" id="best-v-note"></p>
+          <div class="actions">
+            <button type="button" class="small primary" id="best-v-save">Save to my monsters</button>
+            <button type="button" class="small" id="best-v-revise">Revise</button>
+            <button type="button" class="small ghost" id="best-v-orig">Show original</button>
+            <button type="button" class="small ghost" id="best-v-del" hidden>Delete</button>
+            <button type="button" class="small" id="best-v-delok" hidden>Delete for good</button>
+            <button type="button" class="small ghost" id="best-v-delno" hidden>Keep it</button>
+          </div>
+        </div>
+
+        <div class="rolllog" id="best-log" aria-live="polite"></div>
+        <article class="statblock" id="best-block" tabindex="-1">
+          <div class="best-empty">Pick a monster from the list to open its stat block.</div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- ITEMS PAGE: SRD 5.2 (2024 rules) magic items and equipment, plus Claude-made variants -->
+  <div class="best-view" id="view-items" role="tabpanel" aria-labelledby="tab-items" hidden>
+    <div class="lay-head">
+      <div>
+        <h2 class="lay-title">Items</h2>
+        <p class="hint">Magic items and equipment from the 2024 System Reference Document (5.5e rules). Filter by category, rarity and attunement, tap any dice in a description to roll them, and make your own variants with Claude.</p>
+      </div>
+    </div>
+    <div class="best-grid">
+      <div class="best-find">
+        <label for="it-q" class="sub-title">Search items</label>
+        <input type="search" id="it-q" placeholder="e.g. cloak, flame tongue, rope" autocomplete="off" spellcheck="false">
+        <div class="seg" role="group" aria-label="Show" id="it-kind">
+          <button type="button" data-kind="all">All</button>
+          <button type="button" data-kind="magic">Magic</button>
+          <button type="button" data-kind="gear">Equipment</button>
+          <button type="button" data-kind="mine">Yours</button>
+        </div>
+        <div class="best-filters">
+          <label for="it-cat">Category <select id="it-cat"></select></label>
+          <label for="it-rar">Rarity <select id="it-rar"></select></label>
+          <label for="it-att">Attunement <select id="it-att">
+            <option value="">Any</option><option value="yes">Required</option><option value="no">Not required</option>
+          </select></label>
+          <label for="it-sort">Sort <select id="it-sort">
+            <option value="name">A–Z</option><option value="rarity">Rarity</option>
+          </select></label>
+        </div>
+        <div class="best-meta">
+          <span id="it-count">Loading items…</span>
+          <button type="button" class="small ghost" id="it-reset">Reset</button>
+        </div>
+        <div class="best-named" id="it-named" hidden>
+          <span class="sub-title">Named in your campaign</span>
+          <div class="chips" id="it-named-chips"></div>
+        </div>
+        <ul class="best-list it-list" id="it-list" aria-label="Items"></ul>
+        <p class="best-credit">Item data: System Reference Document 5.2 by Wizards of the Coast, licensed <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank" rel="noopener">CC BY 4.0</a>, from the open-source <a href="https://github.com/open5e/open5e-api" target="_blank" rel="noopener">Open5e API</a>. Magic weapons and armor that come in many forms are listed once. Variants you make with Claude are saved in this browser and in Library backups.</p>
+      </div>
+      <div class="best-out" id="it-out">
+        <div class="best-tools" id="it-tools" hidden>
+          <div class="actions">
+            <button type="button" class="small primary" id="it-make-open" aria-expanded="false" aria-controls="it-make">Make a variant with Claude</button>
+          </div>
+          <div class="actions">
+            <button type="button" class="small ghost" id="it-copy">Copy as Markdown</button>
+            <span class="status" id="it-status"></span>
+          </div>
+        </div>
+
+        <div class="reskin" id="it-make" hidden>
+          <label for="it-mk-text"><strong id="it-mk-title">Make a variant</strong></label>
+          <div class="chips" id="it-mk-chips"></div>
+          <textarea id="it-mk-text" rows="2" placeholder="e.g. A version forged from a fallen star that hums near aberrations and can be thrown back to your hand."></textarea>
+          <div class="reskin-opts">
+            <label class="tog" for="it-mk-rar">Rarity <select id="it-mk-rar"></select></label>
+            <label class="tog"><input type="checkbox" id="it-mk-camp"> Flavor it from my campaign</label>
+          </div>
+          <div class="actions">
+            <button type="button" class="primary" id="it-mk-go">Make variant</button>
+            <button type="button" class="ghost" id="it-mk-stop" hidden>Stop</button>
+            <span class="status" id="it-mk-status" role="status"></span>
+          </div>
+          <p class="note" style="margin:0">Claude writes the item to 2024 rules: power matched to rarity, bonuses of +1, +2 or +3 by rarity, and save DCs and spell levels a character of that tier should see.</p>
+        </div>
+
+        <div class="variant-bar" id="it-variant" hidden>
+          <div class="variant-txt">
+            <span class="badge" id="it-v-badge">Variant</span>
+            <span id="it-v-of"></span>
+          </div>
+          <p class="variant-note" id="it-v-note"></p>
+          <div class="actions">
+            <button type="button" class="small primary" id="it-v-save">Save to my items</button>
+            <button type="button" class="small" id="it-v-revise">Revise</button>
+            <button type="button" class="small ghost" id="it-v-orig">Show original</button>
+            <button type="button" class="small ghost" id="it-v-del" hidden>Delete</button>
+            <button type="button" class="small" id="it-v-delok" hidden>Delete for good</button>
+            <button type="button" class="small ghost" id="it-v-delno" hidden>Keep it</button>
+          </div>
+        </div>
+
+        <div class="rolllog" id="it-log" aria-live="polite"></div>
+        <article class="statblock itemcard" id="it-card" tabindex="-1">
+          <div class="best-empty">Pick an item from the list to open it.</div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOOT PAGE: roll tables of treasure built from the 2024 DMG treasure rules and the SRD 5.2 items -->
+  <div class="best-view" id="view-loot" role="tabpanel" aria-labelledby="tab-loot" hidden>
+    <div class="lay-head">
+      <div>
+        <h2 class="lay-title">Loot</h2>
+        <p class="hint">Build a roll table of treasure for a monster, a lair or a whole region. Coins, magic item counts and rarity odds follow the 2024 Dungeon Master's Guide; the items come from the SRD and your own variants.</p>
+      </div>
+    </div>
+    <div class="best-grid">
+      <form class="best-find" id="lt-form" autocomplete="off">
+        <div class="lt-field">
+          <span class="sub-title" id="lt-type-lbl">Treasure</span>
+          <div class="seg" role="group" aria-labelledby="lt-type-lbl" id="lt-type">
+            <button type="button" data-type="hoard">Hoard</button>
+            <button type="button" data-type="individual">Individual</button>
+          </div>
+          <p class="note" id="lt-type-note"></p>
+        </div>
+        <div class="lt-field">
+          <span class="sub-title" id="lt-band-lbl">Challenge rating</span>
+          <div class="seg" role="group" aria-labelledby="lt-band-lbl" id="lt-band">
+            <button type="button" data-band="0">0–4</button>
+            <button type="button" data-band="1">5–10</button>
+            <button type="button" data-band="2">11–16</button>
+            <button type="button" data-band="3">17+</button>
+          </div>
+          <p class="note" id="lt-band-note"></p>
+        </div>
+        <div class="lt-field">
+          <span class="sub-title" id="lt-die-lbl">Table size</span>
+          <div class="seg" role="group" aria-labelledby="lt-die-lbl" id="lt-die">
+            <button type="button" data-die="6">d6</button>
+            <button type="button" data-die="8">d8</button>
+            <button type="button" data-die="10">d10</button>
+            <button type="button" data-die="12">d12</button>
+            <button type="button" data-die="20">d20</button>
+          </div>
+        </div>
+        <fieldset class="lt-field lt-pools" id="lt-pools">
+          <legend class="sub-title">Magic items drawn from</legend>
+          <label class="tog"><input type="checkbox" id="lt-p-arms"> Weapons and armor</label>
+          <label class="tog"><input type="checkbox" id="lt-p-wond"> Wondrous items</label>
+          <label class="tog"><input type="checkbox" id="lt-p-cons"> Potions and scrolls</label>
+          <label class="tog"><input type="checkbox" id="lt-p-impl"> Rings, wands, staffs and rods</label>
+          <label class="tog"><input type="checkbox" id="lt-p-mine"> My item variants</label>
+        </fieldset>
+        <div class="actions">
+          <button type="submit" class="primary" id="lt-go">Generate table</button>
+          <span class="status" id="lt-gen-status"></span>
+        </div>
+
+        <div class="lt-field lt-theme">
+          <label for="lt-theme" class="sub-title">Theme with Claude <span class="lt-opt">optional</span></label>
+          <textarea id="lt-theme" rows="2" placeholder="e.g. The hoard of a drowned temple's crab-priest: barnacled relics, sea-gold and pearls."></textarea>
+          <label class="tog"><input type="checkbox" id="lt-camp"> Flavor it from my campaign</label>
+          <div class="actions">
+            <button type="button" id="lt-theme-go">Theme this table</button>
+            <button type="button" class="ghost" id="lt-theme-stop" hidden>Stop</button>
+            <span class="status" id="lt-theme-status" role="status"></span>
+          </div>
+          <p class="note" style="margin:0">Claude picks items that fit the theme without changing any row's rarities or coin values, describes the treasure, and names the table.</p>
+        </div>
+
+        <div class="lt-saved" id="lt-saved-wrap" hidden>
+          <span class="sub-title">Saved tables</span>
+          <ul class="lt-saved-list" id="lt-saved"></ul>
+        </div>
+      </form>
+
+      <div class="best-out" id="lt-out">
+        <div class="best-tools" id="lt-tools" hidden>
+          <div class="actions">
+            <button type="button" class="small primary" id="lt-roll">Roll d10</button>
+            <button type="button" class="small" id="lt-reroll">Reroll unlocked rows</button>
+          </div>
+          <div class="actions">
+            <button type="button" class="small" id="lt-save">Save table</button>
+            <button type="button" class="small ghost" id="lt-copy">Copy as Markdown</button>
+            <span class="status" id="lt-status"></span>
+          </div>
+        </div>
+        <div class="rolllog" id="lt-log" aria-live="polite"></div>
+        <article class="statblock lt-card" id="lt-card" tabindex="-1">
+          <div class="best-empty">Choose the treasure type and challenge rating, then press Generate table.</div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPELLS PAGE: the SRD 5.2 (2024 rules) spells, plus Claude-made variants -->
+  <div class="best-view" id="view-spells" role="tabpanel" aria-labelledby="tab-spells" hidden>
+    <div class="lay-head">
+      <div>
+        <h2 class="lay-title">Spells</h2>
+        <p class="hint">Every spell in the 2024 System Reference Document (5.5e rules). Filter by level, school and class, tap dice to roll them, and make your own variants with Claude. Spell names in stat blocks and item descriptions link here.</p>
+      </div>
+    </div>
+    <div class="best-grid">
+      <div class="best-find">
+        <label for="sp-q" class="sub-title">Search spells</label>
+        <input type="search" id="sp-q" placeholder="e.g. fireball, heal, teleport" autocomplete="off" spellcheck="false">
+        <div class="seg" role="group" aria-label="Show" id="sp-kind">
+          <button type="button" data-kind="all">All</button>
+          <button type="button" data-kind="mine">Yours</button>
+        </div>
+        <div class="best-filters">
+          <label for="sp-lv">Level <select id="sp-lv"></select></label>
+          <label for="sp-sc">School <select id="sp-sc"></select></label>
+          <label for="sp-cl">Class <select id="sp-cl"></select></label>
+          <label for="sp-tag">Casting <select id="sp-tag">
+            <option value="">Any</option><option value="co">Concentration</option><option value="nco">No concentration</option>
+            <option value="rit">Ritual</option><option value="ba">Bonus Action</option><option value="re">Reaction</option>
+          </select></label>
+        </div>
+        <div class="best-meta">
+          <span id="sp-count">Loading spells…</span>
+          <span class="row" style="gap:6px">
+            <div class="seg" role="group" aria-label="Sort by" id="sp-sort">
+              <button type="button" data-sort="name">A–Z</button>
+              <button type="button" data-sort="level">Level</button>
+            </div>
+            <button type="button" class="small ghost" id="sp-reset">Reset</button>
+          </span>
+        </div>
+        <ul class="best-list sp-list" id="sp-list" aria-label="Spells"></ul>
+        <p class="best-credit">Spell data: System Reference Document 5.2 by Wizards of the Coast, licensed <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank" rel="noopener">CC BY 4.0</a>, from the open-source <a href="https://github.com/open5e/open5e-api" target="_blank" rel="noopener">Open5e API</a>. Variants you make with Claude are saved in this browser and in Library backups.</p>
+      </div>
+      <div class="best-out" id="sp-out">
+        <div class="best-tools" id="sp-tools" hidden>
+          <div class="actions">
+            <button type="button" class="small primary" id="sp-make-open" aria-expanded="false" aria-controls="sp-make">Make a variant with Claude</button>
+          </div>
+          <div class="actions">
+            <button type="button" class="small ghost" id="sp-copy">Copy as Markdown</button>
+            <span class="status" id="sp-status"></span>
+          </div>
+        </div>
+
+        <div class="reskin" id="sp-make" hidden>
+          <label for="sp-mk-text"><strong id="sp-mk-title">Make a variant</strong></label>
+          <div class="chips" id="sp-mk-chips"></div>
+          <textarea id="sp-mk-text" rows="2" placeholder="e.g. A necrotic version cast by a lich's apprentices that leaves victims unable to regain Hit Points."></textarea>
+          <div class="reskin-opts">
+            <label class="tog" for="sp-mk-lv">Level <select id="sp-mk-lv"></select></label>
+            <label class="tog"><input type="checkbox" id="sp-mk-camp"> Flavor it from my campaign</label>
+          </div>
+          <div class="actions">
+            <button type="button" class="primary" id="sp-mk-go">Make variant</button>
+            <button type="button" class="ghost" id="sp-mk-stop" hidden>Stop</button>
+            <span class="status" id="sp-mk-status" role="status"></span>
+          </div>
+          <p class="note" style="margin:0">Claude writes the spell in 2024 format with damage, area and duration matched to its level, plus upcasting or cantrip scaling.</p>
+        </div>
+
+        <div class="variant-bar" id="sp-variant" hidden>
+          <div class="variant-txt">
+            <span class="badge" id="sp-v-badge">Variant</span>
+            <span id="sp-v-of"></span>
+          </div>
+          <p class="variant-note" id="sp-v-note"></p>
+          <div class="actions">
+            <button type="button" class="small primary" id="sp-v-save">Save to my spells</button>
+            <button type="button" class="small" id="sp-v-revise">Revise</button>
+            <button type="button" class="small ghost" id="sp-v-orig">Show original</button>
+            <button type="button" class="small ghost" id="sp-v-del" hidden>Delete</button>
+            <button type="button" class="small" id="sp-v-delok" hidden>Delete for good</button>
+            <button type="button" class="small ghost" id="sp-v-delno" hidden>Keep it</button>
+          </div>
+        </div>
+
+        <div class="rolllog" id="sp-log" aria-live="polite"></div>
+        <article class="statblock spellcard" id="sp-card" tabindex="-1">
+          <div class="best-empty">Pick a spell from the list to open it.</div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- ENCOUNTERS PAGE: lists of monsters scored against the 2024 DMG XP budgets -->
+  <div class="best-view" id="view-encounters" role="tabpanel" aria-labelledby="tab-encounters" hidden>
+    <div class="lay-head">
+      <div>
+        <h2 class="lay-title">Encounters</h2>
+        <p class="hint">Build lists of monsters for a fight and see how hard it is for your party under the 2024 Dungeon Master's Guide XP budgets. Add monsters by hand, let the forge fill an encounter to a difficulty, or ask Claude for one that fits a theme.</p>
+      </div>
+    </div>
+    <div class="best-grid">
+      <div class="best-find">
+        <div class="en-party">
+          <span class="sub-title">Party</span>
+          <div class="en-party-row">
+            <label class="tog" for="en-size">Characters <input type="number" id="en-size" class="num-in" min="1" max="10" step="1"></label>
+            <label class="tog" for="en-level">Level <input type="number" id="en-level" class="num-in" min="1" max="20" step="1"></label>
+          </div>
+          <p class="note" id="en-budget"></p>
+        </div>
+
+        <div class="en-gen">
+          <span class="sub-title">Build one for me</span>
+          <div class="best-filters">
+            <label for="en-diff">Difficulty <select id="en-diff"><option value="low">Low</option><option value="moderate">Moderate</option><option value="high">High</option></select></label>
+            <label for="en-style">Shape <select id="en-style">
+              <option value="mixed">Mixed group</option><option value="leader">Leader and minions</option><option value="horde">Horde of one kind</option><option value="solo">Solo monster</option>
+            </select></label>
+            <label for="en-type">Creature type <select id="en-type"></select></label>
+            <label for="en-src">Monsters <select id="en-src"><option value="all">All books and yours</option><option value="srd">SRD 5.2 only</option><option value="kobold">Kobold Press books only</option><option value="bfrd">Black Flag only</option><option value="tob1">Tome of Beasts 1 only</option><option value="tob2">Tome of Beasts 2 only</option><option value="tob3">Tome of Beasts 3 only</option><option value="home">Spiral Forge homebrew only</option><option value="mine">Yours only</option></select></label>
+          </div>
+          <label for="en-theme" class="sub-title">Theme <span class="lt-opt">optional; filters by name, or guides Claude</span></label>
+          <input type="search" id="en-theme" placeholder="e.g. goblin, undead crypt, sahuagin raid" autocomplete="off">
+          <div class="actions">
+            <button type="button" class="primary" id="en-auto">Build encounter</button>
+            <button type="button" id="en-claude">Suggest with Claude</button>
+            <button type="button" class="ghost" id="en-stop" hidden>Stop</button>
+          </div>
+          <span class="status" id="en-gen-status" role="status"></span>
+          <p class="note" id="en-pool" style="margin:0"></p>
+        </div>
+
+        <div class="en-add">
+          <label for="en-q" class="sub-title">Add monsters</label>
+          <input type="search" id="en-q" placeholder="Search by name or type" autocomplete="off" spellcheck="false">
+          <ul class="best-list en-pick" id="en-pick" aria-label="Monsters to add"></ul>
+        </div>
+
+        <div class="lt-saved" id="en-saved-wrap" hidden>
+          <span class="sub-title">Saved encounters</span>
+          <ul class="lt-saved-list" id="en-saved"></ul>
+        </div>
+        <p class="best-credit">XP budgets and difficulty from the 2024 Dungeon Master's Guide: add up every monster's XP and compare it with the party's budget. There is no multiplier for groups in the 2024 rules.</p>
+      </div>
+
+      <div class="best-out" id="en-out">
+        <div class="best-tools">
+          <div class="actions">
+            <button type="button" class="small" id="en-new">New encounter</button>
+            <button type="button" class="small" id="en-init">Roll initiative</button>
+            <button type="button" class="small primary" id="en-loot">Generate loot</button>
+            <button type="button" class="small" id="en-tocombat">Run in Combat</button>
+          </div>
+          <div class="actions">
+            <button type="button" class="small" id="en-save">Save encounter</button>
+            <button type="button" class="small ghost" id="en-copy">Copy as Markdown</button>
+            <span class="status" id="en-status"></span>
+          </div>
+        </div>
+        <div class="rolllog" id="en-log" aria-live="polite"></div>
+        <article class="statblock en-card" id="en-card">
+          <label class="en-name-lbl" for="en-name">Encounter name</label>
+          <input type="text" id="en-name" class="en-name" placeholder="Untitled encounter" maxlength="100">
+          <div class="en-meter" id="en-meter"></div>
+          <ul class="en-rows" id="en-rows" aria-label="Monsters in this encounter"></ul>
+          <section class="en-loot" id="en-loot-sec" hidden aria-labelledby="en-loot-h">
+            <div class="en-loot-head"><h4 id="en-loot-h">Loot</h4><span class="en-loot-total" id="en-loot-total"></span></div>
+            <p class="en-loot-stale" id="en-loot-stale" hidden>The monsters changed after this loot was rolled. Press Reroll to match them.</p>
+            <ul class="en-loot-list" id="en-loot-list"></ul>
+            <div class="en-loot-hoard" id="en-loot-hoard"></div>
+            <p class="en-loot-hook" id="en-loot-hook" hidden></p>
+            <div class="actions">
+              <label class="tog"><input type="checkbox" id="en-loot-hoardon"> Include a hoard</label>
+              <button type="button" class="small" id="en-loot-reroll">Reroll</button>
+              <button type="button" class="small" id="en-loot-flavor">Describe with Claude</button>
+              <button type="button" class="small ghost" id="en-loot-stop" hidden>Stop</button>
+              <button type="button" class="small ghost" id="en-loot-table">Open as loot table</button>
+              <button type="button" class="small ghost" id="en-loot-clear">Clear</button>
+            </div>
+            <span class="status" id="en-loot-status" role="status"></span>
+          </section>
+          <label class="sub-title" for="en-notes">Tactics and notes</label>
+          <textarea id="en-notes" rows="3" placeholder="Where it happens, how the monsters fight, what makes the terrain interesting."></textarea>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMBAT PAGE: a grid of monster slots for running a fight -->
+  <div class="best-view cb-view" id="view-combat" role="tabpanel" aria-labelledby="tab-combat" hidden>
+    <div class="lay-head">
+      <div>
+        <h2 class="lay-title">Combat</h2>
+        <p class="hint">Keep the stat blocks for a fight side by side. Click an empty square to search the Bestiary and pick a monster, then track each creature's hit points and conditions, roll its attacks, and step through initiative.</p>
+      </div>
+    </div>
+    <div class="cb-bar">
+      <div class="actions">
+        <span class="sub-title" id="cb-cols-lbl">Columns</span>
+        <div class="seg" role="group" aria-labelledby="cb-cols-lbl" id="cb-cols">
+          <button type="button" data-cols="1">1</button><button type="button" data-cols="2">2</button><button type="button" data-cols="3">3</button><button type="button" data-cols="4">4</button>
+        </div>
+        <button type="button" class="small" id="cb-add">Add square</button>
+        <button type="button" class="small" id="cb-fill">Fill from encounter</button>
+        <button type="button" class="small ghost" id="cb-clear">Clear board</button>
+        <button type="button" class="small" id="cb-clearok" hidden>Clear for good</button>
+        <button type="button" class="small ghost" id="cb-clearno" hidden>Keep it</button>
+      </div>
+      <div class="actions cb-turns">
+        <button type="button" class="small primary" id="cb-init">Roll initiative</button>
+        <button type="button" class="small" id="cb-prev" aria-label="Previous turn">◀</button>
+        <span class="cb-round" id="cb-round">Round 1</span>
+        <button type="button" class="small" id="cb-next">Next turn ▶</button>
+      </div>
+      <span class="status" id="cb-status" role="status"></span>
+    </div>
+    <ol class="cb-order" id="cb-order" aria-label="Initiative order" hidden></ol>
+    <div class="cb-grid" id="cb-grid"></div>
+  </div>
+</div>
+
+<div class="dock" id="dock" aria-hidden="false">
+  <span class="dock-count" id="dock-count"></span>
+  <button id="btn-dock-weave" class="primary" type="button">Weave the campaign ↓</button>
+</div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "fantasy": {
+    "placeHint": "Roll the kind of place and what flavors it, or type your own (\"a lighthouse that only shines on moonless nights\").",
+    "descLabel": "Description",
+    "originLabel": "Origin",
+    "occLabel": "Occupants",
+    "ancLabel": "Leader's ancestry",
+    "notesPh": "e.g. 4 players, level 3. Creepy more than gory. Needs a way down to the Underdark. The hag should be bargainable.",
+    "example": {
+      "l-loc": 3,
+      "l-desc": 21,
+      "l-origin": 3,
+      "l-occ": 21,
+      "l-occ-beh": 23,
+      "l-occ-anc": 72
+    },
+    "context": "Assume D&D 5e and a classic fantasy world unless the GM's notes say otherwise. Use monsters and hazards that fit 5e, by name, without stat blocks.",
+    "chips": [
+      "Add two more named NPCs",
+      "Add a trap and a puzzle",
+      "Make area 3 a lair with a set-piece fight",
+      "Add a hidden lower level",
+      "Give the treasure more hooks"
+    ]
+  },
+  "spelljammer": {
+    "placeHint": "Roll the kind of site and what flavors it, or type your own (\"a nautiloid fused into a comet\").",
+    "descLabel": "Condition",
+    "originLabel": "Builders",
+    "occLabel": "Occupants",
+    "ancLabel": "Leader's species",
+    "notesPh": "e.g. 4 players, level 5. A boarding action that turns into a heist. Gravity should matter. Their ship is docked at the airlock.",
+    "example": {
+      "l-loc": 1,
+      "l-desc": 7,
+      "l-origin": 24,
+      "l-occ": 2,
+      "l-occ-beh": 65,
+      "l-occ-anc": 24
+    },
+    "context": "This is Spelljammer run with Mage Hand Press's Dark Matter 5e rules. Mix Spelljammer's wildspace, helms, air envelopes, and gravity planes with Dark Matter's Void, Maw gates, void crystals, warping, grafts, hardlight, and credits. Treat airlessness, gravity, and the Void as real hazards in the keyed areas. Use monsters and hazards by name, without stat blocks.",
+    "chips": [
+      "Add two more named NPCs",
+      "Add a zero-gravity section",
+      "Make the helm room the climax",
+      "Add a docking bay and an escape route",
+      "Give the treasure more hooks"
+    ]
+  }
+}

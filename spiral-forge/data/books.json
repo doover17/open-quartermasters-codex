@@ -1,0 +1,44 @@
+{
+  "srd-2024": {
+    "tag": "",
+    "name": "SRD 5.2 (2024 rules)",
+    "by": "Wizards of the Coast",
+    "lic": "CC BY 4.0",
+    "older": false
+  },
+  "bfrd": {
+    "tag": "Black Flag",
+    "name": "Black Flag SRD",
+    "by": "Kobold Press",
+    "lic": "CC BY 4.0",
+    "older": true
+  },
+  "tob1": {
+    "tag": "Tome of Beasts",
+    "name": "Tome of Beasts 1 (2023 Edition)",
+    "by": "Kobold Press",
+    "lic": "OGL 1.0a",
+    "older": true
+  },
+  "tob2": {
+    "tag": "Tome of Beasts 2",
+    "name": "Tome of Beasts 2",
+    "by": "Kobold Press",
+    "lic": "OGL 1.0a",
+    "older": true
+  },
+  "tob3": {
+    "tag": "Tome of Beasts 3",
+    "name": "Tome of Beasts 3",
+    "by": "Kobold Press",
+    "lic": "OGL 1.0a",
+    "older": true
+  },
+  "home": {
+    "tag": "Homebrew",
+    "name": "Spiral Forge Homebrew",
+    "by": "made for this forge",
+    "lic": "original",
+    "older": false
+  }
+}

@@ -1,0 +1,477 @@
+{
+  "monsters": {
+    "xp": {
+      "0": 10,
+      "1": 200,
+      "2": 450,
+      "3": 700,
+      "4": 1100,
+      "5": 1800,
+      "6": 2300,
+      "7": 2900,
+      "8": 3900,
+      "9": 5000,
+      "10": 5900,
+      "11": 7200,
+      "12": 8400,
+      "13": 10000,
+      "14": 11500,
+      "15": 13000,
+      "16": 15000,
+      "17": 18000,
+      "18": 20000,
+      "19": 22000,
+      "20": 25000,
+      "21": 33000,
+      "22": 41000,
+      "23": 50000,
+      "24": 62000,
+      "25": 75000,
+      "26": 90000,
+      "27": 105000,
+      "28": 120000,
+      "29": 135000,
+      "30": 155000,
+      "0.125": 25,
+      "0.25": 50,
+      "0.5": 100
+    },
+    "abilities": [
+      "Str",
+      "Dex",
+      "Con",
+      "Int",
+      "Wis",
+      "Cha"
+    ],
+    "sizes": [
+      "tiny",
+      "small",
+      "medium",
+      "large",
+      "huge",
+      "gargantuan"
+    ]
+  },
+  "items": {
+    "rarities": [
+      "common",
+      "uncommon",
+      "rare",
+      "very-rare",
+      "legendary",
+      "artifact"
+    ],
+    "rarityLabels": {
+      "common": "Common",
+      "uncommon": "Uncommon",
+      "rare": "Rare",
+      "very-rare": "Very Rare",
+      "legendary": "Legendary",
+      "artifact": "Artifact",
+      "varies": "Rarity Varies"
+    },
+    "value": {
+      "common": "100 GP",
+      "uncommon": "400 GP",
+      "rare": "4,000 GP",
+      "very-rare": "40,000 GP",
+      "legendary": "200,000 GP"
+    },
+    "tier": {
+      "common": "1",
+      "uncommon": "1",
+      "rare": "5",
+      "very-rare": "11",
+      "legendary": "17",
+      "artifact": "17"
+    },
+    "categories": {
+      "wondrous-item": "Wondrous Item",
+      "weapon": "Weapon",
+      "armor": "Armor",
+      "ring": "Ring",
+      "potion": "Potion",
+      "wand": "Wand",
+      "staff": "Staff",
+      "rod": "Rod",
+      "scroll": "Scroll",
+      "adventuring-gear": "Adventuring Gear",
+      "tools": "Tools",
+      "ammunition": "Ammunition",
+      "equipment-pack": "Equipment Pack",
+      "spellcasting-focus": "Spellcasting Focus",
+      "mount": "Mount",
+      "vehicle": "Vehicle"
+    }
+  },
+  "loot": {
+    "rarityLabels": {
+      "common": "Common",
+      "uncommon": "Uncommon",
+      "rare": "Rare",
+      "very-rare": "Very Rare",
+      "legendary": "Legendary"
+    },
+    "rarityOrder": [
+      "common",
+      "uncommon",
+      "rare",
+      "very-rare",
+      "legendary"
+    ],
+    "rarityValue": {
+      "common": 100,
+      "uncommon": 400,
+      "rare": 4000,
+      "very-rare": 40000,
+      "legendary": 200000
+    },
+    "bands": [
+      {
+        "label": "CR 0–4",
+        "levels": "1–4",
+        "hoard": {
+          "n": 2,
+          "s": 4,
+          "x": 100,
+          "u": "GP"
+        },
+        "items": {
+          "n": 1,
+          "s": 4,
+          "add": -1
+        },
+        "ind": {
+          "n": 3,
+          "s": 6,
+          "x": 1,
+          "u": "GP"
+        },
+        "rar": [
+          [
+            54,
+            "common"
+          ],
+          [
+            91,
+            "uncommon"
+          ],
+          [
+            100,
+            "rare"
+          ]
+        ]
+      },
+      {
+        "label": "CR 5–10",
+        "levels": "5–10",
+        "hoard": {
+          "n": 8,
+          "s": 10,
+          "x": 100,
+          "u": "GP"
+        },
+        "items": {
+          "n": 1,
+          "s": 3,
+          "add": 0
+        },
+        "ind": {
+          "n": 2,
+          "s": 8,
+          "x": 10,
+          "u": "GP"
+        },
+        "rar": [
+          [
+            30,
+            "common"
+          ],
+          [
+            81,
+            "uncommon"
+          ],
+          [
+            98,
+            "rare"
+          ],
+          [
+            100,
+            "very-rare"
+          ]
+        ]
+      },
+      {
+        "label": "CR 11–16",
+        "levels": "11–16",
+        "hoard": {
+          "n": 8,
+          "s": 8,
+          "x": 10000,
+          "u": "GP"
+        },
+        "items": {
+          "n": 1,
+          "s": 4,
+          "add": 0
+        },
+        "ind": {
+          "n": 2,
+          "s": 10,
+          "x": 10,
+          "u": "PP"
+        },
+        "rar": [
+          [
+            11,
+            "common"
+          ],
+          [
+            34,
+            "uncommon"
+          ],
+          [
+            70,
+            "rare"
+          ],
+          [
+            93,
+            "very-rare"
+          ],
+          [
+            100,
+            "legendary"
+          ]
+        ]
+      },
+      {
+        "label": "CR 17+",
+        "levels": "17–20",
+        "hoard": {
+          "n": 6,
+          "s": 10,
+          "x": 10000,
+          "u": "GP"
+        },
+        "items": {
+          "n": 1,
+          "s": 6,
+          "add": 0
+        },
+        "ind": {
+          "n": 2,
+          "s": 8,
+          "x": 100,
+          "u": "PP"
+        },
+        "rar": [
+          [
+            20,
+            "rare"
+          ],
+          [
+            64,
+            "very-rare"
+          ],
+          [
+            100,
+            "legendary"
+          ]
+        ]
+      }
+    ],
+    "pools": {
+      "arms": [
+        "weapon",
+        "armor",
+        "ammunition"
+      ],
+      "wond": [
+        "wondrous-item"
+      ],
+      "cons": [
+        "potion",
+        "scroll"
+      ],
+      "impl": [
+        "ring",
+        "wand",
+        "staff",
+        "rod"
+      ]
+    },
+    "gems": [
+      5000,
+      1000,
+      500,
+      100,
+      50,
+      10
+    ],
+    "art": [
+      7500,
+      2500,
+      750,
+      250,
+      25
+    ]
+  },
+  "spells": {
+    "schools": [
+      "abjuration",
+      "conjuration",
+      "divination",
+      "enchantment",
+      "evocation",
+      "illusion",
+      "necromancy",
+      "transmutation"
+    ],
+    "classes": [
+      "bard",
+      "cleric",
+      "druid",
+      "paladin",
+      "ranger",
+      "sorcerer",
+      "warlock",
+      "wizard"
+    ]
+  },
+  "encounters": {
+    "budget": [
+      null,
+      [
+        50,
+        75,
+        100
+      ],
+      [
+        100,
+        150,
+        200
+      ],
+      [
+        150,
+        225,
+        400
+      ],
+      [
+        250,
+        375,
+        500
+      ],
+      [
+        500,
+        750,
+        1100
+      ],
+      [
+        600,
+        1000,
+        1400
+      ],
+      [
+        750,
+        1300,
+        1700
+      ],
+      [
+        1000,
+        1700,
+        2100
+      ],
+      [
+        1300,
+        2000,
+        2600
+      ],
+      [
+        1600,
+        2300,
+        3100
+      ],
+      [
+        1900,
+        2900,
+        4100
+      ],
+      [
+        2200,
+        3700,
+        4700
+      ],
+      [
+        2600,
+        4200,
+        5400
+      ],
+      [
+        2900,
+        4900,
+        6200
+      ],
+      [
+        3300,
+        5400,
+        7800
+      ],
+      [
+        3800,
+        6100,
+        9800
+      ],
+      [
+        4500,
+        7200,
+        11700
+      ],
+      [
+        5000,
+        8700,
+        14200
+      ],
+      [
+        5500,
+        10700,
+        17200
+      ],
+      [
+        6400,
+        13200,
+        22000
+      ]
+    ],
+    "difficulties": [
+      "low",
+      "moderate",
+      "high"
+    ],
+    "difficultyLabels": {
+      "low": "Low",
+      "moderate": "Moderate",
+      "high": "High"
+    }
+  },
+  "combat": {
+    "conditions": [
+      "Blinded",
+      "Charmed",
+      "Deafened",
+      "Exhaustion",
+      "Frightened",
+      "Grappled",
+      "Incapacitated",
+      "Invisible",
+      "Paralyzed",
+      "Petrified",
+      "Poisoned",
+      "Prone",
+      "Restrained",
+      "Stunned",
+      "Unconscious",
+      "Concentrating"
+    ]
+  }
+}

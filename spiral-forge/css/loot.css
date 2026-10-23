@@ -1,0 +1,48 @@
+/* Loot: a numbered roll table. Die face on the left, treasure in the middle, value on the right. */
+.lt-field { display: grid; gap: 6px; justify-items: start; min-width: 0; }
+.lt-field .note { margin: 0; }
+.lt-pools { border: 0; padding: 0; margin: 0; }
+.lt-pools legend { padding: 0; margin-bottom: 4px; }
+.lt-theme { justify-items: stretch; padding-top: 10px; border-top: 1px dashed var(--line); }
+.lt-theme textarea { min-height: 60px; }
+.lt-opt { font-weight: 400; text-transform: none; letter-spacing: 0; font-style: italic; }
+.lt-saved { display: grid; gap: 6px; padding-top: 10px; border-top: 1px dashed var(--line); }
+.lt-saved-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.lt-saved-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px; align-items: center; }
+.lt-saved-list .lt-open { text-align: left; border: 0; background: transparent; padding: 4px 6px; font-weight: 400; display: grid; min-width: 0; }
+.lt-saved-list .lt-open:hover { background: var(--bg); }
+.lt-saved-list .lt-open b { overflow-wrap: anywhere; }
+.lt-saved-list .lt-open span { font-size: 13px; color: var(--muted); }
+.lt-saved-list li[aria-current="true"] .lt-open { background: var(--brass-soft); }
+
+.lt-card { --rc: var(--brass); border-top-color: var(--brass); border-bottom-color: var(--brass); gap: 12px; }
+.lt-card h3 { color: var(--ink); }
+.lt-card .lt-intro { margin: 0; font-style: italic; color: var(--muted); max-width: 68ch; }
+.lt-rows { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid var(--line); }
+.lt-row { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 4px 12px; align-items: start; padding: 10px 4px; border-bottom: 1px solid var(--line); scroll-margin: 80px; }
+.lt-row:nth-child(even) { background: color-mix(in srgb, var(--bg) 60%, transparent); }
+.lt-row.hit { background: var(--brass-soft); outline: 2px solid var(--brass); outline-offset: -2px; border-radius: 4px; }
+.lt-num { font-family: var(--mono); font-weight: 700; font-size: 18px; color: var(--brass); text-align: center; font-variant-numeric: tabular-nums; line-height: 1.4; }
+.lt-body { display: grid; gap: 4px; min-width: 0; font-family: var(--prose); font-size: 16px; }
+.lt-body p { margin: 0; }
+.lt-coins b { font-family: var(--body); font-weight: 700; }
+.lt-coins .how { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.lt-flavor { font-style: italic; color: var(--muted); }
+.lt-items { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+.lt-item { font: inherit; font-family: var(--body); font-size: 15px; font-weight: 600; padding: 2px 10px; border-radius: 999px; border: 1px solid var(--rc, var(--line)); color: var(--rc, var(--ink)); background: var(--panel); cursor: pointer; text-align: left; max-width: 100%; }
+.lt-item:hover { background: var(--bg); }
+.lt-item small { font-weight: 500; font-size: 11px; letter-spacing: .05em; text-transform: uppercase; margin-left: 4px; opacity: .85; }
+.lt-none { color: var(--muted); font-family: var(--body); font-size: 14px; }
+.lt-side { display: grid; gap: 4px; justify-items: end; }
+.lt-val { font-family: var(--mono); font-size: 13px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.lt-acts { display: flex; gap: 2px; }
+.lt-acts button { font-family: var(--body); padding: 2px 8px; font-size: 13px; border-color: transparent; background: transparent; color: var(--muted); }
+.lt-acts button:hover { border-color: var(--line); color: var(--ink); }
+.lt-acts button[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+.lt-foot { margin: 0; font-size: 13px; color: var(--muted); font-family: var(--body); }
+@media (max-width: 520px) {
+  .lt-row { grid-template-columns: 34px minmax(0, 1fr); }
+  .lt-side { grid-column: 2; justify-items: start; grid-auto-flow: column; align-items: center; justify-content: space-between; }
+}
+@media (prefers-reduced-motion: no-preference) { .lt-row.hit { animation: lt-flash .6s ease; } @keyframes lt-flash { from { outline-color: transparent; } } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
